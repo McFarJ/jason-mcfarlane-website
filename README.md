@@ -1,1 +1,1 @@
-licensed under MIT license.
+licensed under [MIT license](LICENSE).
