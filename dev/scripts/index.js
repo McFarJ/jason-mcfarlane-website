@@ -3,11 +3,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Wallpaper from './wallpaper.js'
 import About from './about.js'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 const historyApiFallback = require('connect-history-api-fallback'); //are this and the corresponding package (and Gulp modification) necessary? they're supposed to 'make sure our URL always points towards our app', whatever that means.
 
 //testtest
 alert('working!')
 console.log('working!')
+
+function Index() {
+    return <h1>Index</h1>
+}
+
+function AAA(){
+    return <h1>AAA</h1>
+}
+
+function BBB(){
+    return <h1>BBB</h1>
+}
 
 class Nav extends React.Component{
     render(){
@@ -15,6 +28,29 @@ class Nav extends React.Component{
             <div>
                 <Wallpaper className="wallpaper__dandelion" />
                 <div className="page-content">
+                    <div className="TEST-ROUTER__WRAPPER">
+                        <Router>
+                            <div>
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <Link to="/">Index</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/AAA/">AAA</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/BBB/">BBB</Link>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                                <Route path="/" exact component={Index} />
+                                <Route path="/AAA/" component={AAA} />
+                                <Route path="/BBB/" component={BBB} />
+                            </div>
+                        </Router>
+                    </div>
                     <div className="enlightenment-toggle__wrapper">
                         <a className="enlightenment-toggle" onClick={this.handleEnlightenClick}>
                             <input className="enlightement-toggle__checkbox" type="checkbox" />
