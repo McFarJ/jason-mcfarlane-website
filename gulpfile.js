@@ -10,7 +10,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 // const plumber = require('gulp-plumber');
 const concat = require('gulp-concat');
-const historyApiFallback = require('connect-history-api-fallback'); //necessary?
+const historyApiFallback = require('connect-history-api-fallback');
 
 
 
@@ -47,7 +47,7 @@ function scripts() {
 
 function watch() {
     gulp.watch('./dev/styles/**/*.scss', gulp.series(styles));
-    gulp.watch('./dev/scripts/index.js', gulp.series(scripts)); //will it not reload if I edit other js files?
+    gulp.watch('./dev/scripts/index.js', gulp.series(scripts));
 	gulp.watch('*html', reload);
 };
 
@@ -56,7 +56,7 @@ function bs() {
         server: {
             baseDir: './'
         },
-        middleware: [historyApiFallback()] //necessary?
+        middleware: [historyApiFallback()]
 	})
 };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+// const BeardMapIcon '/images/beard-map-icon.png';
 
 export default class Portfolio extends React.Component{
     render(){
@@ -9,7 +10,7 @@ export default class Portfolio extends React.Component{
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
                             <a className="item__icon-wrapper" href="#">
-                                <img className="item__icon" src="images/beard-map-icon.png" />
+                                <img className="item__icon" src='/images/beard-map-icon.png' />
                             </a>
                             <div className="portfolio__text-wrapper">
                                 <p className="enlightenment-directions enlightenment-directions_hidden">SWITCH</p>
@@ -27,7 +28,7 @@ export default class Portfolio extends React.Component{
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
                             <a className="item__icon-wrapper" href="#">
-                                <img className="item__icon" src="images/mind-unwind-icon.png" />
+                                <img className="item__icon" src="/images/mind-unwind-icon.png" />
                             </a>
                             <div className="portfolio__text-wrapper">
                                 <p className="enlightenment-directions enlightenment-directions_hidden">SECTION</p>
@@ -45,7 +46,7 @@ export default class Portfolio extends React.Component{
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
                             <a className="item__icon-wrapper" href="#">
-                                <img className="item__icon" src="images/coursea-icon.png" />
+                                <img className="item__icon" src="/images/coursea-icon.png" />
                             </a>
                             <div className="portfolio__text-wrapper">
                                 <p className="enlightenment-directions enlightenment-directions_hidden">TO</p>
@@ -63,7 +64,7 @@ export default class Portfolio extends React.Component{
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
                             <a className="item__icon-wrapper" href="#">
-                                <img className="item__icon" src="images/pfm-icon.png" />
+                                <img className="item__icon" src="/images/pfm-icon.png" />
                             </a>
                             <div className="portfolio__text-wrapper">
                                 <p className="enlightenment-directions enlightenment-directions_hidden">ABOUT</p>
