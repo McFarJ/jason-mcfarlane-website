@@ -1,15 +1,37 @@
+@font-face {
+  font-family: 'kraut-type-a-fuckregular';
+  src: url("/kraut____typefuck11-webfont.woff2") format("woff2"), url("/kraut____typefuck11-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.nav__title-main, .nav__title-sub, .enlightenment-toggle__text, .nav__menu-option-text {
+  font-family: 'kraut-type-a-fuckregular'; }
+
+.nav__title-main {
+  font-size: 5vw; }
+
+.nav__title-sub {
+  font-size: 2.5vw; }
+
 body {
-  background-color: red; }
+  background-color: white; }
 
 .button1-background {
-  fill: blue; }
+  fill: #ac7839; }
+
+.button2-background {
+  fill: #287750; }
+
+.button3-background {
+  fill: #323676; }
 
 .button-foreground {
   fill: black; }
 
 .page-content {
   position: absolute;
-  top: 0; }
+  top: 0;
+  width: 100%; }
 
 .wallpaper__dandelion {
   height: 100vh; }
@@ -21,16 +43,29 @@ body {
 .enlightenment-toggle__text {
   display: inline-block; }
 
+.nav__wrapper {
+  width: 100%; }
+
 .nav {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  padding: 0 4vw; }
 
 .nav__title {
   display: inline-block; }
+
+.nav__title-main {
+  margin: 0;
+  text-align: center; }
+
+.nav__title-sub {
+  margin: -1vw 0 0 0;
+  text-align: center; }
 
 .nav__title-wrapper {
   display: inline-block; }
@@ -50,3 +85,21 @@ body {
 
 .nav__menu-option-image {
   width: 10vw; }
+
+.q {
+  fill: #287750; }
+
+.w {
+  fill: pink; }
+
+.e {
+  fill: orange; }
+
+.r {
+  fill: green; }
+
+.t {
+  fill: blue; }
+
+.x {
+  fill: grey; }

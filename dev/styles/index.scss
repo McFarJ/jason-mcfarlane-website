@@ -1,20 +1,88 @@
 //test
-body {background-color: red;}
-.button1-background {fill:blue}
-.button-foreground {fill: black}
+@font-face {
+    font-family: 'kraut-type-a-fuckregular';
+    src: url('/kraut____typefuck11-webfont.woff2') format('woff2'),
+         url('/kraut____typefuck11-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-.page-content {position: absolute; top: 0;}
+$color-accent1: hsla(33,50,45,1);
+$color-accent2: hsla(151,50,31,1);
+$color-accent3: hsla(237,40,33,1);
+
+.nav__title-main, .nav__title-sub, .enlightenment-toggle__text, .nav__menu-option-text {font-family: 'kraut-type-a-fuckregular';}
+.nav__title-main {font-size: 5vw;}
+.nav__title-sub {font-size: 2.5vw;}
+
+
+body {background-color: hsla(360,100,100,1);}
+.button1-background {fill: $color-accent1;}
+.button2-background {fill: $color-accent2;}
+.button3-background {fill: $color-accent3;}
+.button-foreground {fill: hsla(0,0,0,1);}
+
+.page-content {position: absolute; top: 0; width: 100%;}
 .wallpaper__dandelion {height: 100vh;}
+// .wallpaper__dandelion {width:100%}
 
 .enlightenment-toggle__wrapper {width: 100vh; text-align: right;}
 .enlightenment-toggle__text {display:inline-block}
 
-.nav {display: flex; justify-content: space-between;}
+.nav__wrapper {width: 100%;}
+.nav {
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+    padding: 0 4vw;
+}
 .nav__title {display: inline-block}
-.nav__title-wrapper {display: inline-block}
+.nav__title-main {margin: 0; text-align: center;}
+.nav__title-sub {margin: -1vw 0 0 0; text-align: center;}
+.nav__title-wrapper {display: inline-block;}
 
 .nav__secret-letter {padding: 0.75rem; margin: -0.75rem;}
 
 .nav__menu-options-wrapper {display: inline-block}
 .nav__menu-options {display: inline-block; display: inline-flex;}
 .nav__menu-option-image {width: 10vw;}
+
+// .a {fill: orange}
+// .s {fill: white}
+// .d {fill: limegreen}
+// .f {fill: limegreen}
+// .g {fill: limegreen}
+// .h {fill: limegreen}
+// .j {fill: limegreen}
+// .k {fill: limegreen}
+// .l {fill: limegreen}
+
+// .z {fill: limegreen}
+// .x {fill: limegreen}
+// .c {fill: limegreen}
+// .v {fill: limegreen}
+// .b {fill: limegreen}
+// .n {fill: limegreen}
+// .m {fill: limegreen}
+
+// .wp-1 {fill: limegreen}
+
+// .wp-2 {fill: pink}
+
+// .seed-color1
+// .seed-color2
+// .seed-color3
+// .seed-color4
+// .seed-color5
+// .seed-color6
+// .seed-color7
+// .seed-color8
+// .seed-color9
+
+.q {fill: $color-accent2}
+.w{fill: pink}
+.e{fill: orange}
+.r{fill: green}
+.t{fill: blue}
+
+.x{fill: grey}

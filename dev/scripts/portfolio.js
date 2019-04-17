@@ -1,5 +1,4 @@
 import React from 'react';
-// const BeardMapIcon '/images/beard-map-icon.png';
 
 export default class Portfolio extends React.Component{
     render(){
