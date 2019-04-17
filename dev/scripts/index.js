@@ -16,7 +16,9 @@ class Nav extends React.Component{
         return(
             <Router>
                 <div>
-                    <Wallpaper className="wallpaper__dandelion" />
+                    <div className="wallpaper">
+                        <Wallpaper />
+                    </div>
                     <div className="page-content">
                         <div className="enlightenment-toggle__wrapper">
                             <a className="enlightenment-toggle" onClick={this.handleEnlightenClick}>

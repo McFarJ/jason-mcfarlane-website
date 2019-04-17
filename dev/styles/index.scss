@@ -1,4 +1,5 @@
-//test
+* {box-sizing: border-box;}
+
 @font-face {
     font-family: 'kraut-type-a-fuckregular';
     src: url('/kraut____typefuck11-webfont.woff2') format('woff2'),
@@ -7,27 +8,38 @@
     font-style: normal;
 }
 
+$dark: hsla(0,0,0,1);
+$light: hsla(360,100,100,1);
 $color-accent1: hsla(33,50,45,1);
 $color-accent2: hsla(151,50,31,1);
 $color-accent3: hsla(237,40,33,1);
 
-.nav__title-main, .nav__title-sub, .enlightenment-toggle__text, .nav__menu-option-text {font-family: 'kraut-type-a-fuckregular';}
-.nav__title-main {font-size: 5vw;}
-.nav__title-sub {font-size: 2.5vw;}
+.nav__title-main, .nav__title-sub, .enlightenment-toggle__text, .nav__menu-option-text, .skills__title {font-family: 'kraut-type-a-fuckregular';}
+.enlightenment-toggle__text {font-size: 1.9vw;}
+.nav__title-main {font-size: 5.5vw;}
+.nav__title-sub {font-size: 2.9vw;}
+.nav__menu-option-text {font-size: 2.9vw;}
+.about-page__bio, .skills__skill {font-size: 1.75vw;}
 
 
-body {background-color: hsla(360,100,100,1);}
+a {color: $dark; text-decoration: none;}
+ul {list-style-type: none;}
+
+body {background-color: $light; margin:0;}
 .button1-background {fill: $color-accent1;}
 .button2-background {fill: $color-accent2;}
 .button3-background {fill: $color-accent3;}
-.button-foreground {fill: hsla(0,0,0,1);}
+.button-foreground {fill: $dark;}
 
 .page-content {position: absolute; top: 0; width: 100%;}
-.wallpaper__dandelion {height: 100vh;}
+.wallpaper {width: 100%; text-align: center;}
+.wallpaper__dandelion {height: 100vh; display: inline-block; fill: hsla(0,0,50,1); padding: 4vw 0 1vw 0;}
 // .wallpaper__dandelion {width:100%}
 
-.enlightenment-toggle__wrapper {width: 100vh; text-align: right;}
-.enlightenment-toggle__text {display:inline-block}
+.enlightenment-toggle__wrapper {width: 100vw; text-align: right; padding: 1.5vw 1.5vw 3.5vw 1.5vw;}
+.enlightenment-toggle__checkbox {display: inline-block}
+.enlightenment-toggle__text {float: right; margin: 0}
+
 
 .nav__wrapper {width: 100%;}
 .nav {
@@ -40,12 +52,15 @@ body {background-color: hsla(360,100,100,1);}
 .nav__title-main {margin: 0; text-align: center;}
 .nav__title-sub {margin: -1vw 0 0 0; text-align: center;}
 .nav__title-wrapper {display: inline-block;}
-
 .nav__secret-letter {padding: 0.75rem; margin: -0.75rem;}
 
 .nav__menu-options-wrapper {display: inline-block}
-.nav__menu-options {display: inline-block; display: inline-flex;}
+.nav__menu-options {display: inline-flex;}
+.nav__menu-option {margin: 0 1vw;}
+.nav__menu-option:first-child {margin: 0 1vw 0 0;}
+.nav__menu-option:last-child {margin: 0 0 0 1vw;}
 .nav__menu-option-image {width: 10vw;}
+.nav__menu-option-text {text-align: center; margin: 1vw 0;}
 
 // .a {fill: orange}
 // .s {fill: white}
@@ -86,3 +101,27 @@ body {background-color: hsla(360,100,100,1);}
 .t{fill: blue}
 
 .x{fill: grey}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about-page__wrapper {width:100%; padding: 0 4vw;}
+.about-page {width:100%; display: flex;}
+.about-page__bio-wrapper {width: 50%}
+.about-page__bio {width: 100%;}
+.about-page__seeds-img {width: 100%;}
+.about-page__skills-wrapper {width: 50%;}
+.skills__title {text-align: center;}
+.about-page__skills-list {display: flex; flex-wrap: wrap;}
+.skills__skill{display:inline-block; width: 50%;}
+.skills__icon-wrapper{display: inline-block;}
+.skills__name{display:inline-block; padding-left: 0.5vw;}
