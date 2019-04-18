@@ -8,7 +8,7 @@ export default class Portfolio extends React.Component{
 
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
-                            <a className="item__icon-wrapper" href="#">
+                            <a className="item__icon-wrapper-href" href="#">
                                 <img className="item__icon" src='/images/beard-map-icon.png' />
                             </a>
                             <div className="portfolio__text-wrapper">
@@ -26,16 +26,16 @@ export default class Portfolio extends React.Component{
 
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
-                            <a className="item__icon-wrapper" href="#">
+                            <a className="item__icon-wrapper-href" href="#">
                                 <img className="item__icon" src="/images/mind-unwind-icon.png" />
                             </a>
                             <div className="portfolio__text-wrapper">
                                 <p className="enlightenment-directions enlightenment-directions_hidden">SECTION</p>
-                                <a className="text__main">
+                                <a className="text__main" href="#">
                                     <h3 className="text__title">Mind Unwind- web app</h3>
                                     <p className="text__details">JavaScript, jQuery</p>
                                 </a>
-                                <a className="text__github">
+                                <a className="text__github" href="#">
                                     <p>view on GitHub</p>
                                 </a>
                             </div>
@@ -44,16 +44,16 @@ export default class Portfolio extends React.Component{
 
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
-                            <a className="item__icon-wrapper" href="#">
+                            <a className="item__icon-wrapper-href" href="#">
                                 <img className="item__icon" src="/images/coursea-icon.png" />
                             </a>
                             <div className="portfolio__text-wrapper">
                                 <p className="enlightenment-directions enlightenment-directions_hidden">TO</p>
-                                <a className="text__main">
+                                <a className="text__main" href="#">
                                     <h3 className="text__title">One-page responsive website</h3>
                                     <p className="text__details">JavaScript, CSS</p>
                                 </a>
-                                <a className="text__github">
+                                <a className="text__github" href="#">
                                     <p>view on GitHub</p>
                                 </a>
                             </div>
@@ -62,16 +62,16 @@ export default class Portfolio extends React.Component{
 
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
-                            <a className="item__icon-wrapper" href="#">
+                            <a className="item__icon-wrapper-href" href="#">
                                 <img className="item__icon" src="/images/pfm-icon.png" />
                             </a>
                             <div className="portfolio__text-wrapper">
                                 <p className="enlightenment-directions enlightenment-directions_hidden">ABOUT</p>
-                                <a className="text__main">
+                                <a className="text__main" href="#">
                                     <h3 className="text__title">Basic desktop website</h3>
                                     <p className="text__details">HTML, CSS</p>
                                 </a>
-                                <a className="text__github">
+                                <a className="text__github" href="#">
                                     <p>view on GitHub</p>
                                 </a>
                             </div>

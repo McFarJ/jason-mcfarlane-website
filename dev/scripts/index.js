@@ -5,10 +5,29 @@ import Wallpaper from './wallpaper.js';
 import About from './about.js';
 import Portfolio from './portfolio.js';
 import Contact from './contact.js';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 
 
 alert('working!')
+
+
+
+$(document).on('click', 'input[type="checkbox"][data-group]', function(event) {
+    // The checkbox that was clicked
+    var actor = $(this);
+    // The status of that checkbox
+    var checked = actor.prop('checked');
+    // The group that checkbox is in
+    var group = actor.data('group');
+    // All checkboxes of that group
+    var checkboxes = $('input[type="checkbox"][data-group="' + group + '"]');
+    // All checkboxes excluding the one that was clicked
+    var otherCheckboxes = checkboxes.not(actor);
+    // Check those checkboxes
+    otherCheckboxes.prop('checked', checked);
+  });
+  
 
 
 class Nav extends React.Component{
@@ -22,7 +41,7 @@ class Nav extends React.Component{
                     <div className="page-content">
                         <div className="enlightenment-toggle__wrapper">
                             <a className="enlightenment-toggle" onClick={this.handleEnlightenClick}>
-                                <input className="enlightement-toggle__checkbox" type="checkbox" />
+                                <input className="enlightenment-toggle__checkbox" type="checkbox" data-group="enlighten-checkboxes"/>
                                 <h4 className="enlightenment-toggle__text">Enlightenment mode</h4>
                             </a>
                         </div>
@@ -36,7 +55,7 @@ class Nav extends React.Component{
                                 </div>
                                 <div className="nav__menu-options-wrapper">
                                     <div className="nav__menu-options">
-                                        <Link to="/about/" className="nav__menu-option menu-options__about">
+                                        <NavLink to="/about/" className="nav__menu-option menu-options__about" activeStyle={{borderBottom: 'solid 3px black', paddingBottom: '1em'}}>
                                             <svg className="nav__menu-option-image" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                 viewBox="0 0 508 508" xmlSpace="preserve">
                                             <g>
@@ -64,8 +83,8 @@ class Nav extends React.Component{
                                             </g>
                                             </svg>
                                             <h2 className="nav__menu-option-text">about</h2> 
-                                        </Link>
-                                        <Link to="/portfolio/" className="nav__menu-option menu-options__portfolio" href="#">
+                                        </NavLink>
+                                        <NavLink to="/portfolio/" className="nav__menu-option menu-options__portfolio" href="#">
                                             <svg className="nav__menu-option-image" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                 viewBox="0 0 508 508" xmlSpace="preserve">
                                             <g>
@@ -105,8 +124,8 @@ class Nav extends React.Component{
                                             </g>
                                             </svg>
                                             <h2 className="nav__menu-option-text">portfolio</h2> 
-                                        </Link>
-                                        <Link to="/contact/" className="nav__menu-option menu-options__contact" href="#">
+                                        </NavLink>
+                                        <NavLink to="/contact/" className="nav__menu-option menu-options__contact" href="#">
                                             <svg className="nav__menu-option-image" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                 viewBox="0 0 508 508" xmlSpace="preserve">
                                             <g>
@@ -124,7 +143,7 @@ class Nav extends React.Component{
                                             </g>
                                             </svg>
                                             <h2 className="nav__menu-option-text">contact</h2> 
-                                        </Link>
+                                        </NavLink>
                                     </div>
                                 </div>
                             </div>

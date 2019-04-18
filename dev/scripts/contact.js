@@ -8,74 +8,73 @@ export default class Contact extends React.Component{
 
                     <li className="contact__item-wrapper">
                         <div className="contact__item">
-                            <a className="item__icon-wrapper" href="#">
-                                <img className="item__icon" src="/images/beard-map-icon.png" />
+                            <a className="item__icon-wrapper-href" href="#">
+                                <img className="item__icon" src="/images/phone-icon.png" />
                             </a>
                             <div className="contact__text-wrapper">
                                 <p className="enlightenment-directions enlightenment-directions_hidden">SWITCH</p>
                                 <a className="text__main" href="#">
                                     <h3 className="text__title">Phone</h3>
-                                    <p className="text__details">React, Firebase</p>
+                                    <p className="text__details">289-289-2890</p>
                                 </a>
-                                <a className="text__github" href="#">
+                                {/* <a className="text__github" href="#">
                                     <p>view on github</p>
-                                </a>
+                                </a> */}
                             </div>
                         </div>
                     </li>
 
                     <li className="contact__item-wrapper">
                         <div className="contact__item">
-                            <a className="item__icon-wrapper" href="#">
-                                <img className="item__icon" src="/images/mind-unwind-icon.png" />
+                            <a className="item__icon-wrapper-href" href="#">
+                                <img className="item__icon" src="/images/email-icon.png" />
                             </a>
                             <div className="contact__text-wrapper">
                                 <p className="enlightenment-directions enlightenment-directions_hidden">SECTION</p>
-                                <a className="text__main">
+                                <a className="text__main" href="#">
                                     <h3 className="text__title">Email</h3>
-                                    <p className="text__details">JavaScript, jQuery</p>
+                                    <p className="text__details">jasonpsmcfarlane@gmail.com</p>
                                 </a>
-                                <a className="text__github">
+                                {/* <a className="text__github">
                                     <p>view on github</p>
-                                </a>
+                                </a> */}
                             </div>
                         </div>
                     </li>
 
                     <li className="contact__item-wrapper">
                         <div className="contact__item">
-                            <a className="item__icon-wrapper" href="#">
-                                <img className="item__icon" src="/images/coursea-icon.png" />
+                            <a className="item__icon-wrapper-href" href="#">
+                                <img className="item__icon" src="/images/github-icon.png" />
                             </a>
                             <div className="contact__text-wrapper">
                                 <p className="enlightenment-directions enlightenment-directions_hidden">TO</p>
-                                <a className="text__main">
+                                <a className="text__main" href="#">
                                     <h3 className="text__title">GitHub</h3>
-                                    <p className="text__details">JavaScript, CSS</p>
+                                    <p className="text__details">github.com/McFarJ</p>
                                 </a>
-                                <a className="text__github">
+                                {/* <a className="text__github">
                                     <p>view on github</p>
-                                </a>
+                                </a> */}
                             </div>
                         </div>
                     </li>
 
                     <li className="contact__item-wrapper">
-                        <div className="contact__item">
-                            <a className="item__icon-wrapper" href="#">
-                                <img className="item__icon" src="/images/pfm-icon.png" />
-                            </a>
+                        <a className="contact__item contact-enlightenment-toggle" href="#" onClick={this.handleEnlightenClick}>
+                            <div className="item__icon-wrapper-plain">
+                                <img className="item__icon" src="/images/question-icon.png" />
+                            </div>
                             <div className="contact__text-wrapper">
                                 <p className="enlightenment-directions enlightenment-directions_hidden">ABOUT</p>
-                                <a className="text__main">
-                                    <h3 className="text__title">Basic desktop website</h3>
-                                    <p className="text__details">HTML, CSS</p>
-                                </a>
-                                <a className="text__github">
-                                    <p>view on github</p>
-                                </a>
-                            </div>
-                        </div>
+                                    <h3 className="text__title">Did you try</h3>
+                                    {/* <p className="text__details">HTML, CSS</p> */}
+                                    <div className="contact-enlightenment-toggle__wrapper">
+                                    <input className="contact-enlightenment-toggle__checkbox" type="checkbox" data-group="enlighten-checkboxes"/>
+                                    <h4 className="contact-enlightenment-toggle__text">Enlightenment mode</h4>
+                                    </div>
+                                    </div>
+                            </a>
                     </li>
 
                 </ul>
