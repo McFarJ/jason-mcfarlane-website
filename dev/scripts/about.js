@@ -1,18 +1,16 @@
 import React from 'react';
 
+// const textToEnlighten = ['.about-page__bio', '.skills__title', '.skills__icon', '.skills__name']
+
+
 export default class About extends React.Component{
+    
+    componentDidMount(){
+        if(this.props.enlightened){this.props.enlightenment()}
+        return
+    }
+
     render(){
-
-       
-            const textToEnlighten = ['.about-page__bio', '.skills__title', '.skills__icon', '.skills__name']
-            function enlightenment(){
-                textToEnlighten.forEach(function(x){
-                    let newClass = x.replace(/\./, "")
-                    let insertPoint = x.length -1;
-                    $(x).addClass([newClass.slice(0, insertPoint), '_enlightened', newClass.slice(insertPoint)].join(''))
-                })
-            
-
         return(
 
             <div className="about-page__wrapper">

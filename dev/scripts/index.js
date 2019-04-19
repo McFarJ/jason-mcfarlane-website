@@ -28,12 +28,15 @@ alert('working!')
 const textToEnlighten = ['.enlightenment-toggle__text', '.nav__title-main', '.nav__title-sub', '.nav__secret-letter', '.about-page__bio', '.skills__title', '.skills__icon', '.skills__name']
 
 function enlightenment(){
-    $('.wallpaper').addClass('wallpaper_enlightened');
     textToEnlighten.forEach(function(x){
         let newClass = x.replace(/\./, "")
         let insertPoint = x.length -1;
         $(x).addClass([newClass.slice(0, insertPoint), '_enlightened', newClass.slice(insertPoint)].join(''))
     })
+}
+
+function unenlightenment(){
+    return;
 }
 
 class Nav extends React.Component{
@@ -53,20 +56,16 @@ class Nav extends React.Component{
         if ($('.enlightenment-toggle__checkbox').prop('checked')){
             $('.enlightenment-toggle__checkbox').prop('checked', false);
             this.setState({enlightened: false});
-
+            unenlightenment();
+            $('.wallpaper').removeClass('wallpaper_enlightened');
             $('.button-foreground_enlightened').removeClass('button-foreground_enlightened')
-
-
-            
-
         }
         else {
             $('.enlightenment-toggle__checkbox').prop('checked', true);
             this.setState({enlightened: true});
-
+            enlightenment();
+            $('.wallpaper').addClass('wallpaper_enlightened');
             $('.button-foreground').addClass('button-foreground_enlightened')
-            
-
         }
         return;
     }
@@ -74,7 +73,6 @@ class Nav extends React.Component{
     handleCheckboxClick(){
         if ($('.enlightenment-toggle__checkbox').prop('checked')){
             $('.enlightenment-toggle__checkbox').prop('checked', false);
-            enlightenment();
         }
         else {
             $('.enlightenment-toggle__checkbox').prop('checked', true);
@@ -82,12 +80,9 @@ class Nav extends React.Component{
         return;
     }
 
-
     render(){
 
         return(
-       
-
             <Router>
                 <div>
                     <div className="wallpaper">
@@ -178,7 +173,7 @@ class Nav extends React.Component{
                                 </div>
                             </div>
                         </div>
-                        <Route path="/about/" component={About} />
+                        <Route path="/about/" render={(props) => <About {...props} enlightened={this.state.enlightened} enlightenment={enlightenment} />} />
                         <Route path="/portfolio/" component={Portfolio} />
                         <Route path="/contact/" render={(props) => <Contact {...props} handleEnlightenClick={this.handleEnlightenClick} />} />
                     </div>
