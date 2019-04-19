@@ -2,7 +2,19 @@ import React from 'react';
 
 export default class About extends React.Component{
     render(){
+
+       
+            const textToEnlighten = ['.about-page__bio', '.skills__title', '.skills__icon', '.skills__name']
+            function enlightenment(){
+                textToEnlighten.forEach(function(x){
+                    let newClass = x.replace(/\./, "")
+                    let insertPoint = x.length -1;
+                    $(x).addClass([newClass.slice(0, insertPoint), '_enlightened', newClass.slice(insertPoint)].join(''))
+                })
+            
+
         return(
+
             <div className="about-page__wrapper">
                 <div className="about-page">
                     <div className="about-page__bio-wrapper">
@@ -16,67 +28,67 @@ export default class About extends React.Component{
                             <ul className="skills__list">
                                 <li className="skills__skill">
                                     <div className="skills__icon-wrapper">
-                                        <i class="fab fa-react"></i>
+                                        <i className="skills__icon fab fa-react"></i>
                                     </div>
                                     <p className="skills__name">React</p>
                                 </li>
                                 <li className="skills__skill">
                                     <div className="skills__icon-wrapper">
-                                        <i class="fas fa-terminal"></i>
+                                        <i className="skills__icon fas fa-terminal"></i>
                                     </div>
                                     <p className="skills__name">jQuery</p>
                                 </li>
                                 <li className="skills__skill">
                                     <div className="skills__icon-wrapper">
-                                        <i class="fab fa-css3"></i>
+                                        <i className="skills__icon fab fa-css3"></i>
                                     </div>
                                     <p className="skills__name">CSS</p>
                                 </li>
                                 <li className="skills__skill">
                                     <div className="skills__icon-wrapper">
-                                        <i class="fab fa-node"></i>
+                                        <i className="skills__icon fab fa-node"></i>
                                     </div>
                                     <p className="skills__name">Node.js</p>
                                 </li>
                                 <li className="skills__skill">
                                     <div className="skills__icon-wrapper">
-                                        <i class="fab fa-html5"></i>
+                                        <i className="skills__icon fab fa-html5"></i>
                                     </div>
                                     <p className="skills__name">HTML</p>
                                 </li>
                                 <li className="skills__skill">
                                     <div className="skills__icon-wrapper">
-                                        <i class="fab fa-npm"></i>
+                                        <i className="skills__icon fab fa-npm"></i>
                                     </div>
                                     <p className="skills__name">NPM</p>
                                 </li>
                                 <li className="skills__skill">
                                     <div className="skills__icon-wrapper">
-                                        <i class="fab fa-js"></i>
+                                        <i className="skills__icon fab fa-js"></i>
                                     </div>
                                     <p className="skills__name">JavaScript</p>
                                 </li>
                                 <li className="skills__skill">
                                     <div className="skills__icon-wrapper">
-                                        <i class="fab fa-github"></i>
+                                        <i className="skills__icon fab fa-github"></i>
                                     </div>
                                     <p className="skills__name">Git</p>
                                 </li>
                                 <li className="skills__skill">
                                     <div className="skills__icon-wrapper">
-                                        <i class="fab fa-gulp"></i>
+                                        <i className="skills__icon fab fa-gulp"></i>
                                     </div>
                                     <p className="skills__name">Gulp</p>
                                 </li>
                                 <li className="skills__skill">
                                     <div className="skills__icon-wrapper">
-                                        <i class="fab fa-hotjar"></i>
+                                        <i className="skills__icon fab fa-hotjar"></i>
                                     </div>
                                     <p className="skills__name">Firebase</p>
                                 </li>
                                 <li className="skills__skill">
                                     <div className="skills__icon-wrapper">
-                                        <i class="fab fa-adobe"></i>
+                                        <i className="skills__icon fab fa-adobe"></i>
                                     </div>
                                     <p className="skills__name">Photoshop</p>
                                 </li>

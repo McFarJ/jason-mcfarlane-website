@@ -33,18 +33,21 @@ $seed-color9: hsla(12.5,77.3,55.1,1);
 
 a {color: $dark; text-decoration: none;}
 ul {list-style-type: none;}
+body {margin:0;}
 
-body {background-color: $light; margin:0;}
 .button1-background {fill: $color-accent1;}
 .button2-background {fill: $color-accent2;}
 .button3-background {fill: $color-accent3;}
-.button-foreground {fill: $dark;}
+// .button-foreground {fill: $dark;}
+.button-foreground_enlightened {fill: $light;}
 
 .page-content {position: absolute; top: 0; width: 100%;}
-.wallpaper {width: 100%; text-align: center;}
+.wallpaper {background-color: $light; width: 100%; text-align: center;}
+.wallpaper_enlightened {background-color: $dark;}
 .wallpaper__dandelion {height: 99vh; display: inline-block; fill: hsla(0,0,50,1); padding: 4vw 0 1vw 0;}
 
 .enlightenment-toggle__wrapper {width: 100vw; text-align: right; padding: 1.5vw 1.5vw 3.5vw 1.5vw;}
+.enlightenment-toggle:hover {cursor: pointer;}
 .enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox {
     display: inline-block;
     height:2vw;
@@ -52,6 +55,7 @@ body {background-color: $light; margin:0;}
 }
 input{width:25px;}
 .enlightenment-toggle__text, .contact-enlightenment-toggle__text {float: right; margin: 0}
+.enlightenment-toggle__text_enlightened {color: $light}
 
 .nav__wrapper {width: 100%;}
 .nav {
@@ -62,9 +66,12 @@ input{width:25px;}
 }
 .nav__title {display: inline-block; white-space: nowrap;}
 .nav__title-main {margin: 0; text-align: center;}
+.nav__title-main_enlightened {color: $light}
 .nav__title-sub {margin: -1vw 0 0 0; text-align: center;}
+.nav__title-sub_enlightened{color: $light;}
 .nav__title-wrapper {display: inline-block;}
 .nav__secret-letter {padding: 0.75rem; margin: -0.75rem;}
+.nav__secret-letter {color: $light;}
 
 .nav__menu-options-wrapper {display: inline-block}
 .nav__menu-options {display: inline-flex;}
@@ -109,24 +116,21 @@ input{width:25px;}
 
 
 
-
-
-
-
-
-
-
 .about-page__wrapper {width:100%; padding: 0 4vw;}
 .about-page {width:100%; display: flex;}
 .about-page__bio-wrapper {width: 50%}
 .about-page__bio {width: 100%;}
+.about-page__bio_enlightened {color: $light}
 .about-page__seeds-img {width: 100%;}
 .about-page__skills-wrapper {width: 50%;}
 .skills__title {text-align: center;}
+.skills__title_enlightened {color: $light;}
 .about-page__skills-list {display: flex; flex-wrap: wrap;}
 .skills__skill{display:inline-block; width: 50%;}
 .skills__icon-wrapper{display: inline-block;}
+.skills__icon_enlightened{color: $light}
 .skills__name{display:inline-block; padding-left: 0.5vw;}
+.skills__name_enlightened{color: $light;}
 
 .contact__wrapper, .portfolio__wrapper {width: 100%; text-align: center;}
 .contact, .portfolio {width: 75%; display: inline-flex; flex-wrap: wrap; margin: 0 auto;}

@@ -5,34 +5,89 @@ import Wallpaper from './wallpaper.js';
 import About from './about.js';
 import Portfolio from './portfolio.js';
 import Contact from './contact.js';
-// import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Button1 } from './svgs.js';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
-
 
 alert('working!')
 
+// $(document).on('change', 'input[type="checkbox"][data-group]', function(event) {
+//     // The checkbox that was clicked
+//     var actor = $(this);
+//     // The status of that checkbox
+//     var checked = actor.prop('checked');
+//     // The group that checkbox is in
+//     var group = actor.data('group');
+//     // All checkboxes of that group
+//     var checkboxes = $('input[type="checkbox"][data-group="' + group + '"]');
+//     // All checkboxes excluding the one that was clicked
+//     var otherCheckboxes = checkboxes.not(actor);
+//     // Check those checkboxes
+//     otherCheckboxes.prop('checked', checked);
+//   });
 
+const textToEnlighten = ['.enlightenment-toggle__text', '.nav__title-main', '.nav__title-sub', '.nav__secret-letter', '.about-page__bio', '.skills__title', '.skills__icon', '.skills__name']
 
-$(document).on('click', 'input[type="checkbox"][data-group]', function(event) {
-    // The checkbox that was clicked
-    var actor = $(this);
-    // The status of that checkbox
-    var checked = actor.prop('checked');
-    // The group that checkbox is in
-    var group = actor.data('group');
-    // All checkboxes of that group
-    var checkboxes = $('input[type="checkbox"][data-group="' + group + '"]');
-    // All checkboxes excluding the one that was clicked
-    var otherCheckboxes = checkboxes.not(actor);
-    // Check those checkboxes
-    otherCheckboxes.prop('checked', checked);
-  });
-  
-
+function enlightenment(){
+    $('.wallpaper').addClass('wallpaper_enlightened');
+    textToEnlighten.forEach(function(x){
+        let newClass = x.replace(/\./, "")
+        let insertPoint = x.length -1;
+        $(x).addClass([newClass.slice(0, insertPoint), '_enlightened', newClass.slice(insertPoint)].join(''))
+    })
+}
 
 class Nav extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            enlightened: false
+        }
+
+        this.handleEnlightenClick = this.handleEnlightenClick.bind(this);
+        this.handleCheckboxClick = this.handleCheckboxClick.bind(this);
+    }
+
+    handleEnlightenClick(){
+        console.log('running handleEnlightenClick')
+
+        if ($('.enlightenment-toggle__checkbox').prop('checked')){
+            $('.enlightenment-toggle__checkbox').prop('checked', false);
+            this.setState({enlightened: false});
+
+            $('.button-foreground_enlightened').removeClass('button-foreground_enlightened')
+
+
+            
+
+        }
+        else {
+            $('.enlightenment-toggle__checkbox').prop('checked', true);
+            this.setState({enlightened: true});
+
+            $('.button-foreground').addClass('button-foreground_enlightened')
+            
+
+        }
+        return;
+    }
+
+    handleCheckboxClick(){
+        if ($('.enlightenment-toggle__checkbox').prop('checked')){
+            $('.enlightenment-toggle__checkbox').prop('checked', false);
+            enlightenment();
+        }
+        else {
+            $('.enlightenment-toggle__checkbox').prop('checked', true);
+        }
+        return;
+    }
+
+
     render(){
+
         return(
+       
+
             <Router>
                 <div>
                     <div className="wallpaper">
@@ -41,7 +96,7 @@ class Nav extends React.Component{
                     <div className="page-content">
                         <div className="enlightenment-toggle__wrapper">
                             <a className="enlightenment-toggle" onClick={this.handleEnlightenClick}>
-                                <input className="enlightenment-toggle__checkbox" type="checkbox" data-group="enlighten-checkboxes"/>
+                                <input className="enlightenment-toggle__checkbox" type="checkbox" data-group="enlighten-checkboxes" onClick={this.handleCheckboxClick} />
                                 <h4 className="enlightenment-toggle__text">Enlightenment mode</h4>
                             </a>
                         </div>
@@ -56,32 +111,7 @@ class Nav extends React.Component{
                                 <div className="nav__menu-options-wrapper">
                                     <div className="nav__menu-options">
                                         <NavLink to="/about/" className="nav__menu-option menu-options__about" activeStyle={{borderBottom: 'solid 3px black', paddingBottom: '1em'}}>
-                                            <svg className="nav__menu-option-image" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                viewBox="0 0 508 508" xmlSpace="preserve">
-                                            <g>
-                                                <path className="button1-background" d="M401.5,0h-295C47.8,0,0,47.8,0,106.5v295C0,460.2,47.8,508,106.5,508h295c58.7,0,106.5-47.8,106.5-106.5v-295C508,47.8,460.2,0,401.5,0z
-                                                    M188.5,221.2c-18.1,0-32.8-14.7-32.8-32.8s14.7-32.8,32.8-32.8s32.8,14.7,32.8,32.8S206.5,221.2,188.5,221.2z
-                                                    M319.5,221.2c-18.1,0-32.8-14.7-32.8-32.8s14.7-32.8,32.8-32.8c18.1,0,32.8,14.7,32.8,32.8S337.6,221.2,319.5,221.2z
-                                                    M188.5,352.3c-18.1,0-32.8-14.7-32.8-32.8c0-18.1,14.7-32.8,32.8-32.8s32.8,14.7,32.8,32.8C221.2,337.6,206.5,352.3,188.5,352.3z
-                                                    M319.5,352.3c-18.1,0-32.8-14.7-32.8-32.8c0-18.1,14.7-32.8,32.8-32.8c18.1,0,32.8,14.7,32.8,32.8C352.3,337.6,337.6,352.3,319.5,352.3z"/>
-                                                <path className="button-foreground" d="M401.5,0h-295C47.8,0,0,47.8,0,106.5v295C0,460.2,47.8,508,106.5,508h295c58.7,0,106.5-47.8,106.5-106.5v-295
-                                                    C508,47.8,460.2,0,401.5,0z M491.6,401.5c0,49.7-40.4,90.1-90.1,90.1h-295c-49.7,0-90.1-40.4-90.1-90.1v-295
-                                                    c0-49.7,40.4-90.1,90.1-90.1h295c49.7,0,90.1,40.4,90.1,90.1V401.5z"/>
-                                                <path className="button-foreground" d="M401.5,49.2h-295c-31.6,0-57.4,25.7-57.4,57.4v295c0,31.6,25.7,57.4,57.4,57.4h295c31.6,0,57.4-25.7,57.4-57.4v-295
-                                                    C458.8,74.9,433.1,49.2,401.5,49.2z M442.5,401.5c0,22.6-18.4,41-41,41h-295c-22.6,0-41-18.4-41-41v-295c0-22.6,18.4-41,41-41h295
-                                                    c22.6,0,41,18.4,41,41V401.5z"/>
-                                                <path className="button-foreground" d="M188.5,139.3c-27.1,0-49.2,22.1-49.2,49.2s22.1,49.2,49.2,49.2s49.2-22.1,49.2-49.2S215.6,139.3,188.5,139.3z M188.5,221.2
-                                                    c-18.1,0-32.8-14.7-32.8-32.8s14.7-32.8,32.8-32.8s32.8,14.7,32.8,32.8S206.5,221.2,188.5,221.2z"/>
-                                                <path className="button-foreground y" d="M319.5,139.3c-27.1,0-49.2,22.1-49.2,49.2s22.1,49.2,49.2,49.2s49.2-22.1,49.2-49.2S346.7,139.3,319.5,139.3z M319.5,221.2
-                                                    c-18.1,0-32.8-14.7-32.8-32.8s14.7-32.8,32.8-32.8c18.1,0,32.8,14.7,32.8,32.8S337.6,221.2,319.5,221.2z"/>
-                                                <path className="button-foreground" d="M188.5,270.4c-27.1,0-49.2,22.1-49.2,49.2s22.1,49.2,49.2,49.2s49.2-22.1,49.2-49.2C237.6,292.4,215.6,270.4,188.5,270.4z
-                                                    M188.5,352.3c-18.1,0-32.8-14.7-32.8-32.8c0-18.1,14.7-32.8,32.8-32.8s32.8,14.7,32.8,32.8C221.2,337.6,206.5,352.3,188.5,352.3z"
-                                                    />
-                                                <path className="button-foreground" d="M319.5,270.4c-27.1,0-49.2,22.1-49.2,49.2s22.1,49.2,49.2,49.2s49.2-22.1,49.2-49.2C368.7,292.4,346.7,270.4,319.5,270.4z
-                                                    M319.5,352.3c-18.1,0-32.8-14.7-32.8-32.8c0-18.1,14.7-32.8,32.8-32.8c18.1,0,32.8,14.7,32.8,32.8
-                                                    C352.3,337.6,337.6,352.3,319.5,352.3z"/>
-                                            </g>
-                                            </svg>
+                                            <Button1 enlightened={this.state.enlightened} />
                                             <h2 className="nav__menu-option-text">about</h2> 
                                         </NavLink>
                                         <NavLink to="/portfolio/" className="nav__menu-option menu-options__portfolio" href="#">
@@ -150,7 +180,7 @@ class Nav extends React.Component{
                         </div>
                         <Route path="/about/" component={About} />
                         <Route path="/portfolio/" component={Portfolio} />
-                        <Route path="/contact/" component={Contact} />
+                        <Route path="/contact/" render={(props) => <Contact {...props} handleEnlightenClick={this.handleEnlightenClick} />} />
                     </div>
                 </div>
             </Router>
