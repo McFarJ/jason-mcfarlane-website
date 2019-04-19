@@ -1,4 +1,5 @@
 import React from 'react';
+import { DandelionSeeds } from './svgs.js';
 
 // const textToEnlighten = ['.about-page__bio', '.skills__title', '.skills__icon', '.skills__name']
 
@@ -17,7 +18,7 @@ export default class About extends React.Component{
                 <div className="about-page">
                     <div className="about-page__bio-wrapper">
                         <p className="about-page__bio">Recovering actor. Studied web develo<span className="bio__hidden-code">p</span>ment at Hacke<span className="bio__hidden-code">r</span>You in Toronto. Curr<span className="bio__hidden-code">e</span>nt related intere<span className="bio__hidden-code">s</span>t<span className="bio__hidden-code">s</span> include bl<span className="bio__hidden-code">o</span>ckchai<span className="bio__hidden-code">n</span>, GraphQL, Adobe, and OBS.  Curren<span className="bio__hidden-code">t</span> unrelated interests include swimming, straig<span className="bio__hidden-code">h</span>t razors, calisth<span className="bio__hidden-code">e</span>tics, and gr<span className="bio__hidden-code">e</span>asy hair-styling products.</p>
-                        <img className="about-page__seeds-img" src="/images/svgs/dandelion-seeds.svg" />
+                        <DandelionSeeds />
                     </div>
                     
                     <div className="about-page__skills-wrapper">
