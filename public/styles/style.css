@@ -9,7 +9,10 @@
   font-style: normal; }
 
 .nav__title-main, .nav__title-sub, .enlightenment-toggle__text, .nav__menu-option-text, .skills__title, .contact-enlightenment-toggle__text {
-  font-family: 'kraut-type-a-fuckregular'; }
+  font-family: 'kraut-type-a-fuckregular', Sans-Serif; }
+
+.about-page__bio, .skills__name, .text__title, .text__details, .text__github, .enlightenment-directions {
+  font-family: 'Roboto Slab', serif; }
 
 .enlightenment-toggle__text, .contact-enlightenment-toggle__text {
   font-size: 1.9vw; }
@@ -126,10 +129,18 @@ input {
 
 .nav__secret-letter {
   padding: 0.75rem;
-  margin: -0.75rem; }
+  margin: -0.75rem;
+  cursor: default;
+  pointer-events: none; }
 
 .nav__secret-letter_enlightened {
   color: white; }
+
+.nav__secret-letter-functional_enlightened {
+  color: yellow;
+  text-shadow: 0px 0px 6px #08c3fd;
+  cursor: pointer;
+  pointer-events: auto; }
 
 .nav__menu-options-wrapper {
   display: inline-block; }
@@ -151,27 +162,18 @@ input {
 .nav__menu-option-image {
   width: 10vw; }
 
+.game-over-menu-option-image_enlightened {
+  display: none; }
+
 .nav__menu-option-text {
   text-align: center;
   margin: 1vw 0; }
 
-.q {
-  fill: #287750; }
+.nav__menu-option-text_enlightened {
+  color: white; }
 
-.w {
-  fill: pink; }
-
-.e {
-  fill: orange; }
-
-.r {
-  fill: green; }
-
-.t {
-  fill: blue; }
-
-.x {
-  fill: grey; }
+.game-over-menu-option-text_enlightened {
+  display: none; }
 
 .about-page__wrapper {
   width: 100%;
@@ -190,10 +192,38 @@ input {
   width: 100%; }
 
 .about-page__bio_enlightened {
-  color: white; }
+  color: #4d4d4d; }
+
+.game-over-bio_enlightened {
+  visibility: hidden; }
+
+.bio__hidden-code {
+  color: black;
+  text-shadow: none; }
+
+.bio__hidden-code_enlightened {
+  color: limegreen;
+  text-shadow: 0px 0px 5px #cad178; }
+
+.bio__hidden-cap {
+  text-transform: none; }
+
+.bio__hidden-cap_enlightened {
+  text-transform: uppercase; }
+
+.bio__hidden-special {
+  font-family: "Roboto Slab", serif; }
+
+.bio__hidden-special_enlightened {
+  font-family: 'kraut-type-a-fuckregular', Sans-Serif;
+  color: yellow;
+  text-shadow: 0px 0px 6px #08c3fd; }
 
 .about-page__seeds-img {
   width: 100%; }
+
+.about-page__seeds-img_enlightened {
+  fill: white; }
 
 .about-page__skills-wrapper {
   width: 50%; }
@@ -228,6 +258,9 @@ input {
 .skills__name_enlightened {
   color: white; }
 
+.game-over-skills-wrapper_enlightened {
+  visibility: hidden; }
+
 .contact__wrapper, .portfolio__wrapper {
   width: 100%;
   text-align: center; }
@@ -253,5 +286,26 @@ input {
 .item__icon {
   width: 10vw; }
 
-.enlightenment-directions_hidden {
+.item__icon_enlightened {
+  -webkit-filter: drop-shadow(0 0 10px white);
+  filter: drop-shadow(0 0 7px white); }
+
+.text__main_enlightened {
+  display: none; }
+
+.text__title-toggle_enlightened {
+  display: none; }
+
+.contact-enlightenment-toggle__wrapper_enlightened {
+  display: none; }
+
+.enlightenment-directions {
+  display: none;
+  color: red;
+  text-shadow: 0 0 7px white; }
+
+.enlightenment-directions_enlightened {
+  display: block; }
+
+.TEST_clicked {
   display: none; }

@@ -7,6 +7,7 @@ import About from './about.js';
 import Portfolio from './portfolio.js';
 import Contact from './contact.js';
 import { Button1, Button2, Button3 } from './svgs.js';
+import { ClosedCookie as Cookie1, ClosedCookie as Cookie2, ClosedCookie as Cookie3 } from './svgs.js'
 
 alert('working!')
 
@@ -25,7 +26,7 @@ alert('working!')
 //     otherCheckboxes.prop('checked', checked);
 //   });
 
-const textToEnlighten = ['.enlightenment-toggle__text', '.nav__title-main', '.nav__title-sub', '.nav__secret-letter', '.about-page__bio', '.skills__title', '.skills__icon', '.skills__name']
+const textToEnlighten = ['.enlightenment-toggle__text', '.nav__title-main', '.nav__title-sub', '.nav__secret-letter', '.nav__secret-letter-functional', '.nav__menu-option-text', '.about-page__bio', '.skills__title', '.skills__icon', '.skills__name', '.about-page__seeds-img', '.bio__hidden-code', '.bio__hidden-cap', '.bio__hidden-special', '.item__icon', '.text__main', '.enlightenment-directions', '.text__title-toggle', '.contact-enlightenment-toggle__wrapper']
 
 function enlightenment(){
     textToEnlighten.forEach(function(x){
@@ -44,7 +45,10 @@ function unenlightenment(){
 
     $('[class$="_enlightened"]').each(function(index,item){
         console.log(typeof item)
-        $(this).removeClass($(this).attr('class').match(/\S+_enlightened\b/)[0])
+        $(this).removeClass($(this).attr('class').match(/\S+_enlightened\b/))
+        $('[class$="_enlightened"]').each(function(index,item){
+            $(this).removeClass($(this).attr('class').match(/\S+_enlightened\b/))
+        })
     })
         
 
@@ -54,11 +58,13 @@ class Nav extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            enlightened: false
+            enlightened: false,
+            gameOver: false
         }
 
         this.handleEnlightenClick = this.handleEnlightenClick.bind(this);
         this.handleCheckboxClick = this.handleCheckboxClick.bind(this);
+        this.handleSecretLetterClick = this.handleSecretLetterClick.bind(this);
     }
 
     handleEnlightenClick(){
@@ -89,6 +95,13 @@ class Nav extends React.Component{
         return;
     }
 
+    handleSecretLetterClick(){
+        $('.about-page__bio').addClass('game-over-bio game-over-bio_enlightened')
+        $('.about-page__skills-wrapper').addClass('game-over-skills-wrapper game-over-skills-wrapper_enlightened')
+        $('.nav__menu-option-image').addClass('game-over-menu-option-image game-over-menu-option-image_enlightened')
+        $('.nav__menu-option-text').addClass('game-over-menu-option-text game-over-menu-option-text_enlightened')
+    }
+
     render(){
         return(
             <Router>
@@ -107,21 +120,24 @@ class Nav extends React.Component{
                             <div className="nav">
                                 <div className="nav__title-wrapper">
                                     <div className="nav__title">
-                                        <h1 className="nav__title-main">Jason McFarlan<a className="nav__secret-letter" href="#">e</a></h1>
+                                        <h1 className="nav__title-main">Jason McFarlan<a className="nav__secret-letter" href="#" onClick={this.handleSecretLetterClick}>e</a></h1>
                                         <h2 className="nav__title-sub">for web development</h2>
                                     </div>
                                 </div>
                                 <div className="nav__menu-options-wrapper">
                                     <div className="nav__menu-options">
                                         <NavLink to="/about/" className="nav__menu-option menu-options__about" activeStyle={{borderBottom: 'solid 3px black', paddingBottom: '1em'}}>
+                                            <Cookie1 />
                                             <Button1 enlightened={this.state.enlightened} />
                                             <h2 className="nav__menu-option-text">about</h2> 
                                         </NavLink>
                                         <NavLink to="/portfolio/" className="nav__menu-option menu-options__portfolio" href="#">
+                                            <Cookie2 />
                                             <Button2 enlightened={this.state.enlightened} />
                                             <h2 className="nav__menu-option-text">portfolio</h2> 
                                         </NavLink>
                                         <NavLink to="/contact/" className="nav__menu-option menu-options__contact" href="#">
+                                            <Cookie3 />
                                             <Button3 enlightened={this.state.enlightened} />
                                             <h2 className="nav__menu-option-text">contact</h2> 
                                         </NavLink>
@@ -129,9 +145,10 @@ class Nav extends React.Component{
                                 </div>
                             </div>
                         </div>
-                        <Route path="/about/" render={(props) => <About {...props} enlightened={this.state.enlightened} enlightenment={enlightenment} />} />
-                        <Route path="/portfolio/" component={Portfolio} />
-                        <Route path="/contact/" render={(props) => <Contact {...props} handleEnlightenClick={this.handleEnlightenClick} />} />
+                        <Route path="/about/" render={(props) => <About {...props} enlightened={this.state.enlightened} enlightenment={enlightenment} gameOver={this.state.gameOver} />} />
+                        <Route path="/portfolio/" render={(props) => <Portfolio {...props} enlightened={this.state.enlightened} enlightenment={enlightenment} />} />
+                        <Route path="/contact/" render={(props) => <Contact {...props} enlightened={this.state.enlightened} handleEnlightenClick={this.handleEnlightenClick} />} />
+                        <Cookie1 />
                     </div>
                 </div>
             </Router>

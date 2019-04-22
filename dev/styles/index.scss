@@ -24,7 +24,8 @@ $seed-color7: hsla(52.5,78.6,57.8,1);
 $seed-color8: hsla(212.4,31.2,68.6,1);
 $seed-color9: hsla(12.5,77.3,55.1,1);
 
-.nav__title-main, .nav__title-sub, .enlightenment-toggle__text, .nav__menu-option-text, .skills__title, .contact-enlightenment-toggle__text {font-family: 'kraut-type-a-fuckregular';}
+.nav__title-main, .nav__title-sub, .enlightenment-toggle__text, .nav__menu-option-text, .skills__title, .contact-enlightenment-toggle__text {font-family: 'kraut-type-a-fuckregular', Sans-Serif;}
+.about-page__bio, .skills__name, .text__title, .text__details, .text__github, .enlightenment-directions {font-family: 'Roboto Slab', serif;}
 .enlightenment-toggle__text, .contact-enlightenment-toggle__text {font-size: 1.9vw;}
 .nav__title-main {font-size: 5.5vw;}
 .nav__title-sub {font-size: 2.9vw;}
@@ -70,8 +71,9 @@ input{width:25px;}
 .nav__title-sub {margin: -1vw 0 0 0; text-align: center;}
 .nav__title-sub_enlightened{color: $light;}
 .nav__title-wrapper {display: inline-block;}
-.nav__secret-letter {padding: 0.75rem; margin: -0.75rem;}
+.nav__secret-letter {padding: 0.75rem; margin: -0.75rem; cursor: default; pointer-events: none;}
 .nav__secret-letter_enlightened {color: $light;}
+.nav__secret-letter-functional_enlightened {color: hsla(60,100,50,1); text-shadow: 0px 0px 6px hsla(194,98,51,1); cursor: pointer; pointer-events: auto;}
 
 .nav__menu-options-wrapper {display: inline-block}
 .nav__menu-options {display: inline-flex;}
@@ -79,49 +81,25 @@ input{width:25px;}
 .nav__menu-option:first-child {margin: 0 1vw 0 0;}
 .nav__menu-option:last-child {margin: 0 0 0 1vw;}
 .nav__menu-option-image {width: 10vw;}
+.game-over-menu-option-image_enlightened {display: none;}
 .nav__menu-option-text {text-align: center; margin: 1vw 0;}
-
-// .a {fill: orange}
-// .s {fill: white}
-// .d {fill: limegreen}
-// .f {fill: limegreen}
-// .g {fill: limegreen}
-// .h {fill: limegreen}
-// .j {fill: limegreen}
-// .k {fill: limegreen}
-// .l {fill: limegreen}
-
-// .z {fill: limegreen}
-// .x {fill: limegreen}
-// .c {fill: limegreen}
-// .v {fill: limegreen}
-// .b {fill: limegreen}
-// .n {fill: limegreen}
-// .m {fill: limegreen}
-
-// .wp-1 {fill: limegreen}
-
-// .wp-2 {fill: pink}
-
-.q {fill: $color-accent2}
-.w{fill: pink}
-.e{fill: orange}
-.r{fill: green}
-.t{fill: blue}
-
-.x{fill: grey}
-
-
-
-
-
+.nav__menu-option-text_enlightened {color: $light;}
+.game-over-menu-option-text_enlightened {display: none;}
 
 .about-page__wrapper {width:100%; padding: 0 4vw;}
 .about-page {width:100%; display: flex;}
 .about-page__bio-wrapper {width: 50%}
 .about-page__bio {width: 100%;}
-.about-page__bio_enlightened {color: $light}
+.about-page__bio_enlightened {color: darken( $light, 70% )}
+.game-over-bio_enlightened {visibility: hidden;}
+.bio__hidden-code {color: $dark; text-shadow: none;}
+.bio__hidden-code_enlightened {color: hsla(120,61,50,1); text-shadow: 0px 0px 5px $seed-color6;}
+.bio__hidden-cap {text-transform: none;}
+.bio__hidden-cap_enlightened {text-transform: uppercase;}
+.bio__hidden-special {font-family: "Roboto Slab", serif;}
+.bio__hidden-special_enlightened {font-family: 'kraut-type-a-fuckregular', Sans-Serif; color: hsla(60,100,50,1); text-shadow: 0px 0px 6px hsla(194,98,51,1);}
 .about-page__seeds-img {width: 100%;}
+.about-page__seeds-img_enlightened {fill: $light;}
 .about-page__skills-wrapper {width: 50%;}
 .skills__title {text-align: center;}
 .skills__title_enlightened {color: $light;}
@@ -131,28 +109,20 @@ input{width:25px;}
 .skills__icon_enlightened{color: $light}
 .skills__name{display:inline-block; padding-left: 0.5vw;}
 .skills__name_enlightened{color: $light;}
+.game-over-skills-wrapper_enlightened {visibility: hidden;}
 
 .contact__wrapper, .portfolio__wrapper {width: 100%; text-align: center;}
 .contact, .portfolio {width: 75%; display: inline-flex; flex-wrap: wrap; margin: 0 auto;}
 .contact__item-wrapper, .portfolio__item-wrapper {width: 50%; text-align: left;}
 .contact__item, .portfolio__item {display: flex;}
 .item__icon {width: 10vw;}
+.item__icon_enlightened {-webkit-filter: drop-shadow(0 0 10px $light); filter: drop-shadow(0 0 7px $light);}
+.text__main_enlightened {display: none;}
+.text__title-toggle_enlightened {display: none;}
+.contact-enlightenment-toggle__wrapper_enlightened {display: none;}
+.enlightenment-directions {display: none; color: red; text-shadow: 0 0 7px $light;}
+.enlightenment-directions_enlightened {display: block;}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.enlightenment-directions_hidden {display: none;}
+.TEST_clicked {display:none;}
