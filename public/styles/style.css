@@ -9,10 +9,14 @@
   font-style: normal; }
 
 .nav__title-main, .nav__title-sub, .enlightenment-toggle__text, .nav__menu-option-text, .skills__title, .contact-enlightenment-toggle__text {
-  font-family: 'kraut-type-a-fuckregular', Sans-Serif; }
+  font-family: 'kraut-type-a-fuckregular', Sans-Serif;
+  -webkit-filter: drop-shadow(0 0 10px white);
+  filter: drop-shadow(0 0 7px white); }
 
-.about-page__bio, .skills__name, .text__title, .text__details, .text__github, .enlightenment-directions {
-  font-family: 'Roboto Slab', serif; }
+.about-page__bio, .skills__name, .text__title, .text__details, .text__github, .enlightenment-directions, .game-over-bio, .game-over-bio_enlightened {
+  font-family: 'Roboto Slab', serif;
+  -webkit-filter: drop-shadow(0 0 10px white);
+  filter: drop-shadow(0 0 7px white); }
 
 .enlightenment-toggle__text, .contact-enlightenment-toggle__text {
   font-size: 1.9vw; }
@@ -26,8 +30,15 @@
 .nav__menu-option-text {
   font-size: 2.9vw; }
 
-.about-page__bio, .skills__skill {
+.about-page__bio, .game-over-bio, .game-over-bio_enlightened, .skills__skill {
   font-size: 1.75vw; }
+
+.skills__title {
+  font-size: 3.3vw; }
+
+.enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox, .skills__icon, .nav__menu-option-image, .about-page__seeds-img, .item__icon {
+  -webkit-filter: drop-shadow(0 0 10px white);
+  filter: drop-shadow(0 0 7px white); }
 
 a {
   color: black;
@@ -51,14 +62,22 @@ body {
 .button-foreground_enlightened {
   fill: white; }
 
+.wrapper {
+  height: 100vh; }
+
 .page-content {
-  position: absolute;
-  top: 0;
-  width: 100%; }
+  width: 100%;
+  margin-top: 0; }
 
 .wallpaper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -999;
   background-color: white;
-  width: 100%;
+  height: 100%;
   text-align: center; }
 
 .wallpaper_enlightened {
@@ -68,7 +87,7 @@ body {
   height: 99vh;
   display: inline-block;
   fill: gray;
-  padding: 4vw 0 1vw 0; }
+  padding: 4vh 0 1vh 0; }
 
 .enlightenment-toggle__wrapper {
   width: 100vw;
@@ -80,8 +99,9 @@ body {
 
 .enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox {
   display: inline-block;
-  height: 2vw;
-  width: 2vw; }
+  height: 1.5vw;
+  width: 1.5vw;
+  margin: 0.5vw 0.5vw auto auto; }
 
 input {
   width: 25px; }
@@ -104,7 +124,10 @@ input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 4vw; }
+  padding: 0 8vw 2vh 8vw; }
+
+.nav__menu-options, .about-page__skills-wrapper {
+  padding-left: 12vw; }
 
 .nav__title {
   display: inline-block;
@@ -118,14 +141,15 @@ input {
   color: white; }
 
 .nav__title-sub {
-  margin: -1vw 0 0 0;
+  margin: -1vh 0 0 0;
   text-align: center; }
 
 .nav__title-sub_enlightened {
   color: white; }
 
 .nav__title-wrapper {
-  display: inline-block; }
+  display: inline-block;
+  width: 50%; }
 
 .nav__secret-letter {
   padding: 0.75rem;
@@ -143,12 +167,15 @@ input {
   pointer-events: auto; }
 
 .nav__menu-options-wrapper {
-  display: inline-block; }
+  display: inline-block;
+  width: 50%;
+  text-align: center; }
 
 .nav__menu-options {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
-  display: inline-flex; }
+  display: inline-flex;
+  height: 14vw; }
 
 .nav__menu-option {
   margin: 0 1vw; }
@@ -160,14 +187,19 @@ input {
   margin: 0 0 0 1vw; }
 
 .nav__menu-option-image {
-  width: 10vw; }
+  width: 8vw; }
+
+.nav__menu-option-image2 {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding-left: 0.7vw; }
 
 .game-over-menu-option-image_enlightened {
   display: none; }
 
 .nav__menu-option-text {
   text-align: center;
-  margin: 1vw 0; }
+  margin: 1vw 0 0 0; }
 
 .nav__menu-option-text_enlightened {
   color: white; }
@@ -175,9 +207,12 @@ input {
 .game-over-menu-option-text_enlightened {
   display: none; }
 
+.nav__cookie {
+  z-index: 999; }
+
 .about-page__wrapper {
   width: 100%;
-  padding: 0 4vw; }
+  padding: 0 8vw; }
 
 .about-page {
   width: 100%;
@@ -192,7 +227,9 @@ input {
   width: 100%; }
 
 .about-page__bio_enlightened {
-  color: #4d4d4d; }
+  color: #4d4d4d;
+  -webkit-filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); }
 
 .game-over-bio_enlightened {
   visibility: hidden; }
@@ -203,7 +240,7 @@ input {
 
 .bio__hidden-code_enlightened {
   color: limegreen;
-  text-shadow: 0px 0px 5px #cad178; }
+  text-shadow: 0px 0px 7px #cad178; }
 
 .bio__hidden-cap {
   text-transform: none; }
@@ -228,8 +265,12 @@ input {
 .about-page__skills-wrapper {
   width: 50%; }
 
+.skills__list {
+  padding: 0; }
+
 .skills__title {
-  text-align: center; }
+  text-align: center;
+  margin-top: 10vh; }
 
 .skills__title_enlightened {
   color: white; }
@@ -246,14 +287,16 @@ input {
   width: 50%; }
 
 .skills__icon-wrapper {
-  display: inline-block; }
+  display: inline-block;
+  width: 2vw; }
 
 .skills__icon_enlightened {
   color: white; }
 
 .skills__name {
   display: inline-block;
-  padding-left: 0.5vw; }
+  padding-left: 0.5vh;
+  margin: -2vh 0; }
 
 .skills__name_enlightened {
   color: white; }
@@ -284,11 +327,11 @@ input {
   display: flex; }
 
 .item__icon {
-  width: 10vw; }
+  width: 8vw; }
 
 .item__icon_enlightened {
   -webkit-filter: drop-shadow(0 0 10px white);
-  filter: drop-shadow(0 0 7px white); }
+  filter: drop-shadow(0 0 10px white); }
 
 .text__main_enlightened {
   display: none; }
@@ -307,5 +350,51 @@ input {
 .enlightenment-directions_enlightened {
   display: block; }
 
-.TEST_clicked {
+.nav__cookie {
   display: none; }
+
+.nav__cookie_enlightened {
+  display: block;
+  width: 9vw;
+  -webkit-transition: 1s;
+  transition: 1s; }
+
+.nav__cookie_enlightened:hover {
+  -webkit-filter: drop-shadow(0 0 10px white);
+  filter: drop-shadow(0 0 7px white);
+  -webkit-transition: 1s;
+  transition: 1s; }
+
+.cookie-background {
+  fill: rgba(41, 37, 20, 0.5); }
+
+.cookie-foreground {
+  fill: orange; }
+
+.cookie-fortune {
+  fill: pink; }
+
+.xx {
+  fill: white; }
+
+.cookie-outline {
+  fill: seagreen; }
+
+.cookie-open {
+  display: none; }
+
+@media only screen and (max-width: 1465px) {
+  .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .page-content {
+    margin-top: 0; } }
+
+@media only screen and (max-width: 600px) {
+  .enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox {
+    margin: auto; } }

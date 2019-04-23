@@ -24,13 +24,18 @@ $seed-color7: hsla(52.5,78.6,57.8,1);
 $seed-color8: hsla(212.4,31.2,68.6,1);
 $seed-color9: hsla(12.5,77.3,55.1,1);
 
-.nav__title-main, .nav__title-sub, .enlightenment-toggle__text, .nav__menu-option-text, .skills__title, .contact-enlightenment-toggle__text {font-family: 'kraut-type-a-fuckregular', Sans-Serif;}
-.about-page__bio, .skills__name, .text__title, .text__details, .text__github, .enlightenment-directions {font-family: 'Roboto Slab', serif;}
+@mixin glow {-webkit-filter: drop-shadow(0 0 10px $light); filter: drop-shadow(0 0 7px $light);}
+
+.nav__title-main, .nav__title-sub, .enlightenment-toggle__text, .nav__menu-option-text, .skills__title, .contact-enlightenment-toggle__text {font-family: 'kraut-type-a-fuckregular', Sans-Serif; @include glow}
+.about-page__bio, .skills__name, .text__title, .text__details, .text__github, .enlightenment-directions, .game-over-bio, .game-over-bio_enlightened {font-family: 'Roboto Slab', serif; @include glow}
 .enlightenment-toggle__text, .contact-enlightenment-toggle__text {font-size: 1.9vw;}
 .nav__title-main {font-size: 5.5vw;}
 .nav__title-sub {font-size: 2.9vw;}
 .nav__menu-option-text {font-size: 2.9vw;}
-.about-page__bio, .skills__skill {font-size: 1.75vw;}
+.about-page__bio, .game-over-bio, .game-over-bio_enlightened, .skills__skill {font-size: 1.75vw;}
+.skills__title {font-size: 3.3vw;}
+
+.enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox, .skills__icon, .nav__menu-option-image, .about-page__seeds-img, .item__icon {@include glow}
 
 a {color: $dark; text-decoration: none;}
 ul {list-style-type: none;}
@@ -39,20 +44,24 @@ body {margin:0;}
 .button1-background {fill: $color-accent1;}
 .button2-background {fill: $color-accent2;}
 .button3-background {fill: $color-accent3;}
-// .button-foreground {fill: $dark;}
 .button-foreground_enlightened {fill: $light;}
 
-.page-content {position: absolute; top: 0; width: 100%;}
-.wallpaper {background-color: $light; width: 100%; text-align: center;}
+.wrapper {height: 100vh;}
+// .page-content {position: absolute; top: 0; width: 100%;}
+.page-content {width: 100%; margin-top: 0;}
+// .wallpaper {background-color: $light; width: 100%; text-align: center;}
+.wallpaper {position:absolute; top: 0; bottom: 0; right: 0; left: 0; z-index: -999; background-color: $light; height: 100%; text-align: center;}
 .wallpaper_enlightened {background-color: $dark;}
-.wallpaper__dandelion {height: 99vh; display: inline-block; fill: hsla(0,0,50,1); padding: 4vw 0 1vw 0;}
+// .wallpaper__dandelion {height: 99vh; display: inline-block; fill: hsla(0,0,50,1); padding: 4vw 0 1vw 0;}
+.wallpaper__dandelion {height: 99vh; display: inline-block; fill: hsla(0,0,50,1); padding: 4vh 0 1vh 0;}
 
 .enlightenment-toggle__wrapper {width: 100vw; text-align: right; padding: 1.5vw 1.5vw 3.5vw 1.5vw;}
 .enlightenment-toggle:hover {cursor: pointer;}
 .enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox {
     display: inline-block;
-    height:2vw;
-    width:2vw;
+    height:1.5vw;
+    width:1.5vw;
+    margin: 0.5vw 0.5vw auto auto;
 }
 input{width:25px;}
 .enlightenment-toggle__text, .contact-enlightenment-toggle__text {float: right; margin: 0}
@@ -63,37 +72,40 @@ input{width:25px;}
     width: 100%;
     display: flex; 
     justify-content: space-between;
-    padding: 0 4vw;
+    padding: 0 8vw 2vh 8vw;
 }
+.nav__menu-options, .about-page__skills-wrapper {padding-left:12vw;}
 .nav__title {display: inline-block; white-space: nowrap;}
 .nav__title-main {margin: 0; text-align: center;}
 .nav__title-main_enlightened {color: $light}
-.nav__title-sub {margin: -1vw 0 0 0; text-align: center;}
+.nav__title-sub {margin: -1vh 0 0 0; text-align: center;}
 .nav__title-sub_enlightened{color: $light;}
-.nav__title-wrapper {display: inline-block;}
+.nav__title-wrapper {display: inline-block; width:50%;}
 .nav__secret-letter {padding: 0.75rem; margin: -0.75rem; cursor: default; pointer-events: none;}
 .nav__secret-letter_enlightened {color: $light;}
 .nav__secret-letter-functional_enlightened {color: hsla(60,100,50,1); text-shadow: 0px 0px 6px hsla(194,98,51,1); cursor: pointer; pointer-events: auto;}
 
-.nav__menu-options-wrapper {display: inline-block}
-.nav__menu-options {display: inline-flex;}
+.nav__menu-options-wrapper {display: inline-block; width:50%; text-align: center;}
+.nav__menu-options {display: inline-flex; height: 14vw;}
 .nav__menu-option {margin: 0 1vw;}
 .nav__menu-option:first-child {margin: 0 1vw 0 0;}
 .nav__menu-option:last-child {margin: 0 0 0 1vw;}
-.nav__menu-option-image {width: 10vw;}
+.nav__menu-option-image {width: 8vw;}
+.nav__menu-option-image2 {box-sizing: content-box; padding-left: 0.7vw;}
 .game-over-menu-option-image_enlightened {display: none;}
-.nav__menu-option-text {text-align: center; margin: 1vw 0;}
+.nav__menu-option-text {text-align: center; margin: 1vw 0 0 0;}
 .nav__menu-option-text_enlightened {color: $light;}
 .game-over-menu-option-text_enlightened {display: none;}
+.nav__cookie {z-index: 999;}
 
-.about-page__wrapper {width:100%; padding: 0 4vw;}
+.about-page__wrapper {width:100%; padding: 0 8vw;}
 .about-page {width:100%; display: flex;}
 .about-page__bio-wrapper {width: 50%}
 .about-page__bio {width: 100%;}
-.about-page__bio_enlightened {color: darken( $light, 70% )}
+.about-page__bio_enlightened {color: darken( $light, 70% ); -webkit-filter: drop-shadow(0 0 10px rgba( $light, .5 )); filter: drop-shadow(0 0 10px rgba( $light, .5 ));}
 .game-over-bio_enlightened {visibility: hidden;}
 .bio__hidden-code {color: $dark; text-shadow: none;}
-.bio__hidden-code_enlightened {color: hsla(120,61,50,1); text-shadow: 0px 0px 5px $seed-color6;}
+.bio__hidden-code_enlightened {color: hsla(120,61,50,1); text-shadow: 0px 0px 7px $seed-color6;}
 .bio__hidden-cap {text-transform: none;}
 .bio__hidden-cap_enlightened {text-transform: uppercase;}
 .bio__hidden-special {font-family: "Roboto Slab", serif;}
@@ -101,13 +113,14 @@ input{width:25px;}
 .about-page__seeds-img {width: 100%;}
 .about-page__seeds-img_enlightened {fill: $light;}
 .about-page__skills-wrapper {width: 50%;}
-.skills__title {text-align: center;}
+.skills__list {padding:0;}
+.skills__title {text-align: center; margin-top: 10vh;}
 .skills__title_enlightened {color: $light;}
 .about-page__skills-list {display: flex; flex-wrap: wrap;}
 .skills__skill{display:inline-block; width: 50%;}
-.skills__icon-wrapper{display: inline-block;}
+.skills__icon-wrapper{display: inline-block; width: 2vw;}
 .skills__icon_enlightened{color: $light}
-.skills__name{display:inline-block; padding-left: 0.5vw;}
+.skills__name{display:inline-block; padding-left: 0.5vh; margin: -2vh 0;}
 .skills__name_enlightened{color: $light;}
 .game-over-skills-wrapper_enlightened {visibility: hidden;}
 
@@ -115,14 +128,51 @@ input{width:25px;}
 .contact, .portfolio {width: 75%; display: inline-flex; flex-wrap: wrap; margin: 0 auto;}
 .contact__item-wrapper, .portfolio__item-wrapper {width: 50%; text-align: left;}
 .contact__item, .portfolio__item {display: flex;}
-.item__icon {width: 10vw;}
-.item__icon_enlightened {-webkit-filter: drop-shadow(0 0 10px $light); filter: drop-shadow(0 0 7px $light);}
+.item__icon {width: 8vw;}
+.item__icon_enlightened {-webkit-filter: drop-shadow(0 0 10px $light); filter: drop-shadow(0 0 10px $light);}
 .text__main_enlightened {display: none;}
 .text__title-toggle_enlightened {display: none;}
 .contact-enlightenment-toggle__wrapper_enlightened {display: none;}
 .enlightenment-directions {display: none; color: red; text-shadow: 0 0 7px $light;}
 .enlightenment-directions_enlightened {display: block;}
 
+// .q {fill: red}
+// .w {fill: blue}
+// .e {fill: green}
+// .r {fill: pink}
+// .t {fill: purple}
+// .y {fill: orange}
+// .wp-1 {fill: lime}
+// .wp-2 {fill: black}
 
 
-.TEST_clicked {display:none;}
+
+
+
+.nav__cookie {display:none;}
+.nav__cookie_enlightened {display: block; width: 9vw; transition: 1s;}
+.nav__cookie_enlightened:hover {-webkit-filter: drop-shadow(0 0 10px $light); filter: drop-shadow(0 0 7px $light);; transition: 1s;}
+.cookie-background {fill: rgba(41, 37, 20, 0.5)}
+.cookie-foreground {fill: orange;}
+.cookie-fortune {fill: pink}
+.xx {fill:$light}
+.cookie-outline {fill: seagreen}
+.cookie-open {display: none;}
+
+
+
+@media only screen and (max-width: 1465px){
+    .wrapper {display: flex; height: 100vh; align-items: center;}
+    .page-content {margin-top: 0;}
+}
+
+@media only screen and (max-width: 1630px){
+
+}
+
+@media only screen and (max-width: 600px){
+    .enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox {
+        margin: auto;
+        // fix whatever is happening to the checkboxes at this media size
+    }
+}

@@ -11,20 +11,6 @@ import { ClosedCookie as Cookie1, ClosedCookie as Cookie2, ClosedCookie as Cooki
 
 alert('working!')
 
-// $(document).on('change', 'input[type="checkbox"][data-group]', function(event) {
-//     // The checkbox that was clicked
-//     var actor = $(this);
-//     // The status of that checkbox
-//     var checked = actor.prop('checked');
-//     // The group that checkbox is in
-//     var group = actor.data('group');
-//     // All checkboxes of that group
-//     var checkboxes = $('input[type="checkbox"][data-group="' + group + '"]');
-//     // All checkboxes excluding the one that was clicked
-//     var otherCheckboxes = checkboxes.not(actor);
-//     // Check those checkboxes
-//     otherCheckboxes.prop('checked', checked);
-//   });
 
 const textToEnlighten = ['.enlightenment-toggle__text', '.nav__title-main', '.nav__title-sub', '.nav__secret-letter', '.nav__secret-letter-functional', '.nav__menu-option-text', '.about-page__bio', '.skills__title', '.skills__icon', '.skills__name', '.about-page__seeds-img', '.bio__hidden-code', '.bio__hidden-cap', '.bio__hidden-special', '.item__icon', '.text__main', '.enlightenment-directions', '.text__title-toggle', '.contact-enlightenment-toggle__wrapper']
 
@@ -37,21 +23,12 @@ function enlightenment(){
 }
 
 function unenlightenment(){
-    console.log('running unenlightenment')
-    console.log($('[class$="_enlightened"]'))
-
-    // $('[class$="_enlightened"]').removeClass(this.className.match(/\S+_enlightened/)[0])
-
-
     $('[class$="_enlightened"]').each(function(index,item){
-        console.log(typeof item)
         $(this).removeClass($(this).attr('class').match(/\S+_enlightened\b/))
         $('[class$="_enlightened"]').each(function(index,item){
             $(this).removeClass($(this).attr('class').match(/\S+_enlightened\b/))
         })
     })
-        
-
 }
 
 class Nav extends React.Component{
@@ -59,12 +36,16 @@ class Nav extends React.Component{
         super(props)
         this.state = {
             enlightened: false,
-            gameOver: false
+            gameOver: false,
+            cookie1Open: false,
+            cookie2Open: false,
+            cookie3Open: false
         }
 
         this.handleEnlightenClick = this.handleEnlightenClick.bind(this);
         this.handleCheckboxClick = this.handleCheckboxClick.bind(this);
         this.handleSecretLetterClick = this.handleSecretLetterClick.bind(this);
+        this.handleNavClick = this.handleNavClick.bind(this);
     }
 
     handleEnlightenClick(){
@@ -74,6 +55,7 @@ class Nav extends React.Component{
             unenlightenment();
             $('.wallpaper').removeClass('wallpaper_enlightened');
             $('.button-foreground_enlightened').removeClass('button-foreground_enlightened')
+            this.setState({gameOver: false})
         }
         else {
             $('.enlightenment-toggle__checkbox').prop('checked', true);
@@ -100,18 +82,23 @@ class Nav extends React.Component{
         $('.about-page__skills-wrapper').addClass('game-over-skills-wrapper game-over-skills-wrapper_enlightened')
         $('.nav__menu-option-image').addClass('game-over-menu-option-image game-over-menu-option-image_enlightened')
         $('.nav__menu-option-text').addClass('game-over-menu-option-text game-over-menu-option-text_enlightened')
+        $('.nav__cookie').addClass('nav__cookie_enlightened')
+        $('.nav__secret-letter-functional_enlightened').removeClass('nav__secret-letter-functional_enlightened')
+        this.setState({gameOver: true})
+        $('.menu-options__about').css({'-webkit-filter': 'drop-shadow(0 0 0 hsla(151,50%,31%,0))', 'filter': 'drop-shadow(0 0 0 hsla(151,50%,31%,0))', 'transition': '0.5s'})
+    }
+
+    handleNavClick(e){
+        if(this.state.gameOver){e.preventDefault()}
     }
 
     render(){
         return(
             <Router>
-                <div>
-                    <div className="wallpaper">
-                        <Wallpaper />
-                    </div>
+                <div className="wrapper">
                     <div className="page-content">
                         <div className="enlightenment-toggle__wrapper">
-                            <a className="enlightenment-toggle" onClick={this.handleEnlightenClick}>
+                            <a className="enlightenment-toggle" onClick={e => this.handleEnlightenClick(e)}>
                                 <input className="enlightenment-toggle__checkbox" type="checkbox" data-group="enlighten-checkboxes" onClick={this.handleCheckboxClick} />
                                 <h4 className="enlightenment-toggle__text">Enlightenment mode</h4>
                             </a>
@@ -126,18 +113,18 @@ class Nav extends React.Component{
                                 </div>
                                 <div className="nav__menu-options-wrapper">
                                     <div className="nav__menu-options">
-                                        <NavLink to="/about/" className="nav__menu-option menu-options__about" activeStyle={{borderBottom: 'solid 3px black', paddingBottom: '1em'}}>
-                                            <Cookie1 />
+                                        <NavLink to="/about/" className="nav__menu-option menu-options__about" onClick={this.handleNavClick} activeStyle={{'-webkit-filter': 'drop-shadow(0 0 0.25vw hsla(33,50%,45%,1))', 'filter': 'drop-shadow(0 0 0.25vw hsla(33,50%,45%,1))', 'transition': '0.5s'}}>
+                                            <Cookie1 cookieNumber="1" />
                                             <Button1 enlightened={this.state.enlightened} />
                                             <h2 className="nav__menu-option-text">about</h2> 
                                         </NavLink>
-                                        <NavLink to="/portfolio/" className="nav__menu-option menu-options__portfolio" href="#">
-                                            <Cookie2 />
+                                        <NavLink to="/portfolio/" className="nav__menu-option menu-options__portfolio" onClick={this.handleNavClick} activeStyle={{'-webkit-filter': 'drop-shadow(0 0 0.25vw hsla(151,50%,31%,1))', 'filter': 'drop-shadow(0 0 0.25vw hsla(151,50%,31%,1))', 'transition': '0.5s'}}>
+                                            <Cookie2 cookieNumber="2" />
                                             <Button2 enlightened={this.state.enlightened} />
                                             <h2 className="nav__menu-option-text">portfolio</h2> 
                                         </NavLink>
-                                        <NavLink to="/contact/" className="nav__menu-option menu-options__contact" href="#">
-                                            <Cookie3 />
+                                        <NavLink to="/contact/" className="nav__menu-option menu-options__contact" onClick={this.handleNavClick} activeStyle={{'-webkit-filter': 'drop-shadow(0 0 0.25vw hsla(237,40%,33%,1))', 'filter': 'drop-shadow(0 0 0.25vw hsla(237,40%,33%,1))', 'transition': '0.5s'}}>
+                                            <Cookie3 cookieNumber="3" />
                                             <Button3 enlightened={this.state.enlightened} />
                                             <h2 className="nav__menu-option-text">contact</h2> 
                                         </NavLink>
@@ -148,7 +135,9 @@ class Nav extends React.Component{
                         <Route path="/about/" render={(props) => <About {...props} enlightened={this.state.enlightened} enlightenment={enlightenment} gameOver={this.state.gameOver} />} />
                         <Route path="/portfolio/" render={(props) => <Portfolio {...props} enlightened={this.state.enlightened} enlightenment={enlightenment} />} />
                         <Route path="/contact/" render={(props) => <Contact {...props} enlightened={this.state.enlightened} handleEnlightenClick={this.handleEnlightenClick} />} />
-                        <Cookie1 />
+                        <div className="wallpaper">
+                            <Wallpaper />
+                        </div>
                     </div>
                 </div>
             </Router>
