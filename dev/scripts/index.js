@@ -7,7 +7,7 @@ import About from './about.js';
 import Portfolio from './portfolio.js';
 import Contact from './contact.js';
 import { Button1, Button2, Button3 } from './svgs.js';
-import { ClosedCookie as Cookie1, ClosedCookie as Cookie2, ClosedCookie as Cookie3 } from './svgs.js'
+import { Cookie as Cookie1, Cookie as Cookie2, Cookie as Cookie3 } from './svgs.js'
 
 alert('working!')
 
@@ -29,6 +29,11 @@ function unenlightenment(){
             $(this).removeClass($(this).attr('class').match(/\S+_enlightened\b/))
         })
     })
+    $('.nav__cookie-opened').css('display', 'none')
+    $('.fortune').css('display', 'none')
+    $('.fortune__text').css('display', 'none')
+    $('.nav__thanks').css('display', 'none')
+    $('.fortune__text_told').css('display', 'none')
 }
 
 class Nav extends React.Component{
@@ -37,6 +42,7 @@ class Nav extends React.Component{
         this.state = {
             enlightened: false,
             gameOver: false,
+            fortuneTold: false,
             cookie1Open: false,
             cookie2Open: false,
             cookie3Open: false
@@ -46,6 +52,8 @@ class Nav extends React.Component{
         this.handleCheckboxClick = this.handleCheckboxClick.bind(this);
         this.handleSecretLetterClick = this.handleSecretLetterClick.bind(this);
         this.handleNavClick = this.handleNavClick.bind(this);
+        this.setOpenCookie = this.setOpenCookie.bind(this);
+        this.setFortuneTold = this.setFortuneTold.bind(this);
     }
 
     handleEnlightenClick(){
@@ -83,13 +91,28 @@ class Nav extends React.Component{
         $('.nav__menu-option-image').addClass('game-over-menu-option-image game-over-menu-option-image_enlightened')
         $('.nav__menu-option-text').addClass('game-over-menu-option-text game-over-menu-option-text_enlightened')
         $('.nav__cookie').addClass('nav__cookie_enlightened')
+        $('.nav__winning-cookie').css('display', 'block')
         $('.nav__secret-letter-functional_enlightened').removeClass('nav__secret-letter-functional_enlightened')
         this.setState({gameOver: true})
         $('.menu-options__about').css({'-webkit-filter': 'drop-shadow(0 0 0 hsla(151,50%,31%,0))', 'filter': 'drop-shadow(0 0 0 hsla(151,50%,31%,0))', 'transition': '0.5s'})
+        if(this.state.fortuneTold === true){
+            $('.fortune').css('display', 'block')
+            $('.fortune__text_told').css('display', 'block')
+            $('.nav__thanks').css('display', 'block')
+        }
     }
 
     handleNavClick(e){
         if(this.state.gameOver){e.preventDefault()}
+    }
+
+    setOpenCookie(cookieNumber){
+        const stateCookieVar = `cookie${cookieNumber}Open`
+        this.setState({[stateCookieVar]: true})
+    }
+
+    setFortuneTold(){
+        this.setState({fortuneTold: true})
     }
 
     render(){
@@ -114,23 +137,33 @@ class Nav extends React.Component{
                                 <div className="nav__menu-options-wrapper">
                                     <div className="nav__menu-options">
                                         <NavLink to="/about/" className="nav__menu-option menu-options__about" onClick={this.handleNavClick} activeStyle={{'-webkit-filter': 'drop-shadow(0 0 0.25vw hsla(33,50%,45%,1))', 'filter': 'drop-shadow(0 0 0.25vw hsla(33,50%,45%,1))', 'transition': '0.5s'}}>
-                                            <Cookie1 cookieNumber="1" />
+                                            <Cookie1 cookieNumber="1" setOpenCookie={this.setOpenCookie} setFortuneTold={this.setFortuneTold}/>
                                             <Button1 enlightened={this.state.enlightened} />
                                             <h2 className="nav__menu-option-text">about</h2> 
                                         </NavLink>
                                         <NavLink to="/portfolio/" className="nav__menu-option menu-options__portfolio" onClick={this.handleNavClick} activeStyle={{'-webkit-filter': 'drop-shadow(0 0 0.25vw hsla(151,50%,31%,1))', 'filter': 'drop-shadow(0 0 0.25vw hsla(151,50%,31%,1))', 'transition': '0.5s'}}>
-                                            <Cookie2 cookieNumber="2" />
+                                            <Cookie2 cookieNumber="2" setOpenCookie={this.setOpenCookie} setFortuneTold={this.setFortuneTold}/>
                                             <Button2 enlightened={this.state.enlightened} />
                                             <h2 className="nav__menu-option-text">portfolio</h2> 
                                         </NavLink>
                                         <NavLink to="/contact/" className="nav__menu-option menu-options__contact" onClick={this.handleNavClick} activeStyle={{'-webkit-filter': 'drop-shadow(0 0 0.25vw hsla(237,40%,33%,1))', 'filter': 'drop-shadow(0 0 0.25vw hsla(237,40%,33%,1))', 'transition': '0.5s'}}>
-                                            <Cookie3 cookieNumber="3" />
+                                            <Cookie3 cookieNumber="3" setOpenCookie={this.setOpenCookie} setFortuneTold={this.setFortuneTold}/>
                                             <Button3 enlightened={this.state.enlightened} />
                                             <h2 className="nav__menu-option-text">contact</h2> 
                                         </NavLink>
                                     </div>
                                 </div>
                             </div>
+                            <div className="fortune-wrapper">
+                            <div className="fortune fortune_hidden">
+                                <p className="fortune__text fortune__text_hidden fortune__text1">The pursuit of happiness ends in misery.</p>
+                                <p className="fortune__text fortune__text_hidden fortune__text2">'The truth' is the conspiracy theory with the most pragmatic value.</p>
+                                <p className="fortune__text fortune__text_hidden fortune__text3">You may live to see man-made horrors beyond your comprehension.</p>
+                            </div>
+                            <div className="nav__thanks-wrapper">
+                                <p className="nav__thanks">Thanks for playing...</p>
+                            </div>
+                        </div>
                         </div>
                         <Route path="/about/" render={(props) => <About {...props} enlightened={this.state.enlightened} enlightenment={enlightenment} gameOver={this.state.gameOver} />} />
                         <Route path="/portfolio/" render={(props) => <Portfolio {...props} enlightened={this.state.enlightened} enlightenment={enlightenment} />} />

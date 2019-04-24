@@ -13,6 +13,8 @@ $light: hsla(360,100,100,1);
 $color-accent1: hsla(33,50,45,1);
 $color-accent2: hsla(151,50,31,1);
 $color-accent3: hsla(237,40,33,1);
+$fortune-color: hsla(50,50%,50%,0.5);
+$fortune-text-color: hsla(339.7,100,44.1,1);
 
 $seed-color1: hsla(14.6,50.2,44.9,1);
 $seed-color2: hsla(203.8,45.3,29.4,1);
@@ -27,7 +29,7 @@ $seed-color9: hsla(12.5,77.3,55.1,1);
 @mixin glow {-webkit-filter: drop-shadow(0 0 10px $light); filter: drop-shadow(0 0 7px $light);}
 
 .nav__title-main, .nav__title-sub, .enlightenment-toggle__text, .nav__menu-option-text, .skills__title, .contact-enlightenment-toggle__text {font-family: 'kraut-type-a-fuckregular', Sans-Serif; @include glow}
-.about-page__bio, .skills__name, .text__title, .text__details, .text__github, .enlightenment-directions, .game-over-bio, .game-over-bio_enlightened {font-family: 'Roboto Slab', serif; @include glow}
+.about-page__bio, .skills__name, .text__title, .text__details, .text__github, .enlightenment-directions, .game-over-bio, .game-over-bio_enlightened, .fortune__text, {font-family: 'Roboto Slab', serif; @include glow}
 .enlightenment-toggle__text, .contact-enlightenment-toggle__text {font-size: 1.9vw;}
 .nav__title-main {font-size: 5.5vw;}
 .nav__title-sub {font-size: 2.9vw;}
@@ -35,7 +37,7 @@ $seed-color9: hsla(12.5,77.3,55.1,1);
 .about-page__bio, .game-over-bio, .game-over-bio_enlightened, .skills__skill {font-size: 1.75vw;}
 .skills__title {font-size: 3.3vw;}
 
-.enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox, .skills__icon, .nav__menu-option-image, .about-page__seeds-img, .item__icon {@include glow}
+.enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox, .skills__icon, .nav__menu-option-image, .about-page__seeds-img, .item__icon, .nav__cookie, .nav__cookie-opened, .fortune {@include glow}
 
 a {color: $dark; text-decoration: none;}
 ul {list-style-type: none;}
@@ -67,7 +69,7 @@ input{width:25px;}
 .enlightenment-toggle__text, .contact-enlightenment-toggle__text {float: right; margin: 0}
 .enlightenment-toggle__text_enlightened {color: $light}
 
-.nav__wrapper {width: 100%;}
+.nav__wrapper {position: relative; width: 100%;}
 .nav {
     width: 100%;
     display: flex; 
@@ -85,7 +87,7 @@ input{width:25px;}
 .nav__secret-letter_enlightened {color: $light;}
 .nav__secret-letter-functional_enlightened {color: hsla(60,100,50,1); text-shadow: 0px 0px 6px hsla(194,98,51,1); cursor: pointer; pointer-events: auto;}
 
-.nav__menu-options-wrapper {display: inline-block; width:50%; text-align: center;}
+.nav__menu-options-wrapper {position: relative; display: inline-block; width:50%; text-align: center; height: 14vw;}
 .nav__menu-options {display: inline-flex; height: 14vw;}
 .nav__menu-option {margin: 0 1vw;}
 .nav__menu-option:first-child {margin: 0 1vw 0 0;}
@@ -101,7 +103,7 @@ input{width:25px;}
 .about-page__wrapper {width:100%; padding: 0 8vw;}
 .about-page {width:100%; display: flex;}
 .about-page__bio-wrapper {width: 50%}
-.about-page__bio {width: 100%;}
+.about-page__bio {width: 100%;line-height: 1.42rem;}
 .about-page__bio_enlightened {color: darken( $light, 70% ); -webkit-filter: drop-shadow(0 0 10px rgba( $light, .5 )); filter: drop-shadow(0 0 10px rgba( $light, .5 ));}
 .game-over-bio_enlightened {visibility: hidden;}
 .bio__hidden-code {color: $dark; text-shadow: none;}
@@ -136,29 +138,67 @@ input{width:25px;}
 .enlightenment-directions {display: none; color: red; text-shadow: 0 0 7px $light;}
 .enlightenment-directions_enlightened {display: block;}
 
-// .q {fill: red}
-// .w {fill: blue}
-// .e {fill: green}
-// .r {fill: pink}
-// .t {fill: purple}
-// .y {fill: orange}
-// .wp-1 {fill: lime}
-// .wp-2 {fill: black}
+.q {fill: red;}
+.w {fill: blue}
+.e {fill: green}
+.r {fill: pink}
+.t {fill: purple}
+.y {fill: orange}
+.wp-1 {fill: lime}
+.wp-2 {fill: black}
+// .nav__menu-options {display: none;}
+// .wallpaper__dandelion {height: 200vh;}
+
+.bg-seed1 {fill: red}
+.bg-seed2 {fill: blue}
+.bg-seed3 {fill: green}
+.bg-seed4 {fill: purple}
+.bg-seed5 {fill: orange}
+.bg-seed6 {fill: red}
+.bg-seed7 {fill: blue}
+.bg-seed8 {fill: green}
+.bg-seed9 {fill: purple}
+.bg-seed10 {fill: orange}
+.bg-seed11 {fill: red}
+.bg-seed12 {fill: blue}
+.bg-seed13 {fill: green}
+.bg-seed14 {fill: purple}
+.bg-seed15 {fill: orange}
+.bg-seed16 {fill: red}
+.bg-seed17 {fill: blue}
+.bg-seed18 {fill: green}
+.bg-seed19 {fill: purple}
+.bg-seed20 {fill: orange}
+.bg-seed21 {fill: red}
+.bg-seed22 {fill: blue}
+.bg-seed23 {fill: green}
+.bg-seed24 {fill: purple}
+.bg-seed25 {fill: orange}
+.bg-seed26 {fill: red}
+.bg-seed27 {fill: blue}
+.bg-seed28 {fill: green}
+.bg-seed29 {fill: purple}
+.bg-seed30 {fill: orange}
 
 
 
 
 
-.nav__cookie {display:none;}
+.nav__cookie {display: none;}
+.nav__cookie-opened {display: none; width: 9vw;}
 .nav__cookie_enlightened {display: block; width: 9vw; transition: 1s;}
-.nav__cookie_enlightened:hover {-webkit-filter: drop-shadow(0 0 10px $light); filter: drop-shadow(0 0 7px $light);; transition: 1s;}
-.cookie-background {fill: rgba(41, 37, 20, 0.5)}
-.cookie-foreground {fill: orange;}
-.cookie-fortune {fill: pink}
-.xx {fill:$light}
-.cookie-outline {fill: seagreen}
-.cookie-open {display: none;}
+.nav__cookie_has-hover:hover {-webkit-filter: drop-shadow(0 0 20px $light); filter: drop-shadow(0 0 20px $light); transition: 1s;}
+.cookie-foreground {fill: rgba( #362800, 0.5 )} 
+.cookie-background {fill: rgba( #361E00, 0.5 )}
+.cookie-fortune {fill: rgba( $fortune-color, 0.5 )}
+.cookie-outline {fill:$light}
 
+.fortune {display: none; z-index: 999; position: absolute; width: 40vw; left: 40vw; top:20vh; background-color: hsla(50,50%,50%,0.5); border-radius: 1px 0 1px 0; padding: 1vh 4vw; transition: background-color 5s ease;}
+.fortune:hover {background-color: orange;}
+.fortune__text {display: none; color: $fortune-text-color; -webkit-filter: drop-shadow(0 0 1px $fortune-text-color); filter: drop-shadow(0 0 1px $fortune-text-color); text-align: center; transition: 2s;}
+
+.nav__thanks-wrapper {z-index: 1000; display: none; position: absolute; right: 14vw; bottom: 0vw;}
+.nav__thanks {z-index: 1000; font-family: 'Roboto Slab', serif; color: red;}
 
 
 @media only screen and (max-width: 1465px){
