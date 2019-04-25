@@ -22,8 +22,7 @@ $fortune-text-color: hsla(339.7,100,44.1,1);
 .about-page__bio, .skills__name, .text__title, .text__details, .text__github, .enlightenment-directions, .game-over-bio, .game-over-bio_enlightened, .fortune__text, {font-family: 'Roboto Slab', serif; @include glow}
 .enlightenment-toggle__text, .contact-enlightenment-toggle__text {font-size: 1.9vw;}
 .nav__title-main {font-size: 5.5vw;}
-.nav__title-sub {font-size: 2.9vw;}
-.nav__menu-option-text {font-size: 2.9vw;}
+.nav__menu-option-text, .nav__title-sub {font-size: 2.9vw;}
 .about-page__bio, .game-over-bio, .game-over-bio_enlightened, .skills__skill {font-size: 1.75vw;}
 .skills__title {font-size: 3.3vw;}
 
@@ -38,9 +37,9 @@ body {margin:0;}
 .button3-background {fill: $color-accent3;}
 .button-foreground_enlightened {fill: $light;}
 
-.wrapper {height: 100vh;}
+.wrapper {height: 100vh; display: flex; align-items: center;}
 // .page-content {position: absolute; top: 0; width: 100%;}
-.page-content {width: 100%; margin-top: 0;}
+.page-content {display: inline-block; width: 100%; max-width: 1564px; margin-top: 0;}
 // .wallpaper {background-color: $light; width: 100%; text-align: center;}
 .wallpaper {position:absolute; top: 0; bottom: 0; right: 0; left: 0; z-index: -999; background-color: $light; height: 100%; text-align: center;}
 .wallpaper_enlightened {background-color: $dark;}
@@ -94,7 +93,7 @@ input{width:25px;}
 .about-page__wrapper {width:100%; padding: 0 8vw;}
 .about-page {width:100%; display: flex;}
 .about-page__bio-wrapper {width: 50%}
-.about-page__bio {width: 100%;line-height: 1.42rem;}
+.about-page__bio {width: 100%; line-height: 2.75vw;}
 .about-page__bio_enlightened {color: darken( $light, 70% ); -webkit-filter: drop-shadow(0 0 10px rgba( $light, .5 )); filter: drop-shadow(0 0 10px rgba( $light, .5 ));}
 .game-over-bio_enlightened {visibility: hidden;}
 .bio__hidden-code {color: $dark; text-shadow: none;}
@@ -109,13 +108,14 @@ input{width:25px;}
 .skills__list {padding:0;}
 .skills__title {text-align: center; margin-top: 10vh;}
 .skills__title_enlightened {color: $light;}
-.about-page__skills-list {display: flex; flex-wrap: wrap;}
-.skills__skill{display:inline-block; width: 50%;}
+.skills__list {display: flex; flex-wrap: wrap;}
+.skills__skill{width: 50%; margin: 0.3vw 0;}
 .skills__icon-wrapper{display: inline-block; width: 2vw;}
 .skills__icon_enlightened{color: $light}
-.skills__name{display:inline-block; padding-left: 0.5vh; margin: -2vh 0;}
+.skills__name{display:inline-block; padding-left: 0.5vh; margin: 0.1vw 0;}
 .skills__name_enlightened{color: $light;}
 .game-over-skills-wrapper_enlightened {visibility: hidden;}
+.about-page__seeds-img {transform: rotateY(180deg);}
 
 .contact__wrapper, .portfolio__wrapper {width: 100%; text-align: center;}
 .contact, .portfolio {width: 75%; display: inline-flex; flex-wrap: wrap; margin: 0 auto;}
@@ -238,6 +238,40 @@ input{width:25px;}
 .nav__thanks {z-index: 1000; font-family: 'Roboto Slab', serif; color: $fortune-text-color; font-size: 2vw;}
 
 
+@media only screen and (min-width: 1564px){
+    // fonts
+    .enlightenment-toggle__text, .contact-enlightenment-toggle__text {font-size: 29.72px}
+    .nav__title-main {font-size: 86.02px}
+    .nav__menu-option-text, .nav__title-sub {font-size: 45.36px;}
+    .about-page__bio, .game-over-bio, .game-over-bio_enlightened, .skills__skill {font-size: 27.37px}
+    .skills__title {font-size: 51.61px}
+    .fortune__text {font-size: 28.152px}
+    .nav__thanks {font-size: 31.28px}
+    // padding, margin, size
+    .wallpaper__dandelion {padding: 62.56px 0 15.64px 0}
+    .enlightenment-toggle__wrapper {width: 1564px; padding: 23.46px 23.46px 54.74px 23.46px}
+    .enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox {height: 23.46px; width: 23.46px; margin: 7.82px 7.82px auto auto}
+    .nav {padding-right: 125.12px; padding-left: 125.12px}
+    .nav__menu-options, .about-page__skills-wrapper {padding-left: 187.68px}
+    .nav__menu-options, .nav__menu-options-wrapper {height: 218.96px}
+    .nav__menu-option {margin: 0 15.64px}
+    .nav__menu-option:first-child {margin: 0 1.56px 0 0}
+    .nav__menu-option:last-child {margin: 0 0 0 1.56px}
+    .nav__menu-option-image {width: 125.12px}
+    .nav__menu-option-image2 {padding-left: 10.95px}
+    .nav__menu-option-text {margin: 15.64px 0 0 0}
+    .about-page__wrapper {padding: 0 125.12px}
+    .about-page__bio {line-height: 43.01px}
+    .skills__skill {margin: 4.69px 0}
+    .skills__icon-wrapper {width:31.28px}
+    .skills__name {padding-left: 7.82px; margin: 1.56px 0;}
+    .item__icon {width: 125.12px}
+    .nav__cookie-opened, .nav__cookie_enlightened {width: 140.76px}
+    .fortune {width: 656.88px; left: 625.6px; top: 312.8px; padding: 15.64px 46.92px}
+    .fortune__text:first-child {padding: 14.08px 0}
+    .nav__thanks-wrapper {right: 218.96px}
+}
+
 @media only screen and (max-width: 1465px){
     .wrapper {display: flex; height: 100vh; align-items: center;}
     .page-content {margin-top: 0;}
@@ -245,6 +279,10 @@ input{width:25px;}
 
 @media only screen and (max-width: 1630px){
 
+}
+
+@media only screen and (max-width: 1060px){
+    .skills__title {margin-top: 6vh;}
 }
 
 @media only screen and (max-width: 600px){
