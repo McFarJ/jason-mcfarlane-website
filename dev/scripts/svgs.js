@@ -111,8 +111,7 @@ class DandelionSeeds extends React.Component{
         return(
             <svg className="about-page__seeds-img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 87.4 31.1" xmlSpace="preserve" >
-                {/* style={'{stroke:"#231F20";strokeWidth:"0.6484";stroke-miterlimit:"10";}'} */}
-                <g className="seeds-img__seed1">
+                <g className="fg-seed fg-seed1">
                     <path d="M2,28.2l-0.5-0.5C10,19,14.8,9.5,14.9,9.4l0.6,0.3C15.4,9.8,10.6,19.4,2,28.2z"/>
                     <path d="M15.1,9.9c-0.2,0-4.1-1.1-5.2-7.3l0.6-0.1c1,5.8,4.7,6.8,4.7,6.8L15.1,9.9z"/>
                     <path d="M14.9,9.8c-0.1-0.2-3.3-4.6-2.1-7.9l0.6,0.2c-1.1,2.9,2,7.2,2,7.3L14.9,9.8z"/>
@@ -125,7 +124,7 @@ class DandelionSeeds extends React.Component{
                     <path d="M0.6,29.9C0.2,29.8,0,29.6,0,29.6c-0.2-0.8,0.5-1.3,1.5-2.4c0.7-0.8,2-1.3,3.6-3.3c0.7-0.4,1.3-0.6,0.4,0.4
                         c-2.5,2.7-2,2.9-3,4C1.8,29.1,1.1,29.9,0.6,29.9z"/>
                 </g>
-                <g className="seeds-img__seed2">
+                <g className="fg-seed fg-seed2">
                     <path d="M58,26.6L57.9,26c14.4-2.5,21.4-3.1,21.5-3.1l0,0.6C79.3,23.6,72.3,24.1,58,26.6z"/>
                     <path d="M79.1,23.3c0-0.1-0.9-3.3,2.3-7.9l0.5,0.4c-3,4.3-2.2,7.3-2.2,7.4L79.1,23.3z"/>
                     <path d="M79.7,23.3l-0.6-0.1c0-0.2,0.9-5.1,6.5-7.9l0.3,0.6C80.6,18.5,79.7,23.2,79.7,23.3z"/>
@@ -140,7 +139,7 @@ class DandelionSeeds extends React.Component{
                     <path d="M55.4,27c-0.2-0.3-0.2-0.6-0.2-0.6c0.3-0.8,1.3-0.7,2.7-0.9c1.1-0.2,2.4,0.2,4.9-0.2c0.8,0.1,1.3,0.4,0,0.6
                         c-3.6,0.5-3.4,1-4.9,1.2C56.9,27.2,55.8,27.3,55.4,27z"/>
                 </g>
-                <g className="seeds-img__seed3">
+                <g className="fg-seed fg-seed3">
                     <path d="M33.4,20L33,19.4c9.5-5.6,17.1-10.5,17.2-10.6l0.4,0.5C50.5,9.4,42.8,14.3,33.4,20z"/>
                     <path d="M50.2,9.4c-0.1-0.1-2.5-2.2-2.4-4.9c0.1-1.6,1-3.1,2.9-4.4L51,0.5c-1.7,1.2-2.5,2.5-2.6,3.9c-0.1,2.4,2.1,4.4,2.2,4.4
                         L50.2,9.4z"/>
@@ -701,22 +700,5 @@ class Cookie extends React.Component{
         )
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export { Button1, Button2, Button3, DandelionSeeds, Cookie }

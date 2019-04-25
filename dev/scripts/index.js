@@ -8,9 +8,9 @@ import Portfolio from './portfolio.js';
 import Contact from './contact.js';
 import { Button1, Button2, Button3 } from './svgs.js';
 import { Cookie as Cookie1, Cookie as Cookie2, Cookie as Cookie3 } from './svgs.js'
+import { ColorSeeds } from './seed-coloring'
 
 alert('working!')
-
 
 const textToEnlighten = ['.enlightenment-toggle__text', '.nav__title-main', '.nav__title-sub', '.nav__secret-letter', '.nav__secret-letter-functional', '.nav__menu-option-text', '.about-page__bio', '.skills__title', '.skills__icon', '.skills__name', '.about-page__seeds-img', '.bio__hidden-code', '.bio__hidden-cap', '.bio__hidden-special', '.item__icon', '.text__main', '.enlightenment-directions', '.text__title-toggle', '.contact-enlightenment-toggle__wrapper']
 
@@ -34,6 +34,9 @@ function unenlightenment(){
     $('.fortune__text').css('display', 'none')
     $('.nav__thanks').css('display', 'none')
     $('.fortune__text_told').css('display', 'none')
+    $('.nav__menu-option').css('pointer-events', 'auto')
+    $('.game-over-menu-option-image').css('display', 'block')
+    $('.game-over-menu-option-text').css('display', 'block')
 }
 
 class Nav extends React.Component{
@@ -95,10 +98,13 @@ class Nav extends React.Component{
         $('.nav__secret-letter-functional_enlightened').removeClass('nav__secret-letter-functional_enlightened')
         this.setState({gameOver: true})
         $('.menu-options__about').css({'-webkit-filter': 'drop-shadow(0 0 0 hsla(151,50%,31%,0))', 'filter': 'drop-shadow(0 0 0 hsla(151,50%,31%,0))', 'transition': '0.5s'})
-        if(this.state.fortuneTold === true){
+        if(this.state.fortuneTold){
+            $('.game-over-menu-option-image').css('display', 'none')
+            $('.game-over-menu-option-text').css('display', 'none')
             $('.fortune').css('display', 'block')
             $('.fortune__text_told').css('display', 'block')
             $('.nav__thanks').css('display', 'block')
+            $('.nav__menu-option').css('pointer-events', 'none')
         }
     }
 
@@ -113,6 +119,10 @@ class Nav extends React.Component{
 
     setFortuneTold(){
         this.setState({fortuneTold: true})
+    }
+
+    componentDidMount(){
+        ColorSeeds()
     }
 
     render(){
@@ -157,7 +167,7 @@ class Nav extends React.Component{
                             <div className="fortune-wrapper">
                             <div className="fortune fortune_hidden">
                                 <p className="fortune__text fortune__text_hidden fortune__text1">The pursuit of happiness ends in misery.</p>
-                                <p className="fortune__text fortune__text_hidden fortune__text2">'The truth' is the conspiracy theory with the most pragmatic value.</p>
+                                <p className="fortune__text fortune__text_hidden fortune__text2"><span className="fortune__text_italic">The truth</span> is the conspiracy theory with the most pragmatic value.</p>
                                 <p className="fortune__text fortune__text_hidden fortune__text3">You may live to see man-made horrors beyond your comprehension.</p>
                             </div>
                             <div className="nav__thanks-wrapper">
@@ -165,7 +175,7 @@ class Nav extends React.Component{
                             </div>
                         </div>
                         </div>
-                        <Route path="/about/" render={(props) => <About {...props} enlightened={this.state.enlightened} enlightenment={enlightenment} gameOver={this.state.gameOver} />} />
+                        <Route path="/about/" render={(props) => <About {...props} enlightened={this.state.enlightened} enlightenment={enlightenment} gameOver={this.state.gameOver} fortuneTold={this.state.fortuneTold} />} />
                         <Route path="/portfolio/" render={(props) => <Portfolio {...props} enlightened={this.state.enlightened} enlightenment={enlightenment} />} />
                         <Route path="/contact/" render={(props) => <Contact {...props} enlightened={this.state.enlightened} handleEnlightenClick={this.handleEnlightenClick} />} />
                         <div className="wallpaper">

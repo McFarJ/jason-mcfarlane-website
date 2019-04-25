@@ -25,16 +25,22 @@ export default class About extends React.Component{
             $('.game-over-skills-wrapper').addClass('game-over-skills-wrapper_enlightened')
             $('.game-over-menu-option-image').addClass('game-over-menu-option-image_enlightened')
             $('.game-over-menu-option-text').addClass('game-over-menu-option-text_enlightened')
+                if(this.props.fortuneTold){
+                    $('.game-over-menu-option-image').css('display', 'block')
+                    $('.game-over-menu-option-text').css('display', 'block')
+                }
         }
         if(this.props.gameOver){
+            alert('1')
             $('.about-page__bio').addClass('game-over-bio')
             $('.about-page__skills-wrapper').addClass('game-over-skills-wrapper')
             if(this.props.enlightened){
+                alert('2')
                 $('.game-over-bio').addClass('game-over-bio_enlightened')
                 $('.game-over-skills-wrapper').addClass('game-over-skills-wrapper_enlightened')
             }
+            return
         }
-        return
     }
 
     componentWillUnmount(){

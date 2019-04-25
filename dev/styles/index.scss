@@ -16,16 +16,6 @@ $color-accent3: hsla(237,40,33,1);
 $fortune-color: hsla(50,50%,50%,0.5);
 $fortune-text-color: hsla(339.7,100,44.1,1);
 
-$seed-color1: hsla(14.6,50.2,44.9,1);
-$seed-color2: hsla(203.8,45.3,29.4,1);
-$seed-color3: hsla(90.9,49.3,40.2,1);
-$seed-color4: hsla(264,43.8,31.4,1);
-$seed-color5: hsla(339.6,49.5,39.6,1);
-$seed-color6: hsla(64.7,49.2,64.5,1);
-$seed-color7: hsla(52.5,78.6,57.8,1);
-$seed-color8: hsla(212.4,31.2,68.6,1);
-$seed-color9: hsla(12.5,77.3,55.1,1);
-
 @mixin glow {-webkit-filter: drop-shadow(0 0 10px $light); filter: drop-shadow(0 0 7px $light);}
 
 .nav__title-main, .nav__title-sub, .enlightenment-toggle__text, .nav__menu-option-text, .skills__title, .contact-enlightenment-toggle__text {font-family: 'kraut-type-a-fuckregular', Sans-Serif; @include glow}
@@ -56,6 +46,7 @@ body {margin:0;}
 .wallpaper_enlightened {background-color: $dark;}
 // .wallpaper__dandelion {height: 99vh; display: inline-block; fill: hsla(0,0,50,1); padding: 4vw 0 1vw 0;}
 .wallpaper__dandelion {height: 99vh; display: inline-block; fill: hsla(0,0,50,1); padding: 4vh 0 1vh 0;}
+.fg-seed, .bg-seed {transition: 5s;}
 
 .enlightenment-toggle__wrapper {width: 100vw; text-align: right; padding: 1.5vw 1.5vw 3.5vw 1.5vw;}
 .enlightenment-toggle:hover {cursor: pointer;}
@@ -107,7 +98,7 @@ input{width:25px;}
 .about-page__bio_enlightened {color: darken( $light, 70% ); -webkit-filter: drop-shadow(0 0 10px rgba( $light, .5 )); filter: drop-shadow(0 0 10px rgba( $light, .5 ));}
 .game-over-bio_enlightened {visibility: hidden;}
 .bio__hidden-code {color: $dark; text-shadow: none;}
-.bio__hidden-code_enlightened {color: hsla(120,61,50,1); text-shadow: 0px 0px 7px $seed-color6;}
+.bio__hidden-code_enlightened {color: hsla(120,61,50,1); text-shadow: 0px 0px 7px hsla(64.7,49.2,64.5,1);}
 .bio__hidden-cap {text-transform: none;}
 .bio__hidden-cap_enlightened {text-transform: uppercase;}
 .bio__hidden-special {font-family: "Roboto Slab", serif;}
@@ -145,40 +136,85 @@ input{width:25px;}
 .t {fill: purple}
 .y {fill: orange}
 .wp-1 {fill: lime}
-.wp-2 {fill: black}
 // .nav__menu-options {display: none;}
 // .wallpaper__dandelion {height: 200vh;}
 
-.bg-seed1 {fill: red}
-.bg-seed2 {fill: blue}
-.bg-seed3 {fill: green}
-.bg-seed4 {fill: purple}
-.bg-seed5 {fill: orange}
-.bg-seed6 {fill: red}
-.bg-seed7 {fill: blue}
-.bg-seed8 {fill: green}
-.bg-seed9 {fill: purple}
-.bg-seed10 {fill: orange}
-.bg-seed11 {fill: red}
-.bg-seed12 {fill: blue}
-.bg-seed13 {fill: green}
-.bg-seed14 {fill: purple}
-.bg-seed15 {fill: orange}
-.bg-seed16 {fill: red}
-.bg-seed17 {fill: blue}
-.bg-seed18 {fill: green}
-.bg-seed19 {fill: purple}
-.bg-seed20 {fill: orange}
-.bg-seed21 {fill: red}
-.bg-seed22 {fill: blue}
-.bg-seed23 {fill: green}
-.bg-seed24 {fill: purple}
-.bg-seed25 {fill: orange}
-.bg-seed26 {fill: red}
-.bg-seed27 {fill: blue}
-.bg-seed28 {fill: green}
-.bg-seed29 {fill: purple}
-.bg-seed30 {fill: orange}
+// .bg-seed1 {fill: red}
+// .bg-seed2 {fill: blue}
+// .bg-seed3 {fill: green}
+// .bg-seed4 {fill: purple}
+// .bg-seed5 {fill: orange}
+// .bg-seed6 {fill: red}
+// .bg-seed7 {fill: blue}
+// .bg-seed8 {fill: green}
+// .bg-seed9 {fill: purple}
+// .bg-seed10 {fill: orange}
+// .bg-seed11 {fill: red}
+// .bg-seed12 {fill: blue}
+// .bg-seed13 {fill: green}
+// .bg-seed14 {fill: purple}
+// .bg-seed15 {fill: orange}
+// .bg-seed16 {fill: red}
+// .bg-seed17 {fill: blue}
+// .bg-seed18 {fill: green}
+// .bg-seed19 {fill: purple}
+// .bg-seed20 {fill: orange}
+// .bg-seed21 {fill: red}
+// .bg-seed22 {fill: blue}
+// .bg-seed23 {fill: green}
+// .bg-seed24 {fill: purple}
+// .bg-seed25 {fill: orange}
+// .bg-seed26 {fill: red}
+// .bg-seed27 {fill: blue}
+// .bg-seed28 {fill: green}
+// .bg-seed29 {fill: purple}
+// .bg-seed30 {fill: orange}
+// .bg-seed31 {fill: orange}
+// .bg-seed32 {fill: red}
+// .bg-seed33 {fill: blue}
+// .bg-seed34 {fill: green}
+// .bg-seed35 {fill: purple}
+// .bg-seed36 {fill: orange}
+// .bg-seed37 {fill: orange}
+// .bg-seed38 {fill: red}
+// .bg-seed39 {fill: blue}
+// .bg-seed40 {fill: green}
+// .bg-seed41 {fill: purple}
+// .bg-seed42 {fill: orange}
+// .bg-seed43 {fill: orange}
+// .bg-seed44 {fill: red}
+// .bg-seed45 {fill: blue}
+// .bg-seed46 {fill: green}
+// .bg-seed47 {fill: purple}
+// .bg-seed48 {fill: orange}
+// .bg-seed49 {fill: orange}
+// .bg-seed50 {fill: red}
+// .bg-seed51 {fill: blue}
+// .bg-seed52 {fill: green}
+// .bg-seed53 {fill: purple}
+// .bg-seed54 {fill: orange}
+// .bg-seed55 {fill: orange}
+
+// .bg-seed56 {fill: red}
+// .bg-seed57 {fill: blue}
+// .bg-seed58 {fill: green}
+// .bg-seed59 {fill: purple}
+// .bg-seed60 {fill: orange}
+// .bg-seed61 {fill: red}
+// .bg-seed62 {fill: blue}
+// .bg-seed63 {fill: green}
+// .bg-seed64 {fill: purple}
+// .bg-seed65 {fill: orange}
+// .bg-seed66 {fill: red}
+// .bg-seed67 {fill: blue}
+// .bg-seed68 {fill: green}
+// .bg-seed69 {fill: purple}
+// .bg-seed70 {fill: orange}
+// .bg-seed71 {fill: red}
+// .bg-seed72 {fill: blue}
+// .bg-seed73 {fill: green}
+// .bg-seed74 {fill: purple}
+// .bg-seed75 {fill: orange}
 
 
 
@@ -193,12 +229,13 @@ input{width:25px;}
 .cookie-fortune {fill: rgba( $fortune-color, 0.5 )}
 .cookie-outline {fill:$light}
 
-.fortune {display: none; z-index: 999; position: absolute; width: 40vw; left: 40vw; top:20vh; background-color: hsla(50,50%,50%,0.5); border-radius: 1px 0 1px 0; padding: 1vh 4vw; transition: background-color 5s ease;}
-.fortune:hover {background-color: orange;}
-.fortune__text {display: none; color: $fortune-text-color; -webkit-filter: drop-shadow(0 0 1px $fortune-text-color); filter: drop-shadow(0 0 1px $fortune-text-color); text-align: center; transition: 2s;}
+.fortune {display: none; z-index: 999; position: absolute; width: 42vw; left: 40vw; top:20vw; background-color: hsla(50,50%,50%,0.5); border-radius: 1px 0 1px 0; padding: 1vh 3vw; transition: background-color 5s ease;}
+.fortune__text {display: none; color: $fortune-text-color; font-size: 1.8vw; -webkit-filter: drop-shadow(0 0 1px $fortune-text-color); filter: drop-shadow(0 0 1px $fortune-text-color); text-align: center; transition: 2s;}
+.fortune__text_italic {font-style: italic;}
+.fortune__text:first-child {padding: 0.9vw 0;}
 
 .nav__thanks-wrapper {z-index: 1000; display: none; position: absolute; right: 14vw; bottom: 0vw;}
-.nav__thanks {z-index: 1000; font-family: 'Roboto Slab', serif; color: red;}
+.nav__thanks {z-index: 1000; font-family: 'Roboto Slab', serif; color: $fortune-text-color; font-size: 2vw;}
 
 
 @media only screen and (max-width: 1465px){

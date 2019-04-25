@@ -89,6 +89,10 @@ body {
   fill: gray;
   padding: 4vh 0 1vh 0; }
 
+.fg-seed, .bg-seed {
+  -webkit-transition: 5s;
+  transition: 5s; }
+
 .enlightenment-toggle__wrapper {
   width: 100vw;
   text-align: right;
@@ -375,99 +379,6 @@ input {
 .wp-1 {
   fill: lime; }
 
-.wp-2 {
-  fill: black; }
-
-.bg-seed1 {
-  fill: red; }
-
-.bg-seed2 {
-  fill: blue; }
-
-.bg-seed3 {
-  fill: green; }
-
-.bg-seed4 {
-  fill: purple; }
-
-.bg-seed5 {
-  fill: orange; }
-
-.bg-seed6 {
-  fill: red; }
-
-.bg-seed7 {
-  fill: blue; }
-
-.bg-seed8 {
-  fill: green; }
-
-.bg-seed9 {
-  fill: purple; }
-
-.bg-seed10 {
-  fill: orange; }
-
-.bg-seed11 {
-  fill: red; }
-
-.bg-seed12 {
-  fill: blue; }
-
-.bg-seed13 {
-  fill: green; }
-
-.bg-seed14 {
-  fill: purple; }
-
-.bg-seed15 {
-  fill: orange; }
-
-.bg-seed16 {
-  fill: red; }
-
-.bg-seed17 {
-  fill: blue; }
-
-.bg-seed18 {
-  fill: green; }
-
-.bg-seed19 {
-  fill: purple; }
-
-.bg-seed20 {
-  fill: orange; }
-
-.bg-seed21 {
-  fill: red; }
-
-.bg-seed22 {
-  fill: blue; }
-
-.bg-seed23 {
-  fill: green; }
-
-.bg-seed24 {
-  fill: purple; }
-
-.bg-seed25 {
-  fill: orange; }
-
-.bg-seed26 {
-  fill: red; }
-
-.bg-seed27 {
-  fill: blue; }
-
-.bg-seed28 {
-  fill: green; }
-
-.bg-seed29 {
-  fill: purple; }
-
-.bg-seed30 {
-  fill: orange; }
-
 .nav__cookie {
   display: none; }
 
@@ -503,26 +414,30 @@ input {
   display: none;
   z-index: 999;
   position: absolute;
-  width: 40vw;
+  width: 42vw;
   left: 40vw;
-  top: 20vh;
+  top: 20vw;
   background-color: rgba(191, 170, 64, 0.5);
   border-radius: 1px 0 1px 0;
-  padding: 1vh 4vw;
+  padding: 1vh 3vw;
   -webkit-transition: background-color 5s ease;
   transition: background-color 5s ease; }
-
-.fortune:hover {
-  background-color: orange; }
 
 .fortune__text {
   display: none;
   color: #e1004c;
+  font-size: 1.8vw;
   -webkit-filter: drop-shadow(0 0 1px #e1004c);
   filter: drop-shadow(0 0 1px #e1004c);
   text-align: center;
   -webkit-transition: 2s;
   transition: 2s; }
+
+.fortune__text_italic {
+  font-style: italic; }
+
+.fortune__text:first-child {
+  padding: 0.9vw 0; }
 
 .nav__thanks-wrapper {
   z-index: 1000;
@@ -534,7 +449,8 @@ input {
 .nav__thanks {
   z-index: 1000;
   font-family: 'Roboto Slab', serif;
-  color: red; }
+  color: #e1004c;
+  font-size: 2vw; }
 
 @media only screen and (max-width: 1465px) {
   .wrapper {
