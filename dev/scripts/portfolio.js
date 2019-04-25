@@ -32,7 +32,7 @@ export default class Portfolio extends React.Component{
                                     <p className="text__details">React, Firebase</p>
                                 </a>
                                 <a className="text__github" href="#">
-                                    <p>view on GitHub</p>
+                                    <p><span className="text__github_plain">or &nbsp;</span>view on GitHub</p>
                                 </a>
                             </div>
                         </div>
@@ -40,7 +40,7 @@ export default class Portfolio extends React.Component{
 
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
-                            <a className="item__icon-wrapper-href" href="#">
+                            <a className="item__icon-wrapper-href">
                                 <img className="item__icon" src="/images/mind-unwind-icon.png" />
                             </a>
                             <div className="portfolio__text-wrapper">
@@ -50,7 +50,7 @@ export default class Portfolio extends React.Component{
                                     <p className="text__details">JavaScript, jQuery</p>
                                 </a>
                                 <a className="text__github" href="#">
-                                    <p>view on GitHub</p>
+                                    <p><span className="text__github_plain">or &nbsp;</span>view on GitHub</p>
                                 </a>
                             </div>
                         </div>
@@ -68,7 +68,7 @@ export default class Portfolio extends React.Component{
                                     <p className="text__details">JavaScript, CSS</p>
                                 </a>
                                 <a className="text__github" href="#">
-                                    <p>view on GitHub</p>
+                                    <p><span className="text__github_plain">or &nbsp;</span>view on GitHub</p>
                                 </a>
                             </div>
                         </div>
@@ -86,7 +86,7 @@ export default class Portfolio extends React.Component{
                                     <p className="text__details">HTML, CSS</p>
                                 </a>
                                 <a className="text__github" href="#">
-                                    <p>view on GitHub</p>
+                                    <p><span className="text__github_plain">or &nbsp;</span>view on GitHub</p>
                                 </a>
                             </div>
                         </div>

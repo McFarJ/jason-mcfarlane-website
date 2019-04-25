@@ -165,7 +165,9 @@ input {
   padding: 0.75rem;
   margin: -0.75rem;
   cursor: default;
-  pointer-events: none; }
+  pointer-events: none;
+  -webkit-transition: 1s;
+  transition: 1s; }
 
 .nav__secret-letter_enlightened {
   color: white; }
@@ -321,18 +323,28 @@ input {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg); }
 
+.about-page {
+  height: 35.2vw; }
+
 .contact__wrapper, .portfolio__wrapper {
+  height: 35.2vw;
   width: 100%;
   text-align: center; }
 
 .contact, .portfolio {
+  height: 63%;
+  padding-left: 7vw;
   width: 75%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 auto; }
+  position: relative;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
 
 .contact__item-wrapper, .portfolio__item-wrapper {
   width: 50%;
@@ -367,6 +379,36 @@ input {
 .enlightenment-directions_enlightened {
   display: block; }
 
+.text__details {
+  margin-top: 0; }
+
+.text__github {
+  text-decoration: underline;
+  color: #29526d; }
+  .text__github:hover {
+    color: #973355; }
+
+.text__title {
+  text-decoration: underline;
+  color: #29526d;
+  margin-bottom: 0; }
+
+.text__main:hover .text__title {
+  color: #973355; }
+
+.item__icon-wrapper-href {
+  pointer-events: none; }
+
+.text__github_plain {
+  color: black;
+  text-decoration: none;
+  display: inline-block; }
+  .text__github_plain:hover {
+    color: black; }
+
+.enlightenment-directions {
+  font-size: 3vw; }
+
 .q {
   fill: red; }
 
@@ -387,6 +429,33 @@ input {
 
 .wp-1 {
   fill: lime; }
+
+x {
+  color: #ac5539; }
+
+x {
+  color: #29526d; }
+
+x {
+  color: #659934; }
+
+x {
+  color: #492d73; }
+
+x {
+  color: #973355; }
+
+x {
+  color: #cad178; }
+
+x {
+  color: #e8d33f; }
+
+x {
+  color: #96adc8; }
+
+x {
+  color: #e55934; }
 
 .nav__cookie {
   display: none; }
@@ -527,7 +596,11 @@ input {
   .fortune__text:first-child {
     padding: 14.08px 0; }
   .nav__thanks-wrapper {
-    right: 218.96px; } }
+    right: 218.96px; }
+  .about-page {
+    height: 550.47px; }
+  .contact__wrapper, .portfolio__wrapper {
+    height: 550.53px; } }
 
 @media only screen and (max-width: 1465px) {
   .wrapper {
