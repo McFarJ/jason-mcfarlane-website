@@ -12,6 +12,11 @@ export default class Contact extends React.Component{
             $('.text__title-toggle').addClass('text__title-toggle_enlightened')
             $('.contact-enlightenment-toggle__wrapper').addClass('contact-enlightenment-toggle__wrapper_enlightened')
             $('.enlightenment-directions').addClass('enlightenment-directions_enlightened')
+            $('.item__icon').addClass('item__icon_enlightened')
+            $('.text__main').addClass('text__main_enlightened')
+            $('.text__title-toggle').addClass('text__title-toggle_enlightened')
+            $('.contact-enlightenment-toggle__text').addClass('contact-enlightenment-toggle__text_enlightened')
+            $('.contact-enlightenment-toggle').addClass('contact-enlightenment-toggle_enlightened')
         }
     }
 

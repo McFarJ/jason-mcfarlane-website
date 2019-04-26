@@ -6,6 +6,8 @@ export default class Portfolio extends React.Component{
             $('.item__icon').addClass('item__icon_enlightened')
             $('.text__main').addClass('text__main_enlightened')
             $('.enlightenment-directions').addClass('enlightenment-directions_enlightened')
+            $('.item__icon').addClass('item__icon_enlightened')
+            $('.github-p').addClass('github-p_enlightened')
         }
     }
 
@@ -32,7 +34,7 @@ export default class Portfolio extends React.Component{
                                     <p className="text__details">React, Firebase</p>
                                 </a>
                                 <a className="text__github" href="#">
-                                    <p><span className="text__github_plain">or &nbsp;</span>view on GitHub</p>
+                                    <p className="github-p"><span className="text__github_plain">or &nbsp;</span>view on GitHub</p>
                                 </a>
                             </div>
                         </div>
@@ -50,7 +52,7 @@ export default class Portfolio extends React.Component{
                                     <p className="text__details">JavaScript, jQuery</p>
                                 </a>
                                 <a className="text__github" href="#">
-                                    <p><span className="text__github_plain">or &nbsp;</span>view on GitHub</p>
+                                    <p className="github-p"><span className="text__github_plain">or &nbsp;</span>view on GitHub</p>
                                 </a>
                             </div>
                         </div>
@@ -68,7 +70,7 @@ export default class Portfolio extends React.Component{
                                     <p className="text__details">JavaScript, CSS</p>
                                 </a>
                                 <a className="text__github" href="#">
-                                    <p><span className="text__github_plain">or &nbsp;</span>view on GitHub</p>
+                                    <p className="github-p"><span className="text__github_plain">or &nbsp;</span>view on GitHub</p>
                                 </a>
                             </div>
                         </div>
@@ -86,7 +88,7 @@ export default class Portfolio extends React.Component{
                                     <p className="text__details">HTML, CSS</p>
                                 </a>
                                 <a className="text__github" href="#">
-                                    <p><span className="text__github_plain">or &nbsp;</span>view on GitHub</p>
+                                    <p className="github-p"><span className="text__github_plain">or &nbsp;</span>view on GitHub</p>
                                 </a>
                             </div>
                         </div>

@@ -2,17 +2,17 @@ const $ = require ('jquery');
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
-import Wallpaper from './wallpaper.js';
-import About from './about.js';
-import Portfolio from './portfolio.js';
-import Contact from './contact.js';
-import { Button1, Button2, Button3 } from './svgs.js';
-import { Cookie as Cookie1, Cookie as Cookie2, Cookie as Cookie3 } from './svgs.js'
+import Wallpaper from './wallpaper';
+import About from './about';
+import Portfolio from './portfolio';
+import Contact from './contact';
+import { Button1, Button2, Button3 } from './svgs';
+import { Cookie as Cookie1, Cookie as Cookie2, Cookie as Cookie3 } from './svgs'
 import { ColorSeeds } from './seed-coloring'
 
 alert('working!')
 
-const textToEnlighten = ['.enlightenment-toggle__text', '.nav__title-main', '.nav__title-sub', '.nav__secret-letter', '.nav__secret-letter-functional', '.nav__menu-option-text', '.about-page__bio', '.skills__title', '.skills__icon', '.skills__name', '.about-page__seeds-img', '.bio__hidden-code', '.bio__hidden-cap', '.bio__hidden-special', '.item__icon', '.text__main', '.enlightenment-directions', '.text__title-toggle', '.contact-enlightenment-toggle__wrapper']
+const textToEnlighten = ['.enlightenment-toggle__text', '.nav__title-main', '.nav__title-sub', '.nav__secret-letter', '.nav__secret-letter-functional', '.nav__menu-option-text', '.about-page__bio', '.skills__title', '.skills__icon', '.skills__name', '.about-page__seeds-img', '.bio__hidden-code', '.bio__hidden-cap', '.bio__hidden-special', '.item__icon', '.text__main', '.github-p', '.enlightenment-directions', '.text__title-toggle', '.contact-enlightenment-toggle__wrapper', '.contact-enlightenment-toggle']
 
 function enlightenment(){
     textToEnlighten.forEach(function(x){

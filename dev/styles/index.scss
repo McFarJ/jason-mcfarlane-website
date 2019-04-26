@@ -1,13 +1,3 @@
-* {box-sizing: border-box;}
-
-@font-face {
-    font-family: 'kraut-type-a-fuckregular';
-    src: url('/kraut____typefuck11-webfont.woff2') format('woff2'),
-         url('/kraut____typefuck11-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 $dark: hsla(0,0,0,1);
 $light: hsla(360,100,100,1);
 $color-accent1: hsla(33,50,45,1);
@@ -17,39 +7,39 @@ $link-color: hsla(203.8,45.3%,29.4%,1);
 $link-hover-color: hsla(339.6,49.5%,39.6%,1);
 $fortune-color: hsla(50,50%,50%,0.5);
 $fortune-text-color: hsla(339.7,100,44.1,1);
-
+// Glow & Font-Sizes
+@font-face {
+    font-family: 'kraut-type-a-fuckregular';
+    src: url('/kraut____typefuck11-webfont.woff2') format('woff2'),
+         url('/kraut____typefuck11-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 @mixin glow {-webkit-filter: drop-shadow(0 0 10px $light); filter: drop-shadow(0 0 7px $light);}
-
-
-.nav__title-main, .nav__title-sub, .enlightenment-toggle__text, .nav__menu-option-text, .skills__title, .contact-enlightenment-toggle__text {font-family: 'kraut-type-a-fuckregular', Sans-Serif; @include glow}
-.about-page__bio, .skills__name, .text__title, .text__details, .text__github, .enlightenment-directions, .game-over-bio, .game-over-bio_enlightened, .fortune__text {font-family: 'Roboto Slab', serif; @include glow}
+.enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox, .skills__icon, .nav__menu-option-image, .about-page__seeds-img, .item__icon, .nav__cookie, .nav__cookie-opened, .fortune {@include glow}
+.nav__title-main, .nav__title-sub, .enlightenment-toggle__text, .nav__menu-option-text, .enlightenment-directions, .skills__title, .contact-enlightenment-toggle__text {font-family: 'kraut-type-a-fuckregular', Sans-Serif; @include glow}
+.about-page__bio, .skills__name, .text__title, .text__details, .text__github, .game-over-bio, .game-over-bio_enlightened, .fortune__text {font-family: 'Roboto Slab', serif; @include glow}
 .enlightenment-toggle__text, .contact-enlightenment-toggle__text {font-size: 1.9vw;}
 .nav__title-main {font-size: 5.5vw;}
 .nav__menu-option-text, .nav__title-sub {font-size: 2.9vw;}
 .about-page__bio, .game-over-bio, .game-over-bio_enlightened, .skills__skill {font-size: 1.75vw;}
 .skills__title {font-size: 3.3vw;}
-
-.enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox, .skills__icon, .nav__menu-option-image, .about-page__seeds-img, .item__icon, .nav__cookie, .nav__cookie-opened, .fortune {@include glow}
-
+.text__title {font-size: 1.75vw;}
+.text__details, .text__github {font-size: 1.49vw;}
+.enlightenment-directions {font-size: 3vw;}
+// General
+* {box-sizing: border-box;}
 a {color: $dark; text-decoration: none;}
 ul {list-style-type: none;}
 body {margin:0;}
-
-.button1-background {fill: $color-accent1;}
-.button2-background {fill: $color-accent2;}
-.button3-background {fill: $color-accent3;}
-.button-foreground_enlightened {fill: $light;}
-
 .wrapper {height: 100vh; display: flex; align-items: center;}
-// .page-content {position: absolute; top: 0; width: 100%;}
-.page-content {display: inline-block; width: 100%; max-width: 1564px; margin-top: 0;}
-// .wallpaper {background-color: $light; width: 100%; text-align: center;}
-.wallpaper {position:absolute; top: 0; bottom: 0; right: 0; left: 0; z-index: -999; background-color: $light; height: 100%; text-align: center;}
+.page-content {max-width: 1564px; display: inline-block; width: 100%; margin-top: 0;}
+// Wallpaper
+.wallpaper {max-width: 1564px; position:absolute; top: 0; bottom: 0; right: 0; left: 0; z-index: -999; background-color: $light; height: 100%; text-align: center;}
 .wallpaper_enlightened {background-color: $dark;}
-// .wallpaper__dandelion {height: 99vh; display: inline-block; fill: hsla(0,0,50,1); padding: 4vw 0 1vw 0;}
 .wallpaper__dandelion {height: 99vh; display: inline-block; fill: hsla(0,0,50,1); padding: 4vh 0 1vh 0;}
 .fg-seed, .bg-seed {transition: 5s;}
-
+// Top Enlightenment Toggle
 .enlightenment-toggle__wrapper {width: 100vw; text-align: right; padding: 1.5vw 1.5vw 3.5vw 1.5vw;}
 .enlightenment-toggle:hover {cursor: pointer;}
 .enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox {
@@ -61,7 +51,11 @@ body {margin:0;}
 input{width:25px;}
 .enlightenment-toggle__text, .contact-enlightenment-toggle__text {float: right; margin: 0}
 .enlightenment-toggle__text_enlightened {color: $light}
-
+// NAV
+.button1-background {fill: $color-accent1;}
+.button2-background {fill: $color-accent2;}
+.button3-background {fill: $color-accent3;}
+.button-foreground_enlightened {fill: $light;}
 .nav__wrapper {position: relative; width: 100%;}
 .nav {
     width: 100%;
@@ -76,10 +70,9 @@ input{width:25px;}
 .nav__title-sub {margin: -1vh 0 0 0; text-align: center;}
 .nav__title-sub_enlightened{color: $light;}
 .nav__title-wrapper {display: inline-block; width:50%;}
-.nav__secret-letter {padding: 0.75rem; margin: -0.75rem; cursor: default; pointer-events: none; transition: 1s;}
+.nav__secret-letter {padding: 0.75rem; margin: -0.75rem; cursor: default; pointer-events: none;}
 .nav__secret-letter_enlightened {color: $light;}
 .nav__secret-letter-functional_enlightened {color: hsla(60,100,50,1); text-shadow: 0px 0px 6px hsla(194,98,51,1); cursor: pointer; pointer-events: auto;}
-
 .nav__menu-options-wrapper {position: relative; display: inline-block; width:50%; text-align: center; height: 14vw;}
 .nav__menu-options {display: inline-flex; height: 14vw;}
 .nav__menu-option {margin: 0 1vw;}
@@ -92,7 +85,7 @@ input{width:25px;}
 .nav__menu-option-text_enlightened {color: $light;}
 .game-over-menu-option-text_enlightened {display: none;}
 .nav__cookie {z-index: 999;}
-
+// ABOUT Page
 .about-page__wrapper {width:100%; padding: 0 8vw;}
 .about-page {width:100%; display: flex;}
 .about-page__bio-wrapper {width: 50%}
@@ -120,129 +113,27 @@ input{width:25px;}
 .game-over-skills-wrapper_enlightened {visibility: hidden;}
 .about-page__seeds-img {transform: rotateY(180deg);}
 .about-page {height: 35.2vw}
-
+// PORTFOLIO and CONTACT Pages
 .contact__wrapper, .portfolio__wrapper {height: 35.2vw; width: 100%; text-align: center;}
 .contact, .portfolio {height: 63%; padding-left: 7vw; width: 75%; display: flex; flex-wrap: wrap; position: relative; margin: 0 auto; top: 50%; transform: translateY(-50%)}
 .contact__item-wrapper, .portfolio__item-wrapper {width: 50%; text-align: left;}
-.contact__item, .portfolio__item {display: flex;}
-.item__icon {width: 8vw;}
-.item__icon_enlightened {-webkit-filter: drop-shadow(0 0 10px $light); filter: drop-shadow(0 0 10px $light);}
-.text__main_enlightened {display: none;}
-.text__title-toggle_enlightened {display: none;}
-.contact-enlightenment-toggle__wrapper_enlightened {display: none;}
-.enlightenment-directions {display: none; color: red; text-shadow: 0 0 7px $light;}
+.contact__item, .portfolio__item {height: 11vw; display: flex; -webkit-filter: drop-shadow(0 0 10px $light); filter: drop-shadow(0 0 10px $light);}
+.item__icon {width: 8vw; padding-top: 0.6vw;}
+.item__icon_enlightened {-webkit-filter: drop-shadow(0 0 2px $dark); filter: drop-shadow(0 0 2px $dark);}
+.text__title-toggle_enlightened, .contact-enlightenment-toggle__text_enlightened, .contact-enlightenment-toggle__wrapper_enlightened {display: none; pointer-events: none;}
+.contact-enlightenment-toggle_enlightened {pointer-events: none;}
+.enlightenment-directions {text-transform: lowercase; display: none; padding-left: 1vw; color: red; text-shadow: 0 0 7px $light;}
 .enlightenment-directions_enlightened {display: block;}
-.text__details {margin-top: 0;}
-.text__github {text-decoration: underline; color: $link-color; &:hover{color: $link-hover-color}}
-.text__title {text-decoration: underline; color: $link-color; margin-bottom: 0;}
+.text__details {margin-top: 0; -webkit-filter: drop-shadow(0 0 5px $light); filter: drop-shadow(0 0 5px $light);}
+.text__github {text-decoration: underline; color: $link-color; &:hover{color: $link-hover-color}; -webkit-filter: drop-shadow(0 0 5px $light); filter: drop-shadow(0 0 5px $light);}
+.github-p {margin-bottom: 0;}
+.github-p_enlightened {display: none;}
+.text__title {text-decoration: underline; color: $link-color; margin-bottom: 0; -webkit-filter: drop-shadow(0 0 5px $light); filter: drop-shadow(0 0 5px $light);}
 .text__main:hover .text__title {color: $link-hover-color}
+.text__main_enlightened {display: none;}
 .item__icon-wrapper-href {pointer-events: none;}
 .text__github_plain {color: $dark; text-decoration: none; display: inline-block; &:hover{color: $dark}}
-// NEW
-.enlightenment-directions {font-size: 3vw;}
-// .text__title FONT SIZES FOR CONTACT & PORTFOLIO
-
-
-.q {fill: red;}
-.w {fill: blue}
-.e {fill: green}
-.r {fill: pink}
-.t {fill: purple}
-.y {fill: orange}
-.wp-1 {fill: lime}
-// .nav__menu-options {display: none;}
-// .wallpaper__dandelion {height: 200vh;}
-
-// .bg-seed1 {fill: red}
-// .bg-seed2 {fill: blue}
-// .bg-seed3 {fill: green}
-// .bg-seed4 {fill: purple}
-// .bg-seed5 {fill: orange}
-// .bg-seed6 {fill: red}
-// .bg-seed7 {fill: blue}
-// .bg-seed8 {fill: green}
-// .bg-seed9 {fill: purple}
-// .bg-seed10 {fill: orange}
-// .bg-seed11 {fill: red}
-// .bg-seed12 {fill: blue}
-// .bg-seed13 {fill: green}
-// .bg-seed14 {fill: purple}
-// .bg-seed15 {fill: orange}
-// .bg-seed16 {fill: red}
-// .bg-seed17 {fill: blue}
-// .bg-seed18 {fill: green}
-// .bg-seed19 {fill: purple}
-// .bg-seed20 {fill: orange}
-// .bg-seed21 {fill: red}
-// .bg-seed22 {fill: blue}
-// .bg-seed23 {fill: green}
-// .bg-seed24 {fill: purple}
-// .bg-seed25 {fill: orange}
-// .bg-seed26 {fill: red}
-// .bg-seed27 {fill: blue}
-// .bg-seed28 {fill: green}
-// .bg-seed29 {fill: purple}
-// .bg-seed30 {fill: orange}
-// .bg-seed31 {fill: orange}
-// .bg-seed32 {fill: red}
-// .bg-seed33 {fill: blue}
-// .bg-seed34 {fill: green}
-// .bg-seed35 {fill: purple}
-// .bg-seed36 {fill: orange}
-// .bg-seed37 {fill: orange}
-// .bg-seed38 {fill: red}
-// .bg-seed39 {fill: blue}
-// .bg-seed40 {fill: green}
-// .bg-seed41 {fill: purple}
-// .bg-seed42 {fill: orange}
-// .bg-seed43 {fill: orange}
-// .bg-seed44 {fill: red}
-// .bg-seed45 {fill: blue}
-// .bg-seed46 {fill: green}
-// .bg-seed47 {fill: purple}
-// .bg-seed48 {fill: orange}
-// .bg-seed49 {fill: orange}
-// .bg-seed50 {fill: red}
-// .bg-seed51 {fill: blue}
-// .bg-seed52 {fill: green}
-// .bg-seed53 {fill: purple}
-// .bg-seed54 {fill: orange}
-// .bg-seed55 {fill: orange}
-
-// .bg-seed56 {fill: red}
-// .bg-seed57 {fill: blue}
-// .bg-seed58 {fill: green}
-// .bg-seed59 {fill: purple}
-// .bg-seed60 {fill: orange}
-// .bg-seed61 {fill: red}
-// .bg-seed62 {fill: blue}
-// .bg-seed63 {fill: green}
-// .bg-seed64 {fill: purple}
-// .bg-seed65 {fill: orange}
-// .bg-seed66 {fill: red}
-// .bg-seed67 {fill: blue}
-// .bg-seed68 {fill: green}
-// .bg-seed69 {fill: purple}
-// .bg-seed70 {fill: orange}
-// .bg-seed71 {fill: red}
-// .bg-seed72 {fill: blue}
-// .bg-seed73 {fill: green}
-// .bg-seed74 {fill: purple}
-// .bg-seed75 {fill: orange}
-
-x {color: hsla(14.6,50.2%,44.9%,1)}
-x {color: hsla(203.8,45.3%,29.4%,1)}
-x {color: hsla(90.9,49.3%,40.2%,1)}
-x {color: hsla(264,43.8%,31.4%,1)}
-x {color: hsla(339.6,49.5%,39.6%,1)}
-x {color: hsla(64.7,49.2%,64.5%,1)}
-x {color: hsla(52.5,78.6%,57.8%,1)}
-x {color: hsla(212.4,31.2%,68.6%,1)}
-x {color: hsla(12.5,77.3%,55.1%,1)}
-
-
-
-
+// COOKIES and FORTUNE
 .nav__cookie {display: none;}
 .nav__cookie-opened {display: none; width: 9vw;}
 .nav__cookie_enlightened {display: block; width: 9vw; transition: 1s;}
@@ -251,15 +142,12 @@ x {color: hsla(12.5,77.3%,55.1%,1)}
 .cookie-background {fill: rgba( #361E00, 0.5 )}
 .cookie-fortune {fill: rgba( $fortune-color, 0.5 )}
 .cookie-outline {fill:$light}
-
 .fortune {display: none; z-index: 999; position: absolute; width: 42vw; left: 40vw; top:20vw; background-color: hsla(50,50%,50%,0.5); border-radius: 1px 0 1px 0; padding: 1vh 3vw; transition: background-color 5s ease;}
 .fortune__text {display: none; color: $fortune-text-color; font-size: 1.8vw; -webkit-filter: drop-shadow(0 0 1px $fortune-text-color); filter: drop-shadow(0 0 1px $fortune-text-color); text-align: center; transition: 2s;}
 .fortune__text_italic {font-style: italic;}
 .fortune__text:first-child {padding: 0.9vw 0;}
-
 .nav__thanks-wrapper {z-index: 1000; display: none; position: absolute; right: 14vw; bottom: 0vw;}
 .nav__thanks {z-index: 1000; font-family: 'Roboto Slab', serif; color: $fortune-text-color; font-size: 2vw;}
-
 
 @media only screen and (min-width: 1564px){
     // fonts
@@ -270,6 +158,9 @@ x {color: hsla(12.5,77.3%,55.1%,1)}
     .skills__title {font-size: 51.61px}
     .fortune__text {font-size: 28.152px}
     .nav__thanks {font-size: 31.28px}
+    .text__title {font-size: 27.37px;}
+    .text__details, .text__github {font-size: 23.3px;}
+    .enlightenment-directions {font-size: 46.92px;}
     // padding, margin, size
     .wallpaper__dandelion {padding: 62.56px 0 15.64px 0}
     .enlightenment-toggle__wrapper {width: 1564px; padding: 23.46px 23.46px 54.74px 23.46px}
@@ -288,12 +179,15 @@ x {color: hsla(12.5,77.3%,55.1%,1)}
     .skills__skill {margin: 4.69px 0}
     .skills__icon-wrapper {width:31.28px}
     .skills__name {padding-left: 7.82px; margin: 1.56px 0;}
+    .contact, .portfolio {padding-left: 109.4px;}
+    .contact__item, .portfolio__item{height: 172.04px;}
+    .enlightenment-directions {padding-left: 15.64px;}
     .item__icon {width: 125.12px}
+    .item__icon {padding-top: 9.38px;}
     .nav__cookie-opened, .nav__cookie_enlightened {width: 140.76px}
     .fortune {width: 656.88px; left: 625.6px; top: 312.8px; padding: 15.64px 46.92px}
     .fortune__text:first-child {padding: 14.08px 0}
     .nav__thanks-wrapper {right: 218.96px}
-    // NEW
     .about-page {height: 550.47px}
     .contact__wrapper, .portfolio__wrapper {height: 550.53px}
 }
@@ -317,3 +211,19 @@ x {color: hsla(12.5,77.3%,55.1%,1)}
         // fix whatever is happening to the checkboxes at this media size
     }
 }
+
+
+
+
+
+
+x {color: hsla(14.6,50.2%,44.9%,1)}
+x {color: hsla(203.8,45.3%,29.4%,1)}
+x {color: hsla(90.9,49.3%,40.2%,1)}
+x {color: hsla(264,43.8%,31.4%,1)}
+x {color: hsla(339.6,49.5%,39.6%,1)}
+x {color: hsla(64.7,49.2%,64.5%,1)}
+x {color: hsla(52.5,78.6%,57.8%,1)}
+x {color: hsla(212.4,31.2%,68.6%,1)}
+x {color: hsla(12.5,77.3%,55.1%,1)}
+
