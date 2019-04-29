@@ -21,7 +21,6 @@ export default class Portfolio extends React.Component{
         return(
             <div className="portfolio__wrapper">
                 <ul className="portfolio">
-
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
                             <a className="item__icon-wrapper-href" href="#">
@@ -39,7 +38,6 @@ export default class Portfolio extends React.Component{
                             </div>
                         </div>
                     </li>
-
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
                             <a className="item__icon-wrapper-href">
@@ -57,7 +55,6 @@ export default class Portfolio extends React.Component{
                             </div>
                         </div>
                     </li>
-
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
                             <a className="item__icon-wrapper-href" href="#">
@@ -75,7 +72,6 @@ export default class Portfolio extends React.Component{
                             </div>
                         </div>
                     </li>
-
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
                             <a className="item__icon-wrapper-href" href="#">
@@ -93,10 +89,8 @@ export default class Portfolio extends React.Component{
                             </div>
                         </div>
                     </li>
-
                 </ul>
             </div>
         )
     }
-
 }

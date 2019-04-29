@@ -8,17 +8,41 @@ import Portfolio from './portfolio';
 import Contact from './contact';
 import { Button1, Button2, Button3 } from './svgs';
 import { Cookie as Cookie1, Cookie as Cookie2, Cookie as Cookie3 } from './svgs'
-import { ColorSeeds } from './seed-coloring'
-
-alert('working!')
 
 const textToEnlighten = ['.enlightenment-toggle__text', '.nav__title-main', '.nav__title-sub', '.nav__secret-letter', '.nav__secret-letter-functional', '.nav__menu-option-text', '.about-page__bio', '.skills__title', '.skills__icon', '.skills__name', '.about-page__seeds-img', '.bio__hidden-code', '.bio__hidden-cap', '.bio__hidden-special', '.item__icon', '.text__main', '.github-p', '.enlightenment-directions', '.text__title-toggle', '.contact-enlightenment-toggle__wrapper', '.contact-enlightenment-toggle']
+
+let     prevBgSeedNum = null,
+        currBgSeedNum = null,
+        currentBgSeed = 0,
+        prevFgSeedNum = null,
+        currFgSeedNum = null,
+        currentFgSeed = 0
+function bgSeedSelector(){
+    while(prevBgSeedNum === currBgSeedNum){
+        currBgSeedNum = Math.floor(Math.random() * 75) + 1;
+    }
+    prevBgSeedNum = currBgSeedNum;
+    currentBgSeed = `bg-seed${currBgSeedNum}`
+}
+function fgSeedSelector(){
+    while(prevFgSeedNum === currFgSeedNum){
+        currFgSeedNum = Math.floor(Math.random() * 3) + 1;
+    }
+    prevFgSeedNum = currFgSeedNum;
+    currentFgSeed = `fg-seed${currFgSeedNum}`
+}
 
 function enlightenment(){
     textToEnlighten.forEach(function(x){
         let newClass = x.replace(/\./, "")
         let insertPoint = x.length -1;
         $(x).addClass([newClass.slice(0, insertPoint), '_enlightened', newClass.slice(insertPoint)].join(''))
+        if ($('.fg-seed').length > 0) {
+            $('.fg-seed').addClass('notransition')
+            $('.fg-seed').css('fill', 'hsla(100,100%,100%,1)')
+            $('.fg-seed')[0].focus()
+            $('.fg-seed').removeClass('notransition')
+        }
     })
 }
 
@@ -37,7 +61,15 @@ function unenlightenment(){
     $('.nav__menu-option').css('pointer-events', 'auto')
     $('.game-over-menu-option-image').css('display', 'block')
     $('.game-over-menu-option-text').css('display', 'block')
+    if ($('.fg-seed').length > 0) {
+        $('.fg-seed').addClass('notransition')
+        $('.fg-seed').css('fill', 'hsla(0,0%,0%,1)')
+        $('.fg-seed')[0].focus()
+        $('.fg-seed').removeClass('notransition')
+    }
 }
+
+
 
 class Nav extends React.Component{
     constructor(props){
@@ -51,12 +83,30 @@ class Nav extends React.Component{
             cookie3Open: false
         }
 
+        this.colorSeeds = this.colorSeeds.bind(this);
         this.handleEnlightenClick = this.handleEnlightenClick.bind(this);
         this.handleCheckboxClick = this.handleCheckboxClick.bind(this);
         this.handleSecretLetterClick = this.handleSecretLetterClick.bind(this);
         this.handleNavClick = this.handleNavClick.bind(this);
         this.setOpenCookie = this.setOpenCookie.bind(this);
         this.setFortuneTold = this.setFortuneTold.bind(this);
+    }
+
+    colorSeeds(){
+        let thisVar = this;
+        setInterval(function () {
+            $(`.${currentBgSeed}`).css({'fill': 'hsla(0,0%,50%,1)'})
+            if (thisVar.state.enlightened){
+                $(`.${currentFgSeed}`).css({'fill': 'hsla(360,100%,100%,1)'})
+            }
+            else if (!thisVar.state.enlightened){
+                $(`.${currentFgSeed}`).css({'fill': 'hsla(0,0%,0%,1)'})
+            }
+            bgSeedSelector()
+            fgSeedSelector()
+            $(`.${currentBgSeed}`).css({'fill': 'hsla(339.6,49.5%,39.6%,1)'})
+            $(`.${currentFgSeed}`).css({'fill': 'hsla(339.6,49.5%,39.6%,1)'})
+        }, 5000);
     }
 
     handleEnlightenClick(){
@@ -122,7 +172,9 @@ class Nav extends React.Component{
     }
 
     componentDidMount(){
-        ColorSeeds()
+        this.colorSeeds();
+        $('.loading-overlay').hide();
+        $('.nav__button1').click();
     }
 
     render(){
@@ -149,7 +201,7 @@ class Nav extends React.Component{
                                         <NavLink to="/about/" className="nav__menu-option menu-options__about" onClick={this.handleNavClick} activeStyle={{'-webkit-filter': 'drop-shadow(0 0 0.25vw hsla(33,50%,45%,1))', 'filter': 'drop-shadow(0 0 0.25vw hsla(33,50%,45%,1))', 'transition': '0.5s'}}>
                                             <Cookie1 cookieNumber="1" setOpenCookie={this.setOpenCookie} setFortuneTold={this.setFortuneTold}/>
                                             <Button1 enlightened={this.state.enlightened} />
-                                            <h2 className="nav__menu-option-text">about</h2> 
+                                            <h2 className="nav__menu-option-text nav__button1">about</h2> 
                                         </NavLink>
                                         <NavLink to="/portfolio/" className="nav__menu-option menu-options__portfolio" onClick={this.handleNavClick} activeStyle={{'-webkit-filter': 'drop-shadow(0 0 0.25vw hsla(151,50%,31%,1))', 'filter': 'drop-shadow(0 0 0.25vw hsla(151,50%,31%,1))', 'transition': '0.5s'}}>
                                             <Cookie2 cookieNumber="2" setOpenCookie={this.setOpenCookie} setFortuneTold={this.setFortuneTold}/>
@@ -189,8 +241,3 @@ class Nav extends React.Component{
 }
 
 ReactDOM.render(<Nav/>,document.getElementById('app'));
-
-
-$(document).ready(function(){
-    $('.loading-overlay').hide();
-})

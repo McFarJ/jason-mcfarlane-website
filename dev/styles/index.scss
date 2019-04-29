@@ -32,8 +32,11 @@ $fortune-text-color: hsla(339.7,100,44.1,1);
 a {color: $dark; text-decoration: none;}
 ul {list-style-type: none;}
 body {margin:0;}
-.wrapper {height: 100vh; display: flex; align-items: center;}
+.loading-overlay {position: absolute; top: 50%; transform: translateY(-50%); right: 50%; transform: translateX(50%);}
+.loading-overlay__p {text-align: center;}
+.wrapper {height: 100vh; text-align: center;}
 .page-content {max-width: 1564px; display: inline-block; width: 100%; margin-top: 0;}
+.notransition {-webkit-transition: none !important;-moz-transition: none !important;-o-transition: none !important;transition: none !important;}
 // Wallpaper
 .wallpaper {max-width: 1564px; position:absolute; top: 0; bottom: 0; right: 0; left: 0; z-index: -999; background-color: $light; height: 100%; text-align: center;}
 .wallpaper_enlightened {background-color: $dark;}
@@ -88,8 +91,8 @@ input{width:25px;}
 // ABOUT Page
 .about-page__wrapper {width:100%; padding: 0 8vw;}
 .about-page {width:100%; display: flex;}
-.about-page__bio-wrapper {width: 50%}
-.about-page__bio {width: 100%; line-height: 2.75vw;}
+.about-page__bio-wrapper {width: 50%;}
+.about-page__bio {width: 100%; line-height: 2.75vw; text-align: left;}
 .about-page__bio_enlightened {color: darken( $light, 70% ); -webkit-filter: drop-shadow(0 0 10px rgba( $light, .5 )); filter: drop-shadow(0 0 10px rgba( $light, .5 ));}
 .game-over-bio_enlightened {visibility: hidden;}
 .bio__hidden-code {color: $dark; text-shadow: none;}
@@ -104,7 +107,7 @@ input{width:25px;}
 .skills__list {padding:0;}
 .skills__title {text-align: center; margin-top: 10vh;}
 .skills__title_enlightened {color: $light;}
-.skills__list {display: flex; flex-wrap: wrap;}
+.skills__list {display: flex; flex-wrap: wrap; text-align: left;}
 .skills__skill{width: 50%; margin: 0.3vw 0;}
 .skills__icon-wrapper{display: inline-block; width: 2vw;}
 .skills__icon_enlightened{color: $light}
@@ -213,10 +216,6 @@ input{width:25px;}
 }
 
 
-
-
-
-
 x {color: hsla(14.6,50.2%,44.9%,1)}
 x {color: hsla(203.8,45.3%,29.4%,1)}
 x {color: hsla(90.9,49.3%,40.2%,1)}
@@ -226,4 +225,3 @@ x {color: hsla(64.7,49.2%,64.5%,1)}
 x {color: hsla(52.5,78.6%,57.8%,1)}
 x {color: hsla(212.4,31.2%,68.6%,1)}
 x {color: hsla(12.5,77.3%,55.1%,1)}
-

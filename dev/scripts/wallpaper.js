@@ -3,18 +3,6 @@ import React from 'react';
 export default class Wallpaper extends React.Component{
     render(){
         return(
-            
-
-
-
-
-
-
-
-
-
-
-            // <!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
             <svg className="wallpaper__dandelion" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 1651 3402.3" xmlSpace="preserve">
                 <path className="flower-base" d="M1223.7,1982.2c-0.8-5.4-1.1-10.7-0.7-16c0.4-5.2,1.7-10.3,3.6-14.7c1.2-2.9,2.8-5.4,4.3-7.6c-0.5-1.1-0.8-2.2-1-3.3

@@ -56,20 +56,31 @@ ul {
 body {
   margin: 0; }
 
+.loading-overlay {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%); }
+
+.loading-overlay__p {
+  text-align: center; }
+
 .wrapper {
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  text-align: center; }
 
 .page-content {
   max-width: 1564px;
   display: inline-block;
   width: 100%;
   margin-top: 0; }
+
+.notransition {
+  -webkit-transition: none !important;
+  transition: none !important; }
 
 .wallpaper {
   max-width: 1564px;
@@ -247,7 +258,8 @@ input {
 
 .about-page__bio {
   width: 100%;
-  line-height: 2.75vw; }
+  line-height: 2.75vw;
+  text-align: left; }
 
 .about-page__bio_enlightened {
   color: #4d4d4d;
@@ -303,7 +315,8 @@ input {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  text-align: left; }
 
 .skills__skill {
   width: 50%;
