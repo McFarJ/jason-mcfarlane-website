@@ -230,9 +230,9 @@ class Nav extends React.Component{
                         <Route path="/about/" render={(props) => <About {...props} enlightened={this.state.enlightened} enlightenment={enlightenment} gameOver={this.state.gameOver} fortuneTold={this.state.fortuneTold} />} />
                         <Route path="/portfolio/" render={(props) => <Portfolio {...props} enlightened={this.state.enlightened} enlightenment={enlightenment} />} />
                         <Route path="/contact/" render={(props) => <Contact {...props} enlightened={this.state.enlightened} handleEnlightenClick={this.handleEnlightenClick} />} />
-                        <div className="wallpaper">
-                            <Wallpaper />
-                        </div>
+                    </div>
+                    <div className="wallpaper">
+                        <Wallpaper />
                     </div>
                 </div>
             </Router>

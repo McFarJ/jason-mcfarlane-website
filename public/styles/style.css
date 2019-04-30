@@ -57,6 +57,7 @@ body {
   margin: 0; }
 
 .loading-overlay {
+  width: 40px;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -76,7 +77,8 @@ body {
   max-width: 1564px;
   display: inline-block;
   width: 100%;
-  margin-top: 0; }
+  margin-top: 0;
+  max-height: 100vh; }
 
 .notransition {
   -webkit-transition: none !important;
@@ -155,7 +157,8 @@ input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 8vw 2vh 8vw; }
+  padding: 0 8vw 2vh 8vw;
+  height: 16vw; }
 
 .nav__menu-options, .about-page__skills-wrapper {
   padding-left: 12vw; }
@@ -613,17 +616,133 @@ input {
     height: 100vh;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
-  .page-content {
-    margin-top: 0; } }
+            align-items: center; } }
 
 @media only screen and (max-width: 1060px) {
   .skills__title {
     margin-top: 6vh; } }
 
+@media only screen and (max-width: 860px) {
+  .nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: auto;
+    height: auto;
+    padding: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .nav__menu-options {
+    padding: 0; }
+  .about-page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .about-page__bio-wrapper {
+    width: 100%; }
+  .about-page__seeds-img {
+    display: none; }
+  .about-page__skills-wrapper {
+    padding: 0; }
+  .skills__title {
+    margin: 0; }
+  .skills__list {
+    width: 100%; } }
+
 @media only screen and (max-width: 600px) {
-  .enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox {
-    margin: auto; } }
+  .enlightenment-toggle__wrapper {
+    width: 100vw;
+    padding: 5vw 6vw 0 0; }
+  .enlightenment-toggle__checkbox {
+    width: 3vw;
+    height: 3vw;
+    margin: 1vw 1vw 0 0; }
+  @-moz-document url-prefix() {
+    .enlightenment-toggle__checkbox {
+      margin: 0 2vw; } }
+  .enlightenment-toggle__text, .contact-enlightenment-toggle__text {
+    font-size: 4vw; }
+  .nav__title-main {
+    font-size: 10vw; }
+  .nav__menu-option-text, .nav__title-sub {
+    font-size: 5vw; }
+  .about-page__bio, .game-over-bio, .game-over-bio_enlightened, .skills__skill {
+    font-size: 3.8vw; }
+  .skills__title {
+    font-size: 6vw; }
+  .fortune__text {
+    font-size: 4.75vw; }
+  .nav__thanks {
+    font-size: 5.25vw; }
+  .text__title {
+    font-size: 3.5vw; }
+  .text__details, .text__github {
+    font-size: 3.25vw; }
+  .enlightenment-directions {
+    font-size: 9vw; }
+  .nav {
+    width: 100%; }
+  .nav__title-wrapper {
+    width: 100%;
+    padding-bottom: 10vw;
+    padding-top: 17vw; }
+  .nav__menu-options-wrapper {
+    width: 100%;
+    height: 25vw; }
+  .nav__menu-option-image, .nav__cookie {
+    width: 20vw; }
+  .nav__menu-option {
+    margin: 0 3vw; }
+  .nav__menu-option:first-child {
+    margin: 0 3vw 0 0; }
+  .nav__menu-option:last-child {
+    margin: 0 0 0 3vw; }
+  .nav__menu-option-image2 {
+    padding: 0; }
+  .about-page, .about-page__wrapper {
+    height: 88.6vw; }
+  .about-page__skills-wrapper {
+    width: 65vw; }
+  .about-page__bio-wrapper {
+    padding-top: 10vw; }
+  .about-page__bio {
+    line-height: 5vw; }
+  .skills__name {
+    padding-left: 4vw;
+    margin: 0; }
+  .skills__skill {
+    margin: 0; }
+  .skills__list {
+    line-height: 4vw; }
+  .portfolio__wrapper, .contact__wrapper, .contact, .portfolio {
+    height: 88.6vw; }
+  .portfolio__item-wrapper, .contact__item-wrapper {
+    width: 100%;
+    padding-bottom: 4vw; }
+  .contact, .portfolio {
+    height: auto;
+    padding-left: 0;
+    width: 72vw; }
+  .contact__item, .portfolio__item {
+    height: 15vw; }
+  .item__icon {
+    width: 20vw; }
+  .text__title {
+    margin-top: 3vw;
+    white-space: nowrap; }
+  .text__details {
+    margin-bottom: 0; }
+  .github-p {
+    margin-top: 1.5vw; }
+  .enlightenment-directions {
+    padding-left: 1vw;
+    margin: 3vw; } }
 
 x {
   color: #ac5539; }

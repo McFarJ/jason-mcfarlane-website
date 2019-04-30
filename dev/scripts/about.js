@@ -70,7 +70,7 @@ export default class About extends React.Component{
                                 </li>
                                 <li className="skills__skill">
                                     <div className="skills__icon-wrapper">
-                                        <i className="skills__icon fas fa-terminal"></i>
+                                        <i className="skills__icon fas fa-cube"></i>
                                     </div>
                                     <p className="skills__name">jQuery</p>
                                 </li>
