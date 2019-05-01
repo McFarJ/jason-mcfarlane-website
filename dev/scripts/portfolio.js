@@ -32,7 +32,7 @@ export default class Portfolio extends React.Component{
                                     <h3 className="text__title">Beard Map- web app</h3>
                                     <p className="text__details">React, Firebase</p>
                                 </a>
-                                <a className="text__github" href="#">
+                                <a className="text__github" href="https://github.com/McFarJ/Beard-Map-App">
                                     <p className="github-p"><span className="text__github_plain">or &nbsp;</span>view on GitHub</p>
                                 </a>
                             </div>

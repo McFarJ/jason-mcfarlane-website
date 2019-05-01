@@ -61,6 +61,7 @@ function unenlightenment(){
     $('.nav__menu-option').css('pointer-events', 'auto')
     $('.game-over-menu-option-image').css('display', 'block')
     $('.game-over-menu-option-text').css('display', 'block')
+    $('.about-page__seeds-img_visible-on-mobile').removeClass('about-page__seeds-img_visible-on-mobile')
     if ($('.fg-seed').length > 0) {
         $('.fg-seed').addClass('notransition')
         $('.fg-seed').css('fill', 'hsla(0,0%,0%,1)')
@@ -148,6 +149,8 @@ class Nav extends React.Component{
         $('.nav__secret-letter-functional_enlightened').removeClass('nav__secret-letter-functional_enlightened')
         this.setState({gameOver: true})
         $('.menu-options__about').css({'-webkit-filter': 'drop-shadow(0 0 0 hsla(151,50%,31%,0))', 'filter': 'drop-shadow(0 0 0 hsla(151,50%,31%,0))', 'transition': '0.5s'})
+        // NEW
+        $('.about-page__seeds-img').addClass('about-page__seeds-img_visible-on-mobile')
         if(this.state.fortuneTold){
             $('.game-over-menu-option-image').css('display', 'none')
             $('.game-over-menu-option-text').css('display', 'none')
