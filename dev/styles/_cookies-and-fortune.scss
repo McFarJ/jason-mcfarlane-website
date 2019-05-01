@@ -1,0 +1,14 @@
+.nav__cookie {display: none;}
+.nav__cookie-opened {display: none; width: 9vw;}
+.nav__cookie_enlightened {display: block; width: 9vw; transition: 1s;}
+.nav__cookie_has-hover:hover {-webkit-filter: drop-shadow(0 0 20px $light); filter: drop-shadow(0 0 20px $light); transition: 1s;}
+.cookie-foreground {fill: rgba( #362800, 0.5 )} 
+.cookie-background {fill: rgba( #361E00, 0.5 )}
+.cookie-fortune {fill: rgba( $fortune-color, 0.5 )}
+.cookie-outline {fill:$light}
+.fortune {display: none; z-index: 999; position: absolute; width: 42vw; left: 40vw; top:20vw; background-color: hsla(50,50%,50%,0.5); border-radius: 1px 0 1px 0; padding: 1vh 3vw; transition: background-color 5s ease;}
+.fortune__text {display: none; color: $fortune-text-color; font-size: 1.8vw; -webkit-filter: drop-shadow(0 0 1px $fortune-text-color); filter: drop-shadow(0 0 1px $fortune-text-color); text-align: center; transition: 2s;}
+.fortune__text_italic {font-style: italic;}
+.fortune__text:first-child {padding: 0.9vw 0;}
+.nav__thanks-wrapper {z-index: 1000; display: none; position: absolute; right: 14vw; bottom: 0vw;}
+.nav__thanks {z-index: 1000; font-family: 'Roboto Slab', serif; color: $fortune-text-color; font-size: 2vw;}

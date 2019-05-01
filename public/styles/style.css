@@ -57,17 +57,28 @@ body {
   margin: 0; }
 
 .loading-overlay {
-  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.loading-overlay__img {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 50%;
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%); }
+          transform: translateY(-50%); }
 
 .loading-overlay__p {
-  text-align: center; }
+  z-index: -999;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
 
 .wrapper {
   height: 100vh;
@@ -433,7 +444,7 @@ input {
   -webkit-filter: drop-shadow(0 0 5px white);
   filter: drop-shadow(0 0 5px white); }
 
-.text__main:hover .text__title {
+.text__main:hover .text__title, .contact__text-wrapper:hover .text__title {
   color: #973355; }
 
 .text__main_enlightened {
@@ -666,12 +677,12 @@ input {
   .enlightenment-toggle__wrapper {
     width: 525px;
     padding: 26.25px 31.5px 0 0; }
-  .enlightenment-toggle__checkbox {
+  .enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox {
     width: 15.75px;
     height: 15.75px;
     margin: 5.25px 5.25px 0 0; }
   @-moz-document url-prefix() {
-    .enlightenment-toggle__checkbox {
+    .enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox {
       margin: 0 10.5px; } }
   .enlightenment-toggle__text, .contact-enlightenment-toggle__text {
     font-size: 21px; }

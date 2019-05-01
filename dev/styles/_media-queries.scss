@@ -1,0 +1,210 @@
+@media only screen and (min-width: 1564px){
+    // fonts
+    .enlightenment-toggle__text, .contact-enlightenment-toggle__text {font-size: 29.72px}
+    .nav__title-main {font-size: 86.02px}
+    .nav__menu-option-text, .nav__title-sub {font-size: 45.36px;}
+    .about-page__bio, .game-over-bio, .game-over-bio_enlightened, .skills__skill {font-size: 27.37px}
+    .skills__title {font-size: 51.61px}
+    .fortune__text {font-size: 28.152px}
+    .nav__thanks {font-size: 31.28px}
+    .text__title {font-size: 27.37px;}
+    .text__details, .text__github {font-size: 23.3px;}
+    .enlightenment-directions {font-size: 46.92px;}
+    // padding, margin, size
+    .wallpaper__dandelion {padding: 62.56px 0 15.64px 0}
+    .enlightenment-toggle__wrapper {width: 1564px; padding: 23.46px 23.46px 54.74px 23.46px}
+    .enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox {height: 23.46px; width: 23.46px; margin: 7.82px 7.82px auto auto}
+    .nav {padding-right: 125.12px; padding-left: 125.12px; height: 210px;}
+    .nav__menu-options, .about-page__skills-wrapper {padding-left: 187.68px}
+    .nav__menu-options, .nav__menu-options-wrapper {height: 218.96px}
+    .nav__menu-option {margin: 0 15.64px}
+    .nav__menu-option:first-child {margin: 0 1.56px 0 0}
+    .nav__menu-option:last-child {margin: 0 0 0 1.56px}
+    .nav__menu-option-image {width: 125.12px}
+    .nav__menu-option-image2 {padding-left: 10.95px}
+    .nav__menu-option-text {margin: 15.64px 0 0 0}
+    .about-page__wrapper {padding: 0 125.12px; margin: 27.24px}
+    .about-page__bio {line-height: 43.01px}
+    .skills__skill {margin: 4.69px 0}
+    .skills__icon-wrapper {width:31.28px}
+    .skills__name {padding-left: 7.82px; margin: 1.56px 0;}
+    .contact, .portfolio {padding-left: 109.4px;}
+    .contact__item, .portfolio__item{height: 172.04px;}
+    .enlightenment-directions {padding-left: 15.64px;}
+    .item__icon {width: 125.12px}
+    .item__icon {padding-top: 9.38px;}
+    .nav__cookie-opened, .nav__cookie_enlightened {width: 140.76px}
+    .fortune {width: 656.88px; left: 625.6px; top: 312.8px; padding: 15.64px 46.92px}
+    .fortune__text:first-child {padding: 14.08px 0}
+    .nav__thanks-wrapper {right: 218.96px}
+    .about-page {height: 550.47px}
+    .contact__wrapper, .portfolio__wrapper {height: 550.53px}
+}
+
+@media only screen and (max-width: 1465px){
+    .wrapper {display: flex; height: 100vh; align-items: center;}
+}
+
+@media only screen and (max-width: 1060px){
+    .skills__title {margin-top: 6vh;}
+}
+
+@media only screen and (max-width: 860px){
+    // NAV
+    .nav {
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        padding: 0;
+        align-items: center;
+    }
+    .nav__menu-options {
+        padding: 0;
+    }
+    // ABOUT page
+    .about-page {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-page__bio-wrapper {
+        width: 100%;
+    }
+    .about-page__seeds-img {
+        display: none;
+    }
+    .about-page__seeds-img_visible-on-mobile {
+        display: block;
+        margin: 0 auto;
+        width: 325px;
+        padding-top: 50px;
+    }
+
+    .about-page__skills-wrapper {
+        padding: 0;
+    }
+    .skills__title {
+        margin: 0;
+    }   
+    .skills__list {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 860px){
+    .enlightenment-toggle__wrapper {
+        width: 525px;
+        padding: 26.25px 31.5px 0 0;
+    }
+    .enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox {
+        width: 15.75px;
+        height: 15.75px;
+        margin: 5.25px 5.25px 0 0;
+    }
+    @-moz-document url-prefix() {
+        .enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox {margin: 0 10.5px;}
+    }
+
+    .enlightenment-toggle__text, .contact-enlightenment-toggle__text {font-size: 21px;}
+    .nav__title-main {font-size: 52.5px;}
+    .nav__menu-option-text, .nav__title-sub {font-size: 26.25px;}
+    .about-page__bio, .game-over-bio, .game-over-bio_enlightened, .skills__skill {font-size: 19.95px;}
+    .skills__title {font-size: 31.5px;}
+    .fortune__text {font-size: 15px;}
+    .nav__thanks {font-size: 12.5px;}
+    .text__title {font-size: 18.375px;}
+    .text__details, .text__github {font-size: 17.0625px;}
+    .enlightenment-directions {font-size: 47.25px;}
+
+    .enlightenment-toggle__wrapper {width: 100vw}
+
+    .nav{width: 100%;}
+    .nav__title-wrapper{width:100%; padding-bottom: 52.5px; padding-top: 89.25px}
+    .nav__menu-options-wrapper{width:100%; height: 131.25px;}
+    .nav__menu-option-image, .nav__cookie, .nav__cookie-opened {width: 105px;}
+    .nav__menu-option {margin: 0 15.75px;}
+    .nav__menu-option:first-child {margin: 0 15.75px 0 0;}
+    .nav__menu-option:last-child {margin: 0 0 0 15.75px;}
+    .nav__menu-option-image2 {padding: 0;}
+
+    .about-page, .about-page__wrapper {height: 465.15px;}
+    .about-page__skills-wrapper{width: 341.25px;}
+    .about-page__bio-wrapper{padding-top: 52.5px; text-align: center;}
+    .about-page__bio{width: 441px; display: inline-block;}
+    .about-page__bio{line-height: 26.25px;}
+    .skills__name{padding-left: 21px; margin: 0;}
+    .skills__skill{margin: 0;}
+    .skills__list{line-height: 21px;}
+
+    .portfolio__wrapper, .contact__wrapper, .contact, .portfolio {height: 465.15px;}
+    .portfolio__item-wrapper, .contact__item-wrapper {width: 100%; padding-bottom: 21px;}
+    .contact, .portfolio {height: auto; padding-left: 0; width: 378px;}
+    .contact__item, .portfolio__item {height: 78.75px;}
+    .item__icon {width: 105px;}
+    .text__title {margin-top:15.75px; white-space: nowrap;}
+    .github-p {margin-top:7.875px;}
+    .enlightenment-directions {padding-left: 5.25px; margin: 15.75px;}
+
+    .fortune {width: 350px; left: 50%; transform:translateX(-50%); top:400px; padding: 5px 15px;}
+    .fortune__text:first-child {padding: 4.5px 0;}
+    .nav__thanks-wrapper {right: 0; left: 50%; transform:translateX(-50%); bottom: -150px; width: 100%;}
+}
+
+@media only screen and (max-width: 500px){
+    .enlightenment-toggle__wrapper {
+        width: 100vw;
+        padding: 5vw 6vw 0 0;
+    }
+    .enlightenment-toggle__checkbox {
+        width: 3vw;
+        height: 3vw;
+        margin: 1vw 1vw 0 0;
+    }
+    @-moz-document url-prefix() {
+        .enlightenment-toggle__checkbox{margin: 0 2vw;}
+    }
+
+    .enlightenment-toggle__text, .contact-enlightenment-toggle__text {font-size: 4vw;}
+    .nav__title-main {font-size: 10vw;}
+    .nav__menu-option-text, .nav__title-sub {font-size: 5vw;}
+    .about-page__bio, .game-over-bio, .game-over-bio_enlightened, .skills__skill {font-size: 3.8vw;}
+    .skills__title {font-size: 6vw;}
+    .fortune__text {font-size: 3vw;}
+    .nav__thanks {font-size: 2.5vw;}
+    .text__title {font-size: 3.5vw;}
+    .text__details, .text__github {font-size: 3.25vw;}
+    .enlightenment-directions {font-size: 9vw;}
+
+    .nav{width: 100%;}
+    .nav__title-wrapper{width:100%; padding-bottom: 10vw; padding-top: 17vw}
+    .nav__menu-options-wrapper{width:100%; height: 25vw;}
+    .nav__menu-option-image, .nav__cookie, .nav__cookie-opened {width: 20vw;}
+    .nav__menu-option {margin: 0 3vw;}
+    .nav__menu-option:first-child {margin: 0 3vw 0 0;}
+    .nav__menu-option:last-child {margin: 0 0 0 3vw;}
+    .nav__menu-option-image2 {padding: 0;}
+
+    .about-page, .about-page__wrapper {height: 88.6vw;}
+    .about-page__skills-wrapper{width: 65vw;}
+    .about-page__bio-wrapper{padding-top: 10vw;}
+    .about-page__bio{line-height: 5vw; width: 88.2vw;}
+    .skills__name{padding-left: 4vw; margin: 0; }
+    .skills__skill{margin: 0;}
+    .skills__list{line-height: 4vw;}
+    .about-page__seeds-img_visible-on-mobile{width: 65vw; padding-top: 10vw;}
+
+    .portfolio__wrapper, .contact__wrapper, .contact, .portfolio {height: 88.6vw;}
+    .portfolio__item-wrapper, .contact__item-wrapper {padding-bottom: 4vw;}
+    .contact, .portfolio {height: auto; padding-left: 0; width: 72vw;}
+    .contact__item, .portfolio__item {height: 15vw;}
+    .item__icon {width: 20vw;}
+    .text__title {margin-top:3vw; white-space: nowrap;}
+    .text__details {margin-bottom: 0;}
+    .github-p {margin-top:1.5vw;}
+    .enlightenment-directions {padding-left: 1vw; margin: 3vw;}
+
+    .fortune {width: 70vw; left: 50%; transform:translateX(-50%); top:80vw; padding: 1vh 3vw;}
+    .fortune__text:first-child {padding: 0.9vw 0;}
+    .nav__thanks-wrapper {right: 0; left: 50%; transform:translateX(-50%); bottom: -30vw; width: 100%;}
+    
+}

@@ -30,26 +30,26 @@ export default class Contact extends React.Component{
                 <ul className="contact">
                     <li className="contact__item-wrapper">
                         <div className="contact__item">
-                            <a className="item__icon-wrapper-href" href="#">
+                            <a className="item__icon-wrapper-href">
                                 <img className="item__icon" src="/images/phone-icon.png" />
                             </a>
                             <div className="contact__text-wrapper">
                                 <p className="enlightenment-directions">SWITCH</p>
-                                <a className="text__main" href="#">
+                                <a className="text__main" href="tel:1-613-777-7805">
                                     <h3 className="text__title">Phone</h3>
-                                    <p className="text__details">289-289-2890</p>
+                                    <p className="text__details">(613)777-7805</p>
                                 </a>
                             </div>
                         </div>
                     </li>
                     <li className="contact__item-wrapper">
                         <div className="contact__item">
-                            <a className="item__icon-wrapper-href" href="#">
+                            <a className="item__icon-wrapper-href">
                                 <img className="item__icon" src="/images/email-icon.png" />
                             </a>
                             <div className="contact__text-wrapper">
                                 <p className="enlightenment-directions">SECTION</p>
-                                <a className="text__main" href="#">
+                                <a className="text__main" href="mailto:jasonpsmcfarlane@gmail.com">
                                     <h3 className="text__title">Email</h3>
                                     <p className="text__details">jasonpsmcfarlane@gmail.com</p>
                                 </a>
@@ -58,12 +58,12 @@ export default class Contact extends React.Component{
                     </li>
                     <li className="contact__item-wrapper">
                         <div className="contact__item">
-                            <a className="item__icon-wrapper-href" href="#">
+                            <a className="item__icon-wrapper-href">
                                 <img className="item__icon" src="/images/github-icon.png" />
                             </a>
                             <div className="contact__text-wrapper">
                                 <p className="enlightenment-directions">TO</p>
-                                <a className="text__main" href="#">
+                                <a className="text__main" href="https://github.com/McFarJ" target="_blank">
                                     <h3 className="text__title">GitHub</h3>
                                     <p className="text__details">github.com/McFarJ</p>
                                 </a>

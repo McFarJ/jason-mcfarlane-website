@@ -1,0 +1,19 @@
+.contact__wrapper, .portfolio__wrapper {height: 35.2vw; width: 100%; text-align: center;}
+.contact, .portfolio {height: 63%; padding-left: 7vw; width: 75%; display: flex; flex-wrap: wrap; position: relative; margin: 0 auto; top: 50%; transform: translateY(-50%)}
+.contact__item-wrapper, .portfolio__item-wrapper {width: 50%; text-align: left;}
+.contact__item, .portfolio__item {height: 11vw; display: flex; -webkit-filter: drop-shadow(0 0 10px $light); filter: drop-shadow(0 0 10px $light);}
+.item__icon {width: 8vw; padding-top: 0.6vw;}
+.item__icon_enlightened {-webkit-filter: drop-shadow(0 0 2px $dark); filter: drop-shadow(0 0 2px $dark);}
+.text__title-toggle_enlightened, .contact-enlightenment-toggle__text_enlightened, .contact-enlightenment-toggle__wrapper_enlightened {display: none; pointer-events: none;}
+.contact-enlightenment-toggle_enlightened {pointer-events: none;}
+.enlightenment-directions {text-transform: lowercase; display: none; padding-left: 1vw; color: red; text-shadow: 0 0 7px $light;}
+.enlightenment-directions_enlightened {display: block;}
+.text__details {margin-top: 0; -webkit-filter: drop-shadow(0 0 5px $light); filter: drop-shadow(0 0 5px $light);}
+.text__github {text-decoration: underline; color: $link-color; &:hover{color: $link-hover-color}; -webkit-filter: drop-shadow(0 0 5px $light); filter: drop-shadow(0 0 5px $light);}
+.github-p {margin-bottom: 0;}
+.github-p_enlightened {display: none;}
+.text__title {text-decoration: underline; color: $link-color; margin-bottom: 0; -webkit-filter: drop-shadow(0 0 5px $light); filter: drop-shadow(0 0 5px $light);}
+.text__main:hover .text__title, .contact__text-wrapper:hover .text__title {color: $link-hover-color}
+.text__main_enlightened {display: none;}
+.item__icon-wrapper-href {pointer-events: none;}
+.text__github_plain {color: $dark; text-decoration: none; display: inline-block; &:hover{color: $dark}}

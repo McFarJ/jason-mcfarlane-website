@@ -48,10 +48,13 @@ function enlightenment(){
 
 function unenlightenment(){
     $('[class$="_enlightened"]').each(function(index,item){
-        $(this).removeClass($(this).attr('class').match(/\S+_enlightened\b/))
+        $(this).removeClass($(this).attr('class').match(/\S+_enlightened\b/));
         $('[class$="_enlightened"]').each(function(index,item){
             $(this).removeClass($(this).attr('class').match(/\S+_enlightened\b/))
-        })
+        });
+        $('[class$="_enlightened"]').each(function(index,item){
+            $(this).removeClass($(this).attr('class').match(/\S+_enlightened\b/))
+        });
     })
     $('.nav__cookie-opened').css('display', 'none')
     $('.fortune').css('display', 'none')
@@ -62,6 +65,7 @@ function unenlightenment(){
     $('.game-over-menu-option-image').css('display', 'block')
     $('.game-over-menu-option-text').css('display', 'block')
     $('.about-page__seeds-img_visible-on-mobile').removeClass('about-page__seeds-img_visible-on-mobile')
+    $('.nav__secret-letter_enlightened').removeClass('nav__secret-letter_enlightened')
     if ($('.fg-seed').length > 0) {
         $('.fg-seed').addClass('notransition')
         $('.fg-seed').css('fill', 'hsla(0,0%,0%,1)')
@@ -118,6 +122,7 @@ class Nav extends React.Component{
             $('.wallpaper').removeClass('wallpaper_enlightened');
             $('.button-foreground_enlightened').removeClass('button-foreground_enlightened')
             this.setState({gameOver: false})
+            $('html').css('background-color', 'hsla(100,100%,100%,1)')
         }
         else {
             $('.enlightenment-toggle__checkbox').prop('checked', true);
@@ -125,6 +130,7 @@ class Nav extends React.Component{
             enlightenment();
             $('.wallpaper').addClass('wallpaper_enlightened');
             $('.button-foreground').addClass('button-foreground_enlightened')
+            $('html').css('background-color', 'hsla(0,0%,0%,1)')
         }
         return;
     }
@@ -149,11 +155,10 @@ class Nav extends React.Component{
         $('.nav__secret-letter-functional_enlightened').removeClass('nav__secret-letter-functional_enlightened')
         this.setState({gameOver: true})
         $('.menu-options__about').css({'-webkit-filter': 'drop-shadow(0 0 0 hsla(151,50%,31%,0))', 'filter': 'drop-shadow(0 0 0 hsla(151,50%,31%,0))', 'transition': '0.5s'})
-        // NEW
         $('.about-page__seeds-img').addClass('about-page__seeds-img_visible-on-mobile')
+        $('.game-over-menu-option-image').css('display', 'none')
+        $('.game-over-menu-option-text').css('display', 'none')
         if(this.state.fortuneTold){
-            $('.game-over-menu-option-image').css('display', 'none')
-            $('.game-over-menu-option-text').css('display', 'none')
             $('.fortune').css('display', 'block')
             $('.fortune__text_told').css('display', 'block')
             $('.nav__thanks').css('display', 'block')

@@ -23,7 +23,7 @@ export default class Portfolio extends React.Component{
                 <ul className="portfolio">
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
-                            <a className="item__icon-wrapper-href" href="#">
+                            <a className="item__icon-wrapper-href">
                                 <img className="item__icon" src='/images/beard-map-icon.png' />
                             </a>
                             <div className="portfolio__text-wrapper">
@@ -32,7 +32,7 @@ export default class Portfolio extends React.Component{
                                     <h3 className="text__title">Beard Map- web app</h3>
                                     <p className="text__details">React, Firebase</p>
                                 </a>
-                                <a className="text__github" href="https://github.com/McFarJ/Beard-Map-App">
+                                <a className="text__github" href="https://github.com/McFarJ/Beard-Map-App" target="_blank">
                                     <p className="github-p"><span className="text__github_plain">or &nbsp;</span>view on GitHub</p>
                                 </a>
                             </div>
@@ -49,7 +49,7 @@ export default class Portfolio extends React.Component{
                                     <h3 className="text__title">Mind Unwind- web app</h3>
                                     <p className="text__details">JavaScript, jQuery</p>
                                 </a>
-                                <a className="text__github" href="#">
+                                <a className="text__github" href="https://github.com/McFarJ/Mind-Unwind-App" target="_blank">
                                     <p className="github-p"><span className="text__github_plain">or &nbsp;</span>view on GitHub</p>
                                 </a>
                             </div>
@@ -57,7 +57,7 @@ export default class Portfolio extends React.Component{
                     </li>
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
-                            <a className="item__icon-wrapper-href" href="#">
+                            <a className="item__icon-wrapper-href">
                                 <img className="item__icon" src="/images/coursea-icon.png" />
                             </a>
                             <div className="portfolio__text-wrapper">
@@ -66,7 +66,7 @@ export default class Portfolio extends React.Component{
                                     <h3 className="text__title">One-page responsive website</h3>
                                     <p className="text__details">JavaScript, CSS</p>
                                 </a>
-                                <a className="text__github" href="#">
+                                <a className="text__github" href="https://github.com/McFarJ/sample-1-page-responsive-website" target="_blank">
                                     <p className="github-p"><span className="text__github_plain">or &nbsp;</span>view on GitHub</p>
                                 </a>
                             </div>
@@ -74,7 +74,7 @@ export default class Portfolio extends React.Component{
                     </li>
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
-                            <a className="item__icon-wrapper-href" href="#">
+                            <a className="item__icon-wrapper-href">
                                 <img className="item__icon" src="/images/pfm-icon.png" />
                             </a>
                             <div className="portfolio__text-wrapper">
@@ -83,7 +83,7 @@ export default class Portfolio extends React.Component{
                                     <h3 className="text__title">Basic desktop website</h3>
                                     <p className="text__details">HTML, CSS</p>
                                 </a>
-                                <a className="text__github" href="#">
+                                <a className="text__github" href="https://github.com/McFarJ/sample-3-page-site" target="_blank">
                                     <p className="github-p"><span className="text__github_plain">or &nbsp;</span>view on GitHub</p>
                                 </a>
                             </div>
