@@ -1,5 +1,5 @@
 @media only screen and (min-width: 1564px){
-    // fonts
+    // FONT SIZES
     .enlightenment-toggle__text, .contact-enlightenment-toggle__text {font-size: 29.72px}
     .nav__title-main {font-size: 86.02px}
     .nav__menu-option-text, .nav__title-sub {font-size: 45.36px;}
@@ -10,7 +10,7 @@
     .text__title {font-size: 27.37px;}
     .text__details, .text__github {font-size: 23.3px;}
     .enlightenment-directions {font-size: 46.92px;}
-    // padding, margin, size
+    // OTHER SIZES
     .wallpaper__dandelion {padding: 62.56px 0 15.64px 0}
     .enlightenment-toggle__wrapper {width: 1564px; padding: 23.46px 23.46px 54.74px 23.46px}
     .enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox {height: 23.46px; width: 23.46px; margin: 7.82px 7.82px auto auto}
@@ -37,7 +37,7 @@
     .fortune {width: 656.88px; left: 625.6px; top: 312.8px; padding: 15.64px 46.92px}
     .fortune__text:first-child {padding: 14.08px 0}
     .nav__thanks-wrapper {right: 218.96px}
-    .about-page {height: 550.47px}
+    .about-page, .about-page__wrapper {height: 550.53px; margin: 0}
     .contact__wrapper, .portfolio__wrapper {height: 550.53px}
 }
 
@@ -50,7 +50,6 @@
 }
 
 @media only screen and (max-width: 860px){
-    // NAV
     .nav {
         flex-direction: column;
         width: auto;
@@ -58,40 +57,20 @@
         padding: 0;
         align-items: center;
     }
-    .nav__menu-options {
-        padding: 0;
-    }
+    .nav__menu-options {padding: 0;}
     // ABOUT page
-    .about-page {
-        flex-direction: column;
-        align-items: center;
-    }
-    .about-page__bio-wrapper {
-        width: 100%;
-    }
-    .about-page__seeds-img {
-        display: none;
-    }
+    .about-page {flex-direction: column; align-items: center;}
+    .about-page__bio-wrapper {width: 100%;}
+    .about-page__seeds-img {display: none;}
     .about-page__seeds-img_visible-on-mobile {
         display: block;
         margin: 0 auto;
         width: 325px;
         padding-top: 50px;
     }
-
-    .about-page__skills-wrapper {
-        padding: 0;
-    }
-    .skills__title {
-        margin: 0;
-    }   
-    .skills__list {
-        width: 100%;
-    }
-
-}
-
-@media only screen and (max-width: 860px){
+    .about-page__skills-wrapper {padding: 0;}
+    .skills__title {margin: 0;}   
+    .skills__list {width: 100%;}
     .enlightenment-toggle__wrapper {
         width: 525px;
         padding: 26.25px 31.5px 0 0;
@@ -104,7 +83,7 @@
     @-moz-document url-prefix() {
         .enlightenment-toggle__checkbox, .contact-enlightenment-toggle__checkbox {margin: 0 10.5px;}
     }
-
+    // FONT SIZES
     .enlightenment-toggle__text, .contact-enlightenment-toggle__text {font-size: 21px;}
     .nav__title-main {font-size: 52.5px;}
     .nav__menu-option-text, .nav__title-sub {font-size: 26.25px;}
@@ -115,9 +94,8 @@
     .text__title {font-size: 18.375px;}
     .text__details, .text__github {font-size: 17.0625px;}
     .enlightenment-directions {font-size: 47.25px;}
-
+    // OTHER SIZES
     .enlightenment-toggle__wrapper {width: 100vw}
-
     .nav{width: 100%;}
     .nav__title-wrapper{width:100%; padding-bottom: 52.5px; padding-top: 89.25px}
     .nav__menu-options-wrapper{width:100%; height: 131.25px;}
@@ -126,7 +104,6 @@
     .nav__menu-option:first-child {margin: 0 15.75px 0 0;}
     .nav__menu-option:last-child {margin: 0 0 0 15.75px;}
     .nav__menu-option-image2 {padding: 0;}
-
     .about-page, .about-page__wrapper {height: 465.15px;}
     .about-page__skills-wrapper{width: 341.25px;}
     .about-page__bio-wrapper{padding-top: 52.5px; text-align: center;}
@@ -135,7 +112,6 @@
     .skills__name{padding-left: 21px; margin: 0;}
     .skills__skill{margin: 0;}
     .skills__list{line-height: 21px;}
-
     .portfolio__wrapper, .contact__wrapper, .contact, .portfolio {height: 465.15px;}
     .portfolio__item-wrapper, .contact__item-wrapper {width: 100%; padding-bottom: 21px;}
     .contact, .portfolio {height: auto; padding-left: 0; width: 378px;}
@@ -144,7 +120,6 @@
     .text__title {margin-top:15.75px; white-space: nowrap;}
     .github-p {margin-top:7.875px;}
     .enlightenment-directions {padding-left: 5.25px; margin: 15.75px;}
-
     .fortune {width: 350px; left: 50%; transform:translateX(-50%); top:400px; padding: 5px 15px;}
     .fortune__text:first-child {padding: 4.5px 0;}
     .nav__thanks-wrapper {right: 0; left: 50%; transform:translateX(-50%); bottom: -150px; width: 100%;}
@@ -163,7 +138,7 @@
     @-moz-document url-prefix() {
         .enlightenment-toggle__checkbox{margin: 0 2vw;}
     }
-
+    // FONT SIZES
     .enlightenment-toggle__text, .contact-enlightenment-toggle__text {font-size: 4vw;}
     .nav__title-main {font-size: 10vw;}
     .nav__menu-option-text, .nav__title-sub {font-size: 5vw;}
@@ -174,7 +149,7 @@
     .text__title {font-size: 3.5vw;}
     .text__details, .text__github {font-size: 3.25vw;}
     .enlightenment-directions {font-size: 9vw;}
-
+    // OTHER SIZES
     .nav{width: 100%;}
     .nav__title-wrapper{width:100%; padding-bottom: 10vw; padding-top: 17vw}
     .nav__menu-options-wrapper{width:100%; height: 25vw;}
@@ -183,7 +158,6 @@
     .nav__menu-option:first-child {margin: 0 3vw 0 0;}
     .nav__menu-option:last-child {margin: 0 0 0 3vw;}
     .nav__menu-option-image2 {padding: 0;}
-
     .about-page, .about-page__wrapper {height: 88.6vw;}
     .about-page__skills-wrapper{width: 65vw;}
     .about-page__bio-wrapper{padding-top: 10vw;}
@@ -192,7 +166,6 @@
     .skills__skill{margin: 0;}
     .skills__list{line-height: 4vw;}
     .about-page__seeds-img_visible-on-mobile{width: 65vw; padding-top: 10vw;}
-
     .portfolio__wrapper, .contact__wrapper, .contact, .portfolio {height: 88.6vw;}
     .portfolio__item-wrapper, .contact__item-wrapper {padding-bottom: 4vw;}
     .contact, .portfolio {height: auto; padding-left: 0; width: 72vw;}
@@ -202,9 +175,7 @@
     .text__details {margin-bottom: 0;}
     .github-p {margin-top:1.5vw;}
     .enlightenment-directions {padding-left: 1vw; margin: 3vw;}
-
     .fortune {width: 70vw; left: 50%; transform:translateX(-50%); top:80vw; padding: 1vh 3vw;}
     .fortune__text:first-child {padding: 0.9vw 0;}
     .nav__thanks-wrapper {right: 0; left: 50%; transform:translateX(-50%); bottom: -30vw; width: 100%;}
-    
 }
