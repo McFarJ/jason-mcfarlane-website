@@ -31,7 +31,7 @@ export default class Contact extends React.Component{
                     <li className="contact__item-wrapper">
                         <div className="contact__item">
                             <a className="item__icon-wrapper-href">
-                                <img className="item__icon" src="/images/phone-icon.png" />
+                                <img className="item__icon" src="../../images/phone-icon.png" />
                             </a>
                             <div className="contact__text-wrapper">
                                 <p className="enlightenment-directions">SWITCH</p>
@@ -45,13 +45,13 @@ export default class Contact extends React.Component{
                     <li className="contact__item-wrapper">
                         <div className="contact__item">
                             <a className="item__icon-wrapper-href">
-                                <img className="item__icon" src="/images/email-icon.png" />
+                                <img className="item__icon" src="../../images/email-icon.png" />
                             </a>
                             <div className="contact__text-wrapper">
                                 <p className="enlightenment-directions">SECTION</p>
-                                <a className="text__main" href="mailto:jasonpsmcfarlane@gmail.com">
+                                <a className="text__main" href="mailto:jason@jasonmcfarlane.xyz">
                                     <h3 className="text__title">Email</h3>
-                                    <p className="text__details">jasonpsmcfarlane@gmail.com</p>
+                                    <p className="text__details">jason@jasonmcfarlane.xyz</p>
                                 </a>
                             </div>
                         </div>
@@ -59,7 +59,7 @@ export default class Contact extends React.Component{
                     <li className="contact__item-wrapper">
                         <div className="contact__item">
                             <a className="item__icon-wrapper-href">
-                                <img className="item__icon" src="/images/github-icon.png" />
+                                <img className="item__icon" src="../../images/github-icon.png" />
                             </a>
                             <div className="contact__text-wrapper">
                                 <p className="enlightenment-directions">TO</p>
@@ -73,7 +73,7 @@ export default class Contact extends React.Component{
                     <li className="contact__item-wrapper">
                         <a className="contact__item contact-enlightenment-toggle" href="#" onClick={this.props.handleEnlightenClick}>
                             <div className="item__icon-wrapper-plain">
-                                <img className="item__icon" src="/images/question-icon.png" />
+                                <img className="item__icon" src="../../images/question-icon.png" />
                             </div>
                             <div className="contact__text-wrapper">
                                 <p className="enlightenment-directions">ABOUT</p>

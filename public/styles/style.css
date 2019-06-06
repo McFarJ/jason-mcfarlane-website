@@ -616,8 +616,9 @@ input {
     padding: 14.08px 0; }
   .nav__thanks-wrapper {
     right: 218.96px; }
-  .about-page {
-    height: 550.47px; }
+  .about-page, .about-page__wrapper {
+    height: 550.53px;
+    margin: 0; }
   .contact__wrapper, .portfolio__wrapper {
     height: 550.53px; } }
 
@@ -671,9 +672,7 @@ input {
   .skills__title {
     margin: 0; }
   .skills__list {
-    width: 100%; } }
-
-@media only screen and (max-width: 860px) {
+    width: 100%; }
   .enlightenment-toggle__wrapper {
     width: 525px;
     padding: 26.25px 31.5px 0 0; }
@@ -889,30 +888,3 @@ input {
             transform: translateX(-50%);
     bottom: -30vw;
     width: 100%; } }
-
-x {
-  color: #ac5539; }
-
-x {
-  color: #29526d; }
-
-x {
-  color: #659934; }
-
-x {
-  color: #492d73; }
-
-x {
-  color: #973355; }
-
-x {
-  color: #cad178; }
-
-x {
-  color: #e8d33f; }
-
-x {
-  color: #96adc8; }
-
-x {
-  color: #e55934; }

@@ -24,11 +24,11 @@ export default class Portfolio extends React.Component{
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
                             <a className="item__icon-wrapper-href">
-                                <img className="item__icon" src='/images/beard-map-icon.png' />
+                                <img className="item__icon" src='../../images/beard-map-icon.png' />
                             </a>
                             <div className="portfolio__text-wrapper">
                                 <p className="enlightenment-directions">SWITCH</p>
-                                <a className="text__main" href="#">
+                                <a className="text__main" href="https://beard-map-app.firebaseapp.com/">
                                     <h3 className="text__title">Beard Map- web app</h3>
                                     <p className="text__details">React, Firebase</p>
                                 </a>
@@ -38,14 +38,15 @@ export default class Portfolio extends React.Component{
                             </div>
                         </div>
                     </li>
+                    {/* TEST */}
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
                             <a className="item__icon-wrapper-href">
-                                <img className="item__icon" src="/images/mind-unwind-icon.png" />
+                                <img className="item__icon" src="../../images/mind-unwind-icon.png" />
                             </a>
                             <div className="portfolio__text-wrapper">
                                 <p className="enlightenment-directions">SECTION</p>
-                                <a className="text__main" href="#">
+                                <a className="text__main" href="http://jasonmcfarlane.xyz/mind-unwind/">
                                     <h3 className="text__title">Mind Unwind- web app</h3>
                                     <p className="text__details">JavaScript, jQuery</p>
                                 </a>
@@ -58,11 +59,11 @@ export default class Portfolio extends React.Component{
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
                             <a className="item__icon-wrapper-href">
-                                <img className="item__icon" src="/images/coursea-icon.png" />
+                                <img className="item__icon" src="../../images/coursea-icon.png" />
                             </a>
                             <div className="portfolio__text-wrapper">
                                 <p className="enlightenment-directions">TO</p>
-                                <a className="text__main" href="#">
+                                <a className="text__main" href="http://jasonmcfarlane.xyz/one-page-site/">
                                     <h3 className="text__title">One-page responsive website</h3>
                                     <p className="text__details">JavaScript, CSS</p>
                                 </a>
@@ -75,11 +76,11 @@ export default class Portfolio extends React.Component{
                     <li className="portfolio__item-wrapper">
                         <div className="portfolio__item">
                             <a className="item__icon-wrapper-href">
-                                <img className="item__icon" src="/images/pfm-icon.png" />
+                                <img className="item__icon" src="../../images/pfm-icon.png" />
                             </a>
                             <div className="portfolio__text-wrapper">
                                 <p className="enlightenment-directions">ABOUT</p>
-                                <a className="text__main" href="#">
+                                <a className="text__main" href="http://jasonmcfarlane.xyz/desktop-site/">
                                     <h3 className="text__title">Basic desktop website</h3>
                                     <p className="text__details">HTML, CSS</p>
                                 </a>
