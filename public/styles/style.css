@@ -196,6 +196,10 @@ input {
   display: inline-block;
   width: 50%; }
 
+@-moz-document url-prefix() {
+  .nav__title-wrapper {
+    width: auto; } }
+
 .nav__secret-letter {
   padding: 0.75rem;
   margin: -0.75rem;

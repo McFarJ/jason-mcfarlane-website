@@ -75,6 +75,9 @@ input{width:25px;}
 .nav__title-sub {margin: -1vh 0 0 0; text-align: center;}
 .nav__title-sub_enlightened{color: $light;}
 .nav__title-wrapper {display: inline-block; width:50%;}
+@-moz-document url-prefix() {
+    .nav__title-wrapper {width:auto;}
+}
 .nav__secret-letter {padding: 0.75rem; margin: -0.75rem; cursor: default; pointer-events: none;}
 .nav__secret-letter_enlightened {color: $light;}
 .nav__secret-letter-functional_enlightened {color: hsla(60,100,50,1); text-shadow: 0px 0px 6px hsla(194,98,51,1); cursor: pointer; pointer-events: auto;}
