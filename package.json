@@ -24,7 +24,7 @@
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "notify-send": "^0.1.2",
     "react-router-dom": "^5.0.0",
     "vinyl-buffer": "^1.0.1",
